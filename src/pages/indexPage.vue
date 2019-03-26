@@ -18,9 +18,47 @@
               </div>
               <div class="totalBoxRB">
                 <el-row :gutter="30">
-                  <el-col :span="8"><div class="borderBox">1</div></el-col>
-                  <el-col :span="8"><div class="borderBox">2</div></el-col>
-                  <el-col :span="8"><div class="borderBox">3</div></el-col>
+                  
+                  <el-col :span="8">
+                    <div class="cardBox">
+                      <div class="cardBoxT">SKU</div>
+                      <div class="cardBoxM">
+                        <div>8888</div> 
+                        <div>8888</div> 
+                      </div>
+                      <div class="cardBoxB">
+                        <div>完成数</div> 
+                        <div>总数</div> 
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="8">
+                    <div class="cardBox">
+                      <div class="cardBoxT">SKU</div>
+                      <div class="cardBoxM">
+                        <div>8888</div> 
+                        <div>8888</div> 
+                      </div>
+                      <div class="cardBoxB">
+                        <div>完成数</div> 
+                        <div>总数</div> 
+                      </div>
+                    </div>
+                  </el-col>
+                  <el-col :span="8">
+                    <div class="cardBox">
+                      <div class="cardBoxT">SKU</div>
+                      <div class="cardBoxM">
+                        <div>8888</div> 
+                        <div>8888</div> 
+                      </div>
+                      <div class="cardBoxB">
+                        <div>完成数</div> 
+                        <div>总数</div> 
+                      </div>
+                    </div>
+                  </el-col>
+                  
                 </el-row>
               </div>
             </div>
@@ -34,19 +72,21 @@
             <el-col :span="1"><div class="borderBox">路线11</div></el-col>
             
             <el-col :span="4">
+
               <div class="borderBox">
-                <div class="cardBox">
-                  <div class="cardBoxT">SKU</div>
-                  <div class="cardBoxM">
-                    <div class="cardBoxML">8888</div> 
-                    <div class="cardBoxMR">8888</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div class="cardBoxBL">完成数</div> 
-                    <div class="cardBoxBR">总数</div> 
-                  </div>
-                </div>
+                    <div class="cardBox">
+                      <div class="cardBoxT">SKU</div>
+                      <div class="cardBoxM">
+                        <div>8888</div> 
+                        <div>8888</div> 
+                      </div>
+                      <div class="cardBoxB">
+                        <div>完成数</div> 
+                        <div>总数</div> 
+                      </div>
+                    </div>
               </div>
+              
             </el-col>
 
             <el-col :span="4">
@@ -54,12 +94,12 @@
                 <div class="cardBox">
                   <div class="cardBoxT">E数</div>
                   <div class="cardBoxM">
-                    <div class="cardBoxML">8888</div> 
-                    <div class="cardBoxMR">8888</div> 
+                    <div>8888</div> 
+                    <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div class="cardBoxBL">完成数</div> 
-                    <div class="cardBoxBR">总数</div> 
+                    <div>完成数</div> 
+                    <div>总数</div> 
                   </div>
                 </div>
               </div>
@@ -70,12 +110,12 @@
                 <div class="cardBox">
                   <div class="cardBoxT">门店数</div>
                   <div class="cardBoxM">
-                    <div class="cardBoxML">8888</div> 
-                    <div class="cardBoxMR">8888</div> 
+                    <div >8888</div> 
+                    <div >8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div class="cardBoxBL">完成数</div> 
-                    <div class="cardBoxBR">总数</div> 
+                    <div>完成数</div> 
+                    <div>总数</div> 
                   </div>
                 </div>
               </div>
@@ -165,6 +205,7 @@ export default {
 
 <style lang="scss">
 .myBox{
+  font-size:12px;
   width:1080px;
   height:607.5px;
   margin:0 auto;
@@ -220,42 +261,9 @@ export default {
     padding:5px;
     box-sizing:border-box;
     border:none;
-    .cardBox{
-      text-align:center;
-      height:65px;
-      border:solid 1px red;
-      .cardBoxT{
-        height:12px;
-        line-height:12px;
-      }
-      .cardBoxM{
-        height:40px; 
-        line-height:40px;
-        font-size:20px;
-        font-weight:bold;
-        .cardBoxML{
-          width:45%;
-          float:left;
-        }
-        .cardBoxMR{
-          width:45%;
-          float:right;
-        }
-      }
-      .cardBoxB{
-        text-align:center;
-        height:12px;
-        line-height:12px;
-        .cardBoxBL{
-          width:45%;
-          float:left;
-        }
-        .cardBoxBR{
-          width:45%;
-          float:right;
-        }
-      }
-    }
+  }
+  .cardBox{
+    height:50px;
   }
 }
 .linesList:nth-child(odd){
@@ -270,6 +278,40 @@ export default {
   background:#ccc;
   line-height:30px;
   text-align:center;
+}
+
+
+//卡片的全部样式
+.cardBox{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-around;
+
+  height:80px;
+  text-align:center;
+  border:solid 1px #666;
+  padding:5px;
+  .cardBoxT{
+    height:25%;
+    line-height:100%x;
+  }
+  .cardBoxM{
+    display:flex;
+    justify-content: space-around;
+
+    height:50%; 
+    line-height:100%;
+    font-size:20px;
+    font-weight:bold;
+    
+  }
+  .cardBoxB{
+    display:flex;
+    justify-content: space-around;
+    
+    height:25%;
+    line-height:100%;
+  }
 }
 
 
