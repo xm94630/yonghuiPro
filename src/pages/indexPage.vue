@@ -31,9 +31,79 @@
       <div class="linesBox borderBox MT10">
         <div class="linesList">
           <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox">1</div></el-col>
-            <el-col :span="11"><div class="borderBox">2</div></el-col>
-            <el-col :span="12"><div class="borderBox">3</div></el-col>
+            <el-col :span="1"><div class="borderBox">路线11</div></el-col>
+            
+            <el-col :span="4">
+              <div class="borderBox">
+                <div class="cardBox">
+                  <div class="cardBoxT">SKU</div>
+                  <div class="cardBoxM">
+                    <div class="cardBoxML">8888</div> 
+                    <div class="cardBoxMR">8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div class="cardBoxBL">完成数</div> 
+                    <div class="cardBoxBR">总数</div> 
+                  </div>
+                </div>
+              </div>
+            </el-col>
+
+            <el-col :span="4">
+              <div class="borderBox">
+                <div class="cardBox">
+                  <div class="cardBoxT">E数</div>
+                  <div class="cardBoxM">
+                    <div class="cardBoxML">8888</div> 
+                    <div class="cardBoxMR">8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div class="cardBoxBL">完成数</div> 
+                    <div class="cardBoxBR">总数</div> 
+                  </div>
+                </div>
+              </div>
+            </el-col>
+
+            <el-col :span="4">
+              <div class="borderBox">
+                <div class="cardBox">
+                  <div class="cardBoxT">门店数</div>
+                  <div class="cardBoxM">
+                    <div class="cardBoxML">8888</div> 
+                    <div class="cardBoxMR">8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div class="cardBoxBL">完成数</div> 
+                    <div class="cardBoxBR">总数</div> 
+                  </div>
+                </div>
+              </div>
+            </el-col>
+
+
+
+            <el-col :span="11">
+              <div class="borderBox">
+                <div class="miniCard">门店1</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+
+                <div class="miniCard">门店1</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+                <div class="miniCard">门店2</div>
+              </div>
+            </el-col>
           </el-row>
         </div>
         <div class="linesList">
@@ -144,13 +214,62 @@ export default {
 
 .linesBox{
   background:#fff;
-  height:460px;
+  height:380px;
   .borderBox{
     height:75px;
+    padding:5px;
+    box-sizing:border-box;
+    border:none;
+    .cardBox{
+      text-align:center;
+      height:65px;
+      border:solid 1px red;
+      .cardBoxT{
+        height:12px;
+        line-height:12px;
+      }
+      .cardBoxM{
+        height:40px; 
+        line-height:40px;
+        font-size:20px;
+        font-weight:bold;
+        .cardBoxML{
+          width:45%;
+          float:left;
+        }
+        .cardBoxMR{
+          width:45%;
+          float:right;
+        }
+      }
+      .cardBoxB{
+        text-align:center;
+        height:12px;
+        line-height:12px;
+        .cardBoxBL{
+          width:45%;
+          float:left;
+        }
+        .cardBoxBR{
+          width:45%;
+          float:right;
+        }
+      }
+    }
   }
 }
 .linesList:nth-child(odd){
   background:#f3f3f3;
+}
+
+.miniCard{
+  display:inline-block;
+  width:48px;
+  height:30px;
+  margin:0 10px 5px 0;
+  background:#ccc;
+  line-height:30px;
+  text-align:center;
 }
 
 
