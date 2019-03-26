@@ -7,6 +7,28 @@
         <router-link to="/workload" class="myLink">工作量</router-link>
       </div>
 
+      <div class="totalBox">
+        <el-row :gutter="50">
+          <el-col :span="6"><div class="lineBox totalBoxL">123</div></el-col>
+          <el-col :span="18">
+            <div class="totalBoxR">
+              <div class="totalBoxRT">
+                <div>上海会员物流</div>
+                <div>拣货进度</div>
+                <div class="dateBox">1970-01-01 18:00:00</div>
+              </div>
+              <div class="totalBoxRB">
+                <el-row :gutter="50">
+                  <el-col :span="8"><div class="lineBox">1</div></el-col>
+                  <el-col :span="8"><div class="lineBox">2</div></el-col>
+                  <el-col :span="8"><div class="lineBox">3</div></el-col>
+                </el-row>
+              </div>
+            </div>
+          </el-col>
+        </el-row>
+      </div>
+
   </div>
 </template>
 
@@ -51,6 +73,36 @@ export default {
   .myLink{
     margin-right:30px;
   }
+}
+.totalBox{
+  height:260px;
+  width:100%;
+  .totalBoxL{
+    height:260px;
+  }
+  .totalBoxR{
+    height:260px;
+    .totalBoxRT{
+      height:160px;
+      font-size:40px;
+      text-align:center;
+      position:relative;
+      .dateBox{
+        position:absolute;
+        top:0px;
+        right:0px;
+        font-size:12px;
+      }
+    }
+    .totalBoxRB{
+      .lineBox{
+        height:100px;
+      }
+    }
+  }
+}
+.lineBox{
+  border:solid 1px #666;
 }
 
 
