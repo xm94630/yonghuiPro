@@ -12,13 +12,13 @@ const routes = [
         path:'/',
         component:pageIndex
     },{
-        path:'/pagea',
+        path:'/picking',
         component:pageA
     },{
-        path:'/pageb',
+        path:'/pickingReplenishment',
         component:pageB
     },{
-        path:'/createBigScreen',
+        path:'/workload',
         component:createBigScreen
     }
 ]

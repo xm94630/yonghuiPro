@@ -1,22 +1,8 @@
 <template>
   <div class="HeadTitle">
-    <span>{{ msg }}</span>
+    <span><router-link to="/picking">拣货进度</router-link></span>
+    <span><router-link to="/pickingReplenishment">拣货补货进度</router-link></span>
+    <span><router-link to="/workload">工作量</router-link></span>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HeadTitle',
-  props: {
-    msg: String
-  }
-}
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-.HeadTitle{
-  line-height:60px;
-}
-</style>
