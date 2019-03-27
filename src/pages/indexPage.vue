@@ -1,18 +1,6 @@
 <template>
   <div class="myBox">
-      
-<div class="cardBox">
-                      <div class="cardBoxT">SKU</div>
-                      <div class="cardBoxM">
-                        <div>8888</div> 
-                        <div>8888</div> 
-                      </div>
-                      <div class="cardBoxB">
-                        <div>完成数</div> 
-                        <div>总数</div> 
-                      </div>
-                    </div>
-
+    
       <div class="HeadTitle">
         <router-link to="/picking" class="myLink">拣货进度</router-link>
         <router-link to="/pickingReplenishment" class="myLink">拣货补货进度</router-link>
@@ -21,7 +9,7 @@
 
       <div class="totalBox">
         <el-row :gutter="30">
-          <el-col :span="8"><div class="borderBox totalBoxL">123</div></el-col>
+          <el-col :span="8"><div class="borderBox totalBoxL"><xm /></div></el-col>
           <el-col :span="16">
             <div class="totalBoxR">
               <div class="totalBoxRT">
@@ -193,10 +181,12 @@
 
 <script>
 import addBtn from '../components/addBtn.vue'
+import xm from '../components/xm.vue'
 
 export default {
   name: 'app',
   components: {
+    xm,
     addBtn
   },
   data() {
