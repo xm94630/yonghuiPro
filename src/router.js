@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import pageA from './pages/a.vue';
 import pageB from './pages/b.vue';
-import createBigScreen from './pages/createBigScreen.vue';
+import pageC from './pages/c.vue';
 import pageIndex from './pages/indexPage.vue';
 
 Vue.use(VueRouter)
@@ -13,13 +13,13 @@ const routes = [
         component:pageIndex
     },{
         path:'/picking',
-        component:pageA
+        component:pageIndex
     },{
         path:'/pickingReplenishment',
         component:pageB
     },{
         path:'/workload',
-        component:createBigScreen
+        component:pageC
     }
 ]
 

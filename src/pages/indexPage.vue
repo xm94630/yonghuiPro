@@ -2,7 +2,7 @@
   <div class="myBox">
     
       <div class="HeadTitle">
-        <router-link to="/picking" class="myLink">拣货进度</router-link>
+        <router-link to="/picking" class="myLink active">拣货进度</router-link>
         <router-link to="/pickingReplenishment" class="myLink">拣货补货进度</router-link>
         <router-link to="/workload" class="myLink">工作量</router-link>
       </div>
@@ -346,5 +346,9 @@ export default {
   .b{
     color:#bbb
   }
+}
+
+.myLink.active{
+  color:red;
 }
 </style>

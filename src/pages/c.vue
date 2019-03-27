@@ -3,8 +3,8 @@
     
       <div class="HeadTitle">
         <router-link to="/picking" class="myLink">拣货进度</router-link>
-        <router-link to="/pickingReplenishment" class="myLink active">拣货补货进度</router-link>
-        <router-link to="/workload" class="myLink">工作量</router-link>
+        <router-link to="/pickingReplenishment" class="myLink">拣货补货进度</router-link>
+        <router-link to="/workload" class="myLink active">工作量</router-link>
       </div>
 
       <div class="totalBox">
