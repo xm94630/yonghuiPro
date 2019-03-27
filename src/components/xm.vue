@@ -13,6 +13,8 @@
 import echarts from 'echarts'
 
 
+var percent = .5 ;
+
 var option = {
 		    // 标题组件，包含主标题和副标题
 		    title:{
@@ -61,7 +63,7 @@ var option = {
 		            },
 		            data:[
 		                {   // 数据值
-		                    value:100, 
+		                    value:100 * percent, 
 		                    // 数据项名称
 		                    name:'完成率',
 		                    //该数据项是否被选中
@@ -81,7 +83,7 @@ var option = {
 		                 
 		                },
 		                {
-		                    value:100, 
+		                    value:100 *(1-percent), 
 		                    label:{
 		                        normal:{
 		                            show:false,
