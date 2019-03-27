@@ -9,7 +9,11 @@
 
       <div class="totalBox">
         <el-row :gutter="30">
-          <el-col :span="8"><div class="borderBox totalBoxL"><xm /></div></el-col>
+          <el-col :span="8">
+            <div class="borderBox totalBoxL">
+              <pie :percent="percent" />
+            </div>
+          </el-col>
           <el-col :span="16">
             <div class="totalBoxR">
               <div class="totalBoxRT">
@@ -181,16 +185,17 @@
 
 <script>
 import addBtn from '../components/addBtn.vue'
-import xm from '../components/xm.vue'
+import pie from '../components/pie.vue'
 
 export default {
   name: 'app',
   components: {
-    xm,
+    pie,
     addBtn
   },
   data() {
     return {
+      percent:0.6,
       isCollapse: true
     };
   },
