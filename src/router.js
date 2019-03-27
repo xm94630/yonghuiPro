@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import pageA from './pages/a.vue';
 import pageB from './pages/b.vue';
 import pageC from './pages/c.vue';
 import pageIndex from './pages/indexPage.vue';
