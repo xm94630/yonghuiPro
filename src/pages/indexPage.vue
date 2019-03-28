@@ -11,7 +11,7 @@
         <el-row :gutter="30">
           <el-col :span="8">
             <div class="borderBox totalBoxL">
-              <pie :percent="percent" />
+              <pie :chartData="chartData"/>
             </div>
           </el-col>
           <el-col :span="16">
@@ -199,8 +199,12 @@ export default {
   },
   data() {
     return {
-      percent:0.6,
-      isCollapse: true
+      isCollapse: true,
+      chartData:{
+        chartId:"xxxyyy",
+        titleText:"总体进度",
+        percent:0.34,
+      },
     };
   },
   methods: {

@@ -1,5 +1,5 @@
 <template>
-    <div class="bingTuBox" id="bingTu"></div>
+    <div class="bingTuBox" :id="chartData.chartId"></div>
 </template>
 
 
@@ -7,12 +7,12 @@
 import echarts from 'echarts'
 
 //获取饼图option配置
-function getOption(percent){
+function getOption(data){
   var option = {
 		// 标题组件，包含主标题和副标题
 		title:{
 			show:true,
-			text:"总体进度",
+			text:data.titleText,
 			x:"left",
 			textStyle:{
 				fontSize:"12",
@@ -56,7 +56,7 @@ function getOption(percent){
 				},
 				data:[
 					{   // 数据值
-						value:100 * percent, 
+						value:100 * data.percent, 
 						// 数据项名称
 						name:'完成率',
 						//该数据项是否被选中
@@ -76,7 +76,7 @@ function getOption(percent){
 						
 					},
 					{
-						value:100 *(1-percent), 
+						value:100 *(1-data.percent), 
 						label:{
 							normal:{
 								show:false,
@@ -96,16 +96,16 @@ function getOption(percent){
 export default {
   name: 'pie',
   props: {
-    percent:Number
+		chartData:Object,
   },
   data(){
     return{
-        bingTu_option:getOption(this.percent)
+        bingTu_option:getOption(this.chartData)
     }
   },
   mounted: function () {
     // 基于准备好的dom，初始化echarts实例
-    let myChart = echarts.init(document.getElementById('bingTu'))
+    let myChart = echarts.init(document.getElementById(this.chartData.chartId))
     myChart.setOption(this.bingTu_option)
   }
 }
