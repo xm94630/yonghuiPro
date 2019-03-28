@@ -1,184 +1,26 @@
 <template>
   <div class="myBox">
     
-      <div class="HeadTitle">
-        <router-link to="/picking" class="myLink">拣货进度</router-link>
-        <router-link to="/pickingReplenishment" class="myLink active">拣货补货进度</router-link>
-        <router-link to="/workload" class="myLink">工作量</router-link>
+    <div class="HeadTitle">
+      <router-link to="/picking" class="myLink">拣货进度</router-link>
+      <router-link to="/pickingReplenishment" class="myLink active">拣货补货进度</router-link>
+      <router-link to="/workload" class="myLink">工作量</router-link>
+    </div>
+
+    <div class="replenishBox">
+      <div class="replenishBoxLine replenishBoxLine1">
+        <div>上海会员物流拣货补货进度</div>
       </div>
-
-      <div class="totalBox">
-        <el-row :gutter="30">
-          <el-col :span="8">
-            <div class="borderBox totalBoxL">
-              <pie :percent="percent" />
-            </div>
-          </el-col>
-          <el-col :span="16">
-            <div class="totalBoxR">
-              <div class="totalBoxRT">
-                <div>上海会员物流拣货进度</div>
-                <div class="dateBox">1970-01-01 18:00:00</div>
-              </div>
-              <div class="totalBoxRB">
-                <el-row :gutter="30">
-                  
-                  <el-col :span="8">
-                    <div class="cardBox">
-                      <div class="cardBoxT">SKU</div>
-                      <div class="cardBoxM">
-                        <div>8888</div> 
-                        <div>8888</div> 
-                      </div>
-                      <div class="cardBoxB">
-                        <div>完成数</div> 
-                        <div>总数</div> 
-                      </div>
-                    </div>
-                  </el-col>
-                  <el-col :span="8">
-                    <div class="cardBox">
-                      <div class="cardBoxT">SKU</div>
-                      <div class="cardBoxM">
-                        <div>8888</div> 
-                        <div>8888</div> 
-                      </div>
-                      <div class="cardBoxB">
-                        <div>完成数</div> 
-                        <div>总数</div> 
-                      </div>
-                    </div>
-                  </el-col>
-                  <el-col :span="8">
-                    <div class="cardBox">
-                      <div class="cardBoxT">SKU</div>
-                      <div class="cardBoxM">
-                        <div>8888</div> 
-                        <div>8888</div> 
-                      </div>
-                      <div class="cardBoxB">
-                        <div>完成数</div> 
-                        <div>总数</div> 
-                      </div>
-                    </div>
-                  </el-col>
-                  
-                </el-row>
-              </div>
-            </div>
-          </el-col>
-        </el-row>
+      <div class="replenishBoxLine replenishBoxLine2">
+        <div class="replenishBoxLineL">111</div>
+        <div class="replenishBoxLineR">1222</div>
       </div>
-      
-      <div class="linesBox borderBox MT10">
-        <div class="linesList">
-          <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox">路线11</div></el-col>
-            
-            <el-col :span="4">
-
-              <div class="borderBox">
-                    <div class="cardBox">
-                      <div class="cardBoxT">SKU</div>
-                      <div class="cardBoxM">
-                        <div>8888</div> 
-                        <div>8888</div> 
-                      </div>
-                      <div class="cardBoxB">
-                        <div>完成数</div> 
-                        <div>总数</div> 
-                      </div>
-                    </div>
-              </div>
-              
-            </el-col>
-
-            <el-col :span="4">
-              <div class="borderBox">
-                <div class="cardBox">
-                  <div class="cardBoxT">E数</div>
-                  <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
-                  </div>
-                </div>
-              </div>
-            </el-col>
-
-            <el-col :span="4">
-              <div class="borderBox">
-                <div class="cardBox">
-                  <div class="cardBoxT">门店数</div>
-                  <div class="cardBoxM">
-                    <div >8888</div> 
-                    <div >8888</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
-                  </div>
-                </div>
-              </div>
-            </el-col>
+      <div class="replenishBoxLine replenishBoxLine3">1</div>
+      <div class="replenishBoxLine replenishBoxLine4">1</div>
+      <div class="replenishBoxLine replenishBoxLine5">1</div>
+    </div>
 
 
-
-            <el-col :span="11">
-              <div class="borderBox">
-                <div class="miniCard">门店1</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-
-                <div class="miniCard">门店1</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-              </div>
-            </el-col>
-          </el-row>
-        </div>
-        <div class="linesList">
-          <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox">1</div></el-col>
-            <el-col :span="11"><div class="borderBox">2</div></el-col>
-            <el-col :span="12"><div class="borderBox">3</div></el-col>
-          </el-row>
-        </div>
-        <div class="linesList">
-          <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox">1</div></el-col>
-            <el-col :span="11"><div class="borderBox">2</div></el-col>
-            <el-col :span="12"><div class="borderBox">3</div></el-col>
-          </el-row>
-        </div>
-        <div class="linesList">
-          <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox">1</div></el-col>
-            <el-col :span="11"><div class="borderBox">2</div></el-col>
-            <el-col :span="12"><div class="borderBox">3</div></el-col>
-          </el-row>
-        </div>
-        <div class="linesList">
-          <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox">1</div></el-col>
-            <el-col :span="11"><div class="borderBox">2</div></el-col>
-            <el-col :span="12"><div class="borderBox">3</div></el-col>
-          </el-row>
-        </div>
-      </div>
 
   </div>
 </template>
@@ -229,126 +71,36 @@ export default {
     margin-right:30px;
   }
 }
-.totalBox{
-  height:160px;
-  width:100%;
-  .totalBoxL{
-    height:160px;
-  }
-  .totalBoxR{
-    height:160px;
-    .totalBoxRT{
-      height:70px;
-      font-size:20px;
-      text-align:center;
-      position:relative;
-      .dateBox{
-        position:absolute;
-        top:0px;
-        right:0px;
-        font-size:12px;
-      }
-    }
-    .totalBoxRB{
-      .borderBox{
-        height:80px;
-      }
-    }
-  }
-}
-.borderBox{
-  border:solid 1px #666;
-}
 
-.linesBox{
-  background:#fff;
-  height:380px;
-  .borderBox{
-    height:75px;
-    padding:5px;
-    box-sizing:border-box;
-    border:none;
-  }
-  .cardBox{
-    height:50px;
-  }
-}
-.linesList:nth-child(odd){
-  background:#f3f3f3;
-}
-
-.miniCard{
-  display:inline-block;
-  width:48px;
-  height:30px;
-  margin:0 10px 5px 0;
-  background:#ccc;
-  line-height:30px;
-  text-align:center;
-}
-
-
-//卡片的全部样式
-.cardBox{
+.replenishBox{
+  height:90%;
   display:flex;
-  flex-direction:column;
-  justify-content: space-around;
-
-  height:80px;
-  text-align:center;
+  flex-direction: column;
+  justify-content:space-between;
+}
+.replenishBoxLine{
   border:solid 1px #666;
-  padding:5px;
-  .cardBoxT{
-    height:25%;
-    line-height:100%x;
+  display:flex;
+  box-sizing:border-box;
+  padding:0 20px;
+  .replenishBoxLineL{
+    width:85%
   }
-  .cardBoxM{
-    display:flex;
-    justify-content: space-around;
-
-    height:50%; 
-    line-height:100%;
-    font-size:20px;
-    font-weight:bold;
-    
-  }
-  .cardBoxB{
-    display:flex;
-    justify-content: space-around;
-    
-    height:25%;
-    line-height:100%;
+  .replenishBoxLineR{
+    width:15%
   }
 }
-
-
-// #app {
-//   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-//   margin-top: 60px;
-// }
-
-.el-container {
-  height: 100%;
+.replenishBoxLine1{
+  height:10%;
+  border:none;
+  font-size:30px;
+  margin:0 auto;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
 }
-
-.el-header{
-  background:lightseagreen;
-  font-size:20px;
-  color:#fff;
-}
-
-.a{
-  color:#111;
-  .b{
-    color:#bbb
-  }
-}
-
-.myLink.active{
-  color:red;
-}
+.replenishBoxLine2{height:20%}
+.replenishBoxLine3{height:20%}
+.replenishBoxLine4{height:20%}
+.replenishBoxLine5{height:20%}
 </style>
