@@ -1,8 +1,8 @@
 <template>
   <div class="myBox">
-    
+      
       <div class="HeadTitle">
-        <router-link to="/picking" class="myLink active">拣货进度</router-link>
+        <router-link to="/picking" class="myLink active">拣货进度{{xxx}}</router-link>
         <router-link to="/pickingReplenishment" class="myLink">拣货补货进度</router-link>
         <router-link to="/workload" class="myLink">工作量</router-link>
       </div>
@@ -189,6 +189,7 @@
 import addBtn from '../components/addBtn.vue'
 import pie from '../components/pie.vue'
 import dater from '../components/Dater.vue'
+import axios from 'axios'
 
 export default {
   name: 'app',
@@ -205,6 +206,7 @@ export default {
         titleText:"总体进度",
         percent:0.34,
       },
+      xxx:0
     };
   },
   methods: {
@@ -214,6 +216,12 @@ export default {
     handleClose(key, keyPath) {
       console.log(key, keyPath);
     }
+  },
+  mounted:function(){
+    axios.get('/json')
+      .then((response)=>{
+        this.xxx = response.data.title;        
+      })
   }
 }
 </script>
