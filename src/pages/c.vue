@@ -8,7 +8,7 @@
     </div>
 
     <div class="workloadBox">
-      <div class="workloadbaseBox workloadBoxT">111</div>
+      <div class="workloadbaseBox workloadBoxT">上海会员物流拣货工作量</div>
       <div class="workloadbaseBox workloadBoxM">222</div>
       <div class="workloadbaseBox workloadBoxB">
         <div class="workloadBoxBL">333</div>
@@ -77,7 +77,13 @@ export default {
 
 .workloadBoxT{
   height:10%;
-  border:solid 1px #666;
+  //border:solid 1px #666;
+  font-size:30px;
+  text-align:center;
+  //垂直居中
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
 }
 .workloadBoxM{
   height:41%;
