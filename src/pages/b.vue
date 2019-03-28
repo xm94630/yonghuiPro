@@ -9,10 +9,82 @@
 
     <div class="replenishBox">
       <div class="replenishBoxLine replenishBoxLine1">
-        <div>上海会员物流拣货补货进度</div>
+        上海会员物流拣货补货进度
       </div>
       <div class="replenishBoxLine replenishBoxLine2">
-        <div class="replenishBoxLineL">111</div>
+        <div class="replenishBoxLineL">
+          <div class="replenishBoxLine_title">
+            <div>当日拣货任务汇总</div>
+          </div>
+          <div class="replenishBoxLine_con">
+            <el-row :gutter="10">      
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT"> 任务总量</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">已完成</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">未完成</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">异常</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+
+            </el-row>
+
+
+
+          </div>
+        </div>
         <div class="replenishBoxLineR">1222</div>
       </div>
       <div class="replenishBoxLine replenishBoxLine3">1</div>
@@ -84,7 +156,20 @@ export default {
   box-sizing:border-box;
   padding:0 20px;
   .replenishBoxLineL{
-    width:85%
+    width:85%;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    .replenishBoxLine_title{
+      height:20%;
+      display:flex;
+      flex-direction: column;
+      justify-content:center;
+    }
+    .replenishBoxLine_con{
+      height:80%;
+      border:solid 1px red;
+    }
   }
   .replenishBoxLineR{
     width:15%
