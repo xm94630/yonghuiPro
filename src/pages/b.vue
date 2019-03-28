@@ -10,6 +10,7 @@
     <div class="replenishBox">
       <div class="replenishBoxLine replenishBoxLine1">
         上海会员物流拣货补货进度
+        <div class="dateBox">1970-01-01 18:00:00</div>
       </div>
 
       <div class="replenishBoxLine replenishBoxLine2">
@@ -419,6 +420,7 @@ export default {
   justify-content:space-between;
 }
 .replenishBoxLine{
+  position:relative;
   border:solid 1px #666;
   display:flex;
   box-sizing:border-box;
@@ -453,6 +455,8 @@ export default {
   }
 }
 .replenishBoxLine1{
+  text-align: center;
+  width:100%;
   height:10%;
   border:none;
   font-size:30px;

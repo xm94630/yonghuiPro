@@ -239,19 +239,16 @@ export default {
     height:160px;
     .totalBoxRT{
       height:70px;
-      font-size:20px;
+      font-size:30px;
       text-align:center;
       position:relative;
-      .dateBox{
-        position:absolute;
-        top:0px;
-        right:0px;
-        font-size:12px;
-      }
     }
     .totalBoxRB{
       .borderBox{
         height:80px;
+      }
+      .cardBox{
+        height:90px;
       }
     }
   }
@@ -270,7 +267,7 @@ export default {
     border:none;
   }
   .cardBox{
-    height:50px;
+    height:62px;
   }
 }
 .linesList:nth-child(odd){
@@ -285,6 +282,13 @@ export default {
   background:#ccc;
   line-height:30px;
   text-align:center;
+}
+
+.dateBox{
+  position:absolute;
+  top:0px;
+  right:0px;
+  font-size:12px;
 }
 
 

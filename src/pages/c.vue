@@ -8,7 +8,10 @@
     </div>
 
     <div class="workloadBox">
-      <div class="workloadbaseBox workloadBoxT">上海会员物流拣货工作量</div>
+      <div class="workloadbaseBox workloadBoxT">
+        上海会员物流拣货工作量
+        <div class="dateBox">1970-01-01 18:00:00</div>  
+      </div>
       <div class="workloadbaseBox workloadBoxM">
         <lineChart :percent="percent" :chartData="chartData1"/>
       </div>
@@ -100,6 +103,9 @@ export default {
   justify-content:space-between;
   height:90%;
   //border:solid 1px red;
+  .workloadbaseBox{
+    position:relative;
+  }
 }
 
 .workloadBoxT{
