@@ -1,5 +1,5 @@
 <template>
-    <div class="bingTuBox" id="bingTu"></div>
+    <div class="bingTuBox" :id="this.chartData.chartId"></div>
 </template>
 
 
@@ -59,7 +59,7 @@ export default {
   },
   mounted: function () {
     // 基于准备好的dom，初始化echarts实例
-    let myChart = echarts.init(document.getElementById('bingTu'))
+    let myChart = echarts.init(document.getElementById(this.chartData.chartId))
     myChart.setOption(this.bingTu_option)
   }
 }

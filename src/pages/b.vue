@@ -11,6 +11,7 @@
       <div class="replenishBoxLine replenishBoxLine1">
         上海会员物流拣货补货进度
       </div>
+
       <div class="replenishBoxLine replenishBoxLine2">
         <div class="replenishBoxLineL">
           <div class="replenishBoxLine_title">
@@ -87,9 +88,236 @@
         </div>
         <div class="replenishBoxLineR"><pie2 :chartData="chartData1" /></div>
       </div>
-      <div class="replenishBoxLine replenishBoxLine3">1</div>
-      <div class="replenishBoxLine replenishBoxLine4">1</div>
-      <div class="replenishBoxLine replenishBoxLine5">1</div>
+      <div class="replenishBoxLine replenishBoxLine3">
+        <div class="replenishBoxLineL">
+          <div class="replenishBoxLine_title">
+            <div>当日拣货任务汇总</div>
+          </div>
+          <div class="replenishBoxLine_con">
+            <el-row :gutter="10">      
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT"> 任务总量</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">已完成</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">未完成</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">异常</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+
+            </el-row>
+
+
+
+          </div>
+        </div>
+        <div class="replenishBoxLineR"><pie2 :chartData="chartData2" /></div>
+      </div>
+      <div class="replenishBoxLine replenishBoxLine4">
+        <div class="replenishBoxLineL">
+          <div class="replenishBoxLine_title">
+            <div>当日拣货任务汇总</div>
+          </div>
+          <div class="replenishBoxLine_con">
+            <el-row :gutter="10">      
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT"> 任务总量</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">已完成</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">未完成</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">异常</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+
+            </el-row>
+
+
+
+          </div>
+        </div>
+        <div class="replenishBoxLineR"><pie2 :chartData="chartData3" /></div>
+      </div>
+      <div class="replenishBoxLine replenishBoxLine5">
+        <div class="replenishBoxLineL">
+          <div class="replenishBoxLine_title">
+            <div>当日拣货任务汇总</div>
+          </div>
+          <div class="replenishBoxLine_con">
+            <el-row :gutter="10">      
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT"> 任务总量</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">已完成</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">未完成</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6">
+
+                <div class="cardBox">
+                  <div class="cardBoxT">异常</div>
+                  <div class="cardBoxM">
+                    <div>8888</div> 
+                    <div>8888</div> 
+                  </div>
+                  <div class="cardBoxB">
+                    <div>完成数</div> 
+                    <div>总数</div> 
+                  </div>
+                </div>
+
+              </el-col>
+
+            </el-row>
+
+
+
+          </div>
+        </div>
+        <div class="replenishBoxLineR"><pie2 :chartData="chartData4" /></div>
+      </div>
+
+
     </div>
 
 
@@ -113,6 +341,36 @@ export default {
       isCollapse: true,
       chartData1:{
         chartId:"id001",
+        titleText:"",
+        percent:0.6,
+        seriesData:[
+          {value:100, name:'异常'},
+          {value:100, name:'已完成'},
+          {value:100, name:'未完成'}
+        ],
+      },
+      chartData2:{
+        chartId:"id002",
+        titleText:"",
+        percent:0.6,
+        seriesData:[
+          {value:100, name:'异常'},
+          {value:10, name:'已完成'},
+          {value:100, name:'未完成'}
+        ],
+      },
+      chartData3:{
+        chartId:"id003",
+        titleText:"",
+        percent:0.6,
+        seriesData:[
+          {value:100, name:'异常'},
+          {value:300, name:'已完成'},
+          {value:100, name:'未完成'}
+        ],
+      },
+      chartData4:{
+        chartId:"id004",
         titleText:"",
         percent:0.6,
         seriesData:[
