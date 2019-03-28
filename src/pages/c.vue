@@ -9,10 +9,16 @@
 
     <div class="workloadBox">
       <div class="workloadbaseBox workloadBoxT">上海会员物流拣货工作量</div>
-      <div class="workloadbaseBox workloadBoxM">222</div>
+      <div class="workloadbaseBox workloadBoxM">
+        <lineChart :percent="percent" />
+      </div>
       <div class="workloadbaseBox workloadBoxB">
-        <div class="workloadBoxBL">333</div>
-        <div class="workloadBoxBR">444</div>
+        <div class="workloadBoxBL">
+          <barChart :percent="percent" />
+        </div>
+        <div class="workloadBoxBR">
+          <barChart :percent="percent" />
+        </div>
       </div>
     </div>
 
@@ -22,12 +28,14 @@
 
 <script>
 import addBtn from '../components/addBtn.vue'
-import pie from '../components/pie.vue'
+import lineChart from '../components/line.vue'
+import barChart from '../components/bar.vue'
 
 export default {
   name: 'app',
   components: {
-    pie,
+    lineChart,
+    barChart,
     addBtn
   },
   data() {
