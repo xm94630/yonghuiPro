@@ -85,7 +85,7 @@
 
           </div>
         </div>
-        <div class="replenishBoxLineR">1222</div>
+        <div class="replenishBoxLineR"><pie2 :chartData="chartData1" /></div>
       </div>
       <div class="replenishBoxLine replenishBoxLine3">1</div>
       <div class="replenishBoxLine replenishBoxLine4">1</div>
@@ -99,18 +99,28 @@
 
 <script>
 import addBtn from '../components/addBtn.vue'
-import pie from '../components/pie.vue'
+import pie2 from '../components/pie2.vue'
 
 export default {
   name: 'app',
   components: {
-    pie,
+    pie2,
     addBtn
   },
   data() {
     return {
       percent:0.6,
-      isCollapse: true
+      isCollapse: true,
+      chartData1:{
+        chartId:"id001",
+        titleText:"",
+        percent:0.6,
+        seriesData:[
+          {value:100, name:'异常'},
+          {value:100, name:'已完成'},
+          {value:100, name:'未完成'}
+        ],
+      }
     };
   },
   methods: {
@@ -156,7 +166,7 @@ export default {
   box-sizing:border-box;
   padding:0 20px;
   .replenishBoxLineL{
-    width:85%;
+    width:80%;
     display:flex;
     flex-direction: column;
     justify-content:space-between;
@@ -172,7 +182,7 @@ export default {
     }
   }
   .replenishBoxLineR{
-    width:15%
+    width:20%
   }
 }
 .replenishBoxLine1{

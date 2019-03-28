@@ -1,0 +1,77 @@
+<template>
+    <div class="bingTuBox" id="bingTu"></div>
+</template>
+
+
+<script>
+import echarts from 'echarts'
+
+//获取饼图option配置
+function getOption(data){
+
+	let option = {
+    title : {
+        text: data.titleText,
+        // subtext: '纯属虚构',
+        // x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    // legend: {
+    //     orient: 'vertical',
+    //     left: 'left',
+    //     data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+    // },
+    series : [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:data.seriesData
+            // itemStyle: {
+            //     emphasis: {
+            //         shadowBlur: 10,
+            //         shadowOffsetX: 0,
+            //         shadowColor: 'rgba(0, 0, 0, 0.5)'
+            //     }
+            // }
+        }
+    ]
+	};
+
+
+  return option
+}
+
+export default {
+  name: 'pie',
+  props: {
+    percent:Number,
+		chartData:Object
+  },
+  data(){
+    return{
+        bingTu_option:getOption(this.chartData)
+    }
+  },
+  mounted: function () {
+    // 基于准备好的dom，初始化echarts实例
+    let myChart = echarts.init(document.getElementById('bingTu'))
+    myChart.setOption(this.bingTu_option)
+  }
+}
+</script>
+
+
+<style scoped>
+.bingTuBox{
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+
+
