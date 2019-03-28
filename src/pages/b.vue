@@ -427,16 +427,25 @@ export default {
     width:80%;
     display:flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content:space-around;
     .replenishBoxLine_title{
-      height:20%;
+      height:18%;
       display:flex;
       flex-direction: column;
       justify-content:center;
     }
     .replenishBoxLine_con{
-      height:80%;
-      border:solid 1px red;
+      height:60%;
+      //border:solid 1px red;
+      .el-row{
+        height:100%;
+        .el-col{ 
+          height:100%;
+          .cardBox{
+            height:100%;
+          }
+        }
+      }
     }
   }
   .replenishBoxLineR{

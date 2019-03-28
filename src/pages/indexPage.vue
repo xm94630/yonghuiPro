@@ -294,10 +294,13 @@ export default {
   flex-direction:column;
   justify-content: space-around;
 
-  height:80px;
+  //height:80px;
   text-align:center;
   border:solid 1px #666;
+  
+  box-sizing:border-box;  
   padding:5px;
+
   .cardBoxT{
     height:25%;
     line-height:100%x;
