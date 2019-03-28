@@ -14,10 +14,10 @@
       </div>
       <div class="workloadbaseBox workloadBoxB">
         <div class="workloadBoxBL">
-          <barChart :percent="percent" />
+          <barChart :percent="percent" :chartData="chartData2" />
         </div>
         <div class="workloadBoxBR">
-          <barChart :percent="percent" />
+          <barChart :percent="percent" :chartData="chartData3" />
         </div>
       </div>
     </div>
@@ -40,6 +40,15 @@ export default {
   },
   data() {
     return {
+      chartData2:{
+        chartId:"xxxyyy",
+        titleText:"当日拣货任务汇总222",
+      },
+      chartData3:{
+        chartId:"zzz",
+        titleText:"当日拣货任务汇总333",
+      },
+
       percent:0.6,
       isCollapse: true
     };
