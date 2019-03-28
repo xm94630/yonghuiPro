@@ -21,13 +21,13 @@ function getOption(data){
 		},
     xAxis: {
         type: 'category',
-        data: ['甲', '乙', '丙', '丁','甲', '乙', '丙', '丁']
+        data: data.xAxisData,
     },
     yAxis: {
         type: 'value'
     },
     series: [{
-        data: [120, 200, 150, 80,120, 100, 150, 80],
+        data: data.seriesData,
         type: 'bar'
     }]
   };

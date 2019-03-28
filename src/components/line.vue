@@ -1,5 +1,5 @@
 <template>
-    <div class="bingTuBox" id="bingTu"></div>
+    <div class="bingTuBox" :id="chartData.chartId"></div>
 </template>
 
 
@@ -7,11 +7,11 @@
 import echarts from 'echarts'
 
 //获取饼图option配置
-function getOption(percent){
+function getOption(data){
 	let option = {
-				title:{
+		title:{
 			show:true,
-			text:"总体进度",
+			text:data.titleText,
 			x:"left",
 			textStyle:{
 				fontSize:"12",
@@ -22,13 +22,13 @@ function getOption(percent){
     xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: ['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00','7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00','14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00','21:00', '22:00', '23:00', '24:00']
+        data: data.xAxisData,
     },
     yAxis: {
         type: 'value'
     },
     series: [{
-        data: [820, 932, 901, 934, 1290, 1330, 1320,820, 932, 901, 934, 1290, 1330, 1320,1220, 932, 901, 934, 1290, 330, 120,820, 932, 901, 934],
+        data: data.seriesData,
         type: 'line',
         areaStyle: {}
     }]
@@ -40,16 +40,17 @@ function getOption(percent){
 export default {
   name: 'pie',
   props: {
-    percent:Number
+    percent:Number,
+    chartData:Object,
   },
   data(){
     return{
-        bingTu_option:getOption(this.percent)
+        bingTu_option:getOption(this.chartData)
     }
   },
   mounted: function () {
     // 基于准备好的dom，初始化echarts实例
-    let myChart = echarts.init(document.getElementById('bingTu'))
+    let myChart = echarts.init(document.getElementById(this.chartData.chartId))
     myChart.setOption(this.bingTu_option)
   }
 }

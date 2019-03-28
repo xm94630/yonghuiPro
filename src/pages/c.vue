@@ -10,7 +10,7 @@
     <div class="workloadBox">
       <div class="workloadbaseBox workloadBoxT">上海会员物流拣货工作量</div>
       <div class="workloadbaseBox workloadBoxM">
-        <lineChart :percent="percent" />
+        <lineChart :percent="percent" :chartData="chartData1"/>
       </div>
       <div class="workloadbaseBox workloadBoxB">
         <div class="workloadBoxBL">
@@ -40,13 +40,23 @@ export default {
   },
   data() {
     return {
+      chartData1:{
+        chartId:"aaa",
+        titleText:"当日拣货任务汇总",
+        xAxisData:['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00','7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00','14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00','21:00', '22:00', '23:00', '24:00'],
+        seriesData:[110, 932, 901, 934, 1290, 1330, 1320,820, 932, 901, 934, 1290, 1330, 1320,1220, 932, 901, 934, 1290, 330, 120,820, 932, 901, 934],
+      },
       chartData2:{
         chartId:"xxxyyy",
-        titleText:"当日拣货任务汇总222",
+        titleText:"人工拣货每人拣货量",
+        xAxisData:['甲', '乙', '丙', '丁','甲', '乙', '丙', '丁'],
+        seriesData:[120, 200, 150, 80,120, 100, 150, 80]
       },
       chartData3:{
         chartId:"zzz",
-        titleText:"当日拣货任务汇总333",
+        titleText:"AGV每工位拣货量",
+        xAxisData:['甲', '乙', '丙', '丁','甲', '乙', '丙', '丁'],
+        seriesData:[10, 20, 15, 80,120, 100, 150, 80]
       },
 
       percent:0.6,
