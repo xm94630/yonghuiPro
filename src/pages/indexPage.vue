@@ -18,7 +18,9 @@
             <div class="totalBoxR">
               <div class="totalBoxRT">
                 <div>上海会员物流拣货进度</div>
-                <div class="dateBox">1970-01-01 18:00:00</div>
+                <div class="dateBox">
+                  <dater />
+                </div>
               </div>
               <div class="totalBoxRB">
                 <el-row :gutter="30">
@@ -186,11 +188,13 @@
 <script>
 import addBtn from '../components/addBtn.vue'
 import pie from '../components/pie.vue'
+import dater from '../components/Dater.vue'
 
 export default {
   name: 'app',
   components: {
     pie,
+    dater,
     addBtn
   },
   data() {

@@ -10,7 +10,9 @@
     <div class="workloadBox">
       <div class="workloadbaseBox workloadBoxT">
         上海会员物流拣货工作量
-        <div class="dateBox">1970-01-01 18:00:00</div>  
+        <div class="dateBox">
+          <dater />
+        </div>  
       </div>
       <div class="workloadbaseBox workloadBoxM">
         <lineChart :percent="percent" :chartData="chartData1"/>
@@ -33,12 +35,14 @@
 import addBtn from '../components/addBtn.vue'
 import lineChart from '../components/line.vue'
 import barChart from '../components/bar.vue'
+import dater from '../components/Dater.vue'
 
 export default {
   name: 'app',
   components: {
     lineChart,
     barChart,
+    dater,
     addBtn
   },
   data() {
