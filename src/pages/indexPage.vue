@@ -72,10 +72,10 @@
         </el-row>
       </div>
       
-      <div class="linesBox borderBox MT10">
+      <div class="linesBox borderBox MT30">
         <div class="linesList">
           <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox">路线11</div></el-col>
+            <el-col :span="1"><div class="borderBox lineName">路线11</div></el-col>
             
             <el-col :span="4">
 
@@ -227,13 +227,14 @@ export default {
 
 <style lang="scss">
 .myBox{
-  font-size:12px;
-  width:1080px;
-  height:607.5px;
+  font-size:16px;
+  width:1920px;
+  height:1080px;
   margin:0 auto;
   border:solid 1px #000;
   background:#fff;
   padding:0 30px;
+  box-sizing:border-box;
 }
 .HeadTitle{
   width:100%;
@@ -245,25 +246,25 @@ export default {
   }
 }
 .totalBox{
-  height:160px;
+  height:320px;
   width:100%;
   .totalBoxL{
-    height:160px;
+    height:320px;
   }
   .totalBoxR{
-    height:160px;
+    height:320px;
     .totalBoxRT{
-      height:70px;
+      height:160px;
       font-size:30px;
       text-align:center;
       position:relative;
     }
     .totalBoxRB{
       .borderBox{
-        height:80px;
+        height:160px;
       }
       .cardBox{
-        height:90px;
+        height:160px;
       }
     }
   }
@@ -274,15 +275,19 @@ export default {
 
 .linesBox{
   background:#fff;
-  height:380px;
+  height:680px;
+  .lineName{
+    line-height:130px;
+    text-align:center;
+  }
   .borderBox{
-    height:75px;
-    padding:5px;
+    height:130px;
+    padding:10px;
     box-sizing:border-box;
     border:none;
   }
   .cardBox{
-    height:62px;
+    height:110px;
   }
 }
 .linesList:nth-child(odd){
@@ -291,11 +296,11 @@ export default {
 
 .miniCard{
   display:inline-block;
-  width:48px;
-  height:30px;
-  margin:0 10px 5px 0;
+  width:90px;
+  height:50px;
+  line-height:50px;
+  margin:0 10px 10px 0;
   background:#ccc;
-  line-height:30px;
   text-align:center;
 }
 
