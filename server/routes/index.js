@@ -20,47 +20,47 @@ router.get('/epimetheus/api/diy/report/queryReportByCode', async (ctx, next) => 
     total:{
       rate:{data:0.5},
       SKU:{
-        finish:8888,
-        total:8888,
+        finish:12,
+        total:32,
       },
       E:{
-        finish:8888,
-        total:8888,
+        finish:345,
+        total:2345,
       },
       shop:{
-        finish:8888,
-        total:8888,
+        finish:12,
+        total:23,
       },
     },
   
     lines:[
       {
         SKU:{
-          finish:222,
-          total:222,
+          finish:234,
+          total:1222,
         },
         E:{
-          finish:222,
-          total:222,
+          finish:17,
+          total:32,
         },
         shop:{
-          finish:222,
-          total:222,
+          finish:34,
+          total:23,
         },
         shopState:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2], 
       },
       {
         SKU:{
-          finish:222,
-          total:333,
+          finish:55,
+          total:438,
         },
         E:{
-          finish:222,
+          finish:1,
           total:233,
         },
         shop:{
-          finish:222,
-          total:222,
+          finish:1,
+          total:432,
         },
         shopState:[1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,2], 
       }

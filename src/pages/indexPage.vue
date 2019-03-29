@@ -2,7 +2,7 @@
   <div class="myBox">
       
       <div class="HeadTitle">
-        <router-link to="/picking" class="myLink active">拣货进度{{xxx}}</router-link>
+        <router-link to="/picking" class="myLink active">拣货进度</router-link>
         <router-link to="/pickingReplenishment" class="myLink">拣货补货进度</router-link>
         <router-link to="/workload" class="myLink">工作量</router-link>
       </div>
@@ -29,8 +29,8 @@
                     <div class="cardBox">
                       <div class="cardBoxT">SKU</div>
                       <div class="cardBoxM">
-                        <div>8888</div> 
-                        <div>8888</div> 
+                        <div>{{total.SKU.finish}}</div> 
+                        <div>{{total.SKU.total}}</div> 
                       </div>
                       <div class="cardBoxB">
                         <div>完成数</div> 
@@ -42,8 +42,8 @@
                     <div class="cardBox">
                       <div class="cardBoxT">E数</div>
                       <div class="cardBoxM">
-                        <div>8888</div> 
-                        <div>8888</div> 
+                        <div>{{total.E.finish}}</div> 
+                        <div>{{total.E.total}}</div> 
                       </div>
                       <div class="cardBoxB">
                         <div>完成数</div> 
@@ -55,8 +55,8 @@
                     <div class="cardBox">
                       <div class="cardBoxT">门店数</div>
                       <div class="cardBoxM">
-                        <div>8888</div> 
-                        <div>8888</div> 
+                        <div>{{total.shop.finish}}</div> 
+                        <div>{{total.shop.total}}</div> 
                       </div>
                       <div class="cardBoxB">
                         <div>完成数</div> 
@@ -73,7 +73,8 @@
       </div>
       
       <div class="linesBox borderBox MT30">
-        <div class="linesList">
+        
+        <div class="linesList" v-for="one in lines">
           <el-row :gutter="10">
             <el-col :span="1"><div class="borderBox lineName">路线11</div></el-col>
             
@@ -83,8 +84,8 @@
                     <div class="cardBox">
                       <div class="cardBoxT">SKU</div>
                       <div class="cardBoxM">
-                        <div>8888</div> 
-                        <div>8888</div> 
+                        <div>{{one.SKU.finish}}</div> 
+                        <div>{{one.SKU.total}}</div> 
                       </div>
                       <div class="cardBoxB">
                         <div>完成数</div> 
@@ -100,8 +101,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">E数</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>{{one.E.finish}}</div> 
+                    <div>{{one.E.total}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>完成数</div> 
@@ -116,8 +117,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">门店数</div>
                   <div class="cardBoxM">
-                    <div >8888</div> 
-                    <div >8888</div> 
+                    <div>{{one.shop.finish}}</div> 
+                    <div>{{one.shop.total}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>完成数</div> 
@@ -126,8 +127,6 @@
                 </div>
               </div>
             </el-col>
-
-
 
             <el-col :span="11">
               <div class="borderBox">
@@ -151,34 +150,9 @@
             </el-col>
           </el-row>
         </div>
-        <div class="linesList">
-          <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox">1</div></el-col>
-            <el-col :span="11"><div class="borderBox">2</div></el-col>
-            <el-col :span="12"><div class="borderBox">3</div></el-col>
-          </el-row>
-        </div>
-        <div class="linesList">
-          <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox">1</div></el-col>
-            <el-col :span="11"><div class="borderBox">2</div></el-col>
-            <el-col :span="12"><div class="borderBox">3</div></el-col>
-          </el-row>
-        </div>
-        <div class="linesList">
-          <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox">1</div></el-col>
-            <el-col :span="11"><div class="borderBox">2</div></el-col>
-            <el-col :span="12"><div class="borderBox">3</div></el-col>
-          </el-row>
-        </div>
-        <div class="linesList">
-          <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox">1</div></el-col>
-            <el-col :span="11"><div class="borderBox">2</div></el-col>
-            <el-col :span="12"><div class="borderBox">3</div></el-col>
-          </el-row>
-        </div>
+        
+
+
       </div>
 
   </div>
@@ -199,13 +173,50 @@ export default {
   },
   data() {
     return {
-      isCollapse: true,
+
       chartData:{
         chartId:"xxxyyy",
         titleText:"总体进度",
-        percent:0.34,
+        percent:0,  //数据来自接口
       },
-      xxx:0
+
+      //全部来自接口
+      total:{
+        SKU:{
+          finish:0,
+          total:0,
+        },
+        E:{
+          finish:0,
+          total:0,
+        },
+        shop:{
+          finish:0,
+          total:0,
+        },
+      },
+
+      //数据全部来自接口
+      lines:[
+        {
+          SKU:{
+            finish:0,
+            total:0,
+          },
+          E:{
+            finish:0,
+            total:0,
+          },
+          shop:{
+            finish:0,
+            total:0,
+          },
+          shopState:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2], 
+        },
+      ], 
+
+
+
     };
   },
   methods: {
@@ -222,7 +233,9 @@ export default {
     //匹配的规则是 '/epimetheus/api'
     axios.get('/epimetheus/api' + '/diy/report/queryReportByCode')
       .then((response)=>{
-        this.xxx = response.data.title;        
+        this.total             = response.data.total
+        this.lines             = response.data.lines
+        
       })
   }
 }
@@ -283,7 +296,6 @@ export default {
   background:#fff;
   height:666px;
   .lineName{
-    line-height:130px;
     text-align:center;
   }
   .borderBox{
