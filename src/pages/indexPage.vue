@@ -131,23 +131,22 @@
 
             <el-col :span="11">
               <div class="borderBox">
-                <div class="miniCard">门店1</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-
-                <div class="miniCard">门店1</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
-                <div class="miniCard">门店2</div>
+                <div class="miniCard shopUnFinish">门店1</div>
+                <div class="miniCard shopOnGoing">门店2</div>
+                <div class="miniCard shopFinish">门店3</div>
+                <div class="miniCard shopFinish">门店4</div>
+                <div class="miniCard shopFinish">门店5</div>
+                <div class="miniCard shopFinish">门店6</div>
+                <div class="miniCard shopFinish">门店7</div>
+                <div class="miniCard shopFinish">门店8</div>
+                <div class="miniCard shopFinish">门店9</div>
+                <div class="miniCard shopFinish">门店10</div>
+                <div class="miniCard shopFinish">门店2</div>
+                <div class="miniCard shopFinish">门店2</div>
+                <div class="miniCard shopFinish">门店2</div>
+                <div class="miniCard shopFinish">门店2</div>
+                <div class="miniCard shopFinish">门店2</div>
+                <div class="miniCard shopFinish">门店2</div>
               </div>
             </el-col>
           </el-row>
@@ -218,7 +217,7 @@ export default {
     }
   },
   mounted:function(){
-    axios.get('/json')
+    axios.get('/api/json')
       .then((response)=>{
         this.xxx = response.data.title;        
       })
@@ -373,5 +372,15 @@ export default {
 
 .myLink.active{
   color:red;
+}
+
+.shopUnFinish{
+  background:#999;
+}
+.shopOnGoing{
+  background:red;
+}
+.shopFinish{
+  background:green;
 }
 </style>
