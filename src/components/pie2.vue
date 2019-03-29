@@ -14,6 +14,11 @@ function getOption(data){
         text: data.titleText,
         // subtext: '纯属虚构',
         // x:'center'
+        textStyle:{
+				  fontSize:"18",
+				  color:"#666",
+				  //fontWeight:"bold",
+  			}
     },
     tooltip : {
         trigger: 'item',

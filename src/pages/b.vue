@@ -31,8 +31,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -46,8 +46,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -61,8 +61,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -76,8 +76,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -107,8 +107,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -122,8 +122,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -137,8 +137,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -152,8 +152,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -183,8 +183,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -198,8 +198,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -213,8 +213,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -228,8 +228,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -259,8 +259,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -274,8 +274,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -289,8 +289,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -304,8 +304,8 @@
                     <div>8888</div> 
                   </div>
                   <div class="cardBoxB">
-                    <div>完成数</div> 
-                    <div>总数</div> 
+                    <div>SKU</div> 
+                    <div>E数</div> 
                   </div>
                 </div>
 
@@ -435,13 +435,13 @@ export default {
     flex-direction: column;
     justify-content:space-around;
     .replenishBoxLine_title{
-      height:18%;
+      height:20%;
       display:flex;
       flex-direction: column;
       justify-content:center;
     }
     .replenishBoxLine_con{
-      height:60%;
+      height:65%;
       //border:solid 1px red;
       .el-row{
         height:100%;
@@ -463,7 +463,7 @@ export default {
   width:100%;
   height:10%;
   border:none;
-  font-size:30px;
+  font-size:50px;
   margin:0 auto;
   display:flex;
   flex-direction: column;

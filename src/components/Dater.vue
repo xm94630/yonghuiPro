@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
 .Dater{
-
+  font-size:25px;
 }
 </style>
 

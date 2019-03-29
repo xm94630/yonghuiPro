@@ -115,7 +115,7 @@ export default {
 .workloadBoxT{
   height:10%;
   //border:solid 1px #666;
-  font-size:30px;
+  font-size:50px;
   text-align:center;
   //垂直居中
   display:flex;

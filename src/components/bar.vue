@@ -14,7 +14,7 @@ function getOption(data){
 			text:data.titleText,
 			x:"left",
 			textStyle:{
-				fontSize:"12",
+				fontSize:"18",
 				color:"#666",
 				//fontWeight:"bold",
 			}

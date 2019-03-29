@@ -40,7 +40,7 @@
                   </el-col>
                   <el-col :span="8">
                     <div class="cardBox">
-                      <div class="cardBoxT">SKU</div>
+                      <div class="cardBoxT">E数</div>
                       <div class="cardBoxM">
                         <div>8888</div> 
                         <div>8888</div> 
@@ -53,7 +53,7 @@
                   </el-col>
                   <el-col :span="8">
                     <div class="cardBox">
-                      <div class="cardBoxT">SKU</div>
+                      <div class="cardBoxT">门店数</div>
                       <div class="cardBoxM">
                         <div>8888</div> 
                         <div>8888</div> 
@@ -238,8 +238,8 @@ export default {
 }
 .HeadTitle{
   width:100%;
-  height:40px;
-  line-height:40px;
+  height:60px;
+  line-height:60px;
   font-weight: bold;
   .myLink{
     margin-right:30px;
@@ -255,7 +255,7 @@ export default {
     height:320px;
     .totalBoxRT{
       height:160px;
-      font-size:30px;
+      font-size:50px;
       text-align:center;
       position:relative;
     }
@@ -265,6 +265,9 @@ export default {
       }
       .cardBox{
         height:160px;
+        .cardBoxM{
+          font-size:50px;
+        }
       }
     }
   }
@@ -275,7 +278,7 @@ export default {
 
 .linesBox{
   background:#fff;
-  height:680px;
+  height:666px;
   .lineName{
     line-height:130px;
     text-align:center;
@@ -288,6 +291,9 @@ export default {
   }
   .cardBox{
     height:110px;
+    .cardBoxM{
+      font-size:30px;
+    }
   }
 }
 .linesList:nth-child(odd){
@@ -326,25 +332,22 @@ export default {
   padding:5px;
 
   .cardBoxT{
-    height:25%;
-    line-height:100%x;
+    height:30%;
+    font-size:20px;
+    font-weight:bold;
   }
   .cardBoxM{
     display:flex;
     justify-content: space-around;
-
     height:50%; 
-    line-height:100%;
-    font-size:20px;
+    font-size:35px;
     font-weight:bold;
     
   }
   .cardBoxB{
     display:flex;
     justify-content: space-around;
-    
-    height:25%;
-    line-height:100%;
+    height:30%;
   }
 }
 
