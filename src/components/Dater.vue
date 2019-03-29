@@ -4,7 +4,6 @@
 
 
 <script>
-import echarts from 'echarts'
 import moment from 'moment'
 
 

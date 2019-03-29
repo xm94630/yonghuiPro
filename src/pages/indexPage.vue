@@ -217,7 +217,10 @@ export default {
     }
   },
   mounted:function(){
-    axios.get('/api/json')
+    //webpack对 "http://localhost:8080/epimetheus/api/diy/report/queryReportByCode" 代理，
+    //代理访问   "http://localhost:3000/epimetheus/api/diy/report/queryReportByCode"
+    //匹配的规则是 '/epimetheus/api'
+    axios.get('/epimetheus/api' + '/diy/report/queryReportByCode')
       .then((response)=>{
         this.xxx = response.data.title;        
       })
