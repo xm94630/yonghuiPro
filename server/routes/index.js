@@ -47,7 +47,19 @@ router.get('/epimetheus/api/diy/report/queryReportByCode', async (ctx, next) => 
           finish:34,
           total:23,
         },
-        shopState:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2], 
+        shopState:[{
+          name:'绍兴店',
+          state:0,
+        },{
+          name:'南京店',
+          state:1,
+        },{
+          name:'北京店',
+          state:2,
+        },{
+          name:'广州店',
+          state:2,
+        }], 
       },
       {
         SKU:{
@@ -62,7 +74,11 @@ router.get('/epimetheus/api/diy/report/queryReportByCode', async (ctx, next) => 
           finish:1,
           total:432,
         },
-        shopState:[1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,2], 
+        shopState:[{
+            name:'大兴店',
+            state:1,
+          }], 
+        
       }
 
     ]

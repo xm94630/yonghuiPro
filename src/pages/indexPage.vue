@@ -130,22 +130,21 @@
 
             <el-col :span="11">
               <div class="borderBox">
-                <div class="miniCard shopUnFinish">门店1</div>
-                <div class="miniCard shopOnGoing">门店2</div>
-                <div class="miniCard shopFinish">门店3</div>
-                <div class="miniCard shopFinish">门店4</div>
-                <div class="miniCard shopFinish">门店5</div>
-                <div class="miniCard shopFinish">门店6</div>
-                <div class="miniCard shopFinish">门店7</div>
-                <div class="miniCard shopFinish">门店8</div>
-                <div class="miniCard shopFinish">门店9</div>
-                <div class="miniCard shopFinish">门店10</div>
-                <div class="miniCard shopFinish">门店2</div>
-                <div class="miniCard shopFinish">门店2</div>
-                <div class="miniCard shopFinish">门店2</div>
-                <div class="miniCard shopFinish">门店2</div>
-                <div class="miniCard shopFinish">门店2</div>
-                <div class="miniCard shopFinish">门店2</div>
+
+                <template v-for="oneShop in one.shopState">
+                  <template v-if="oneShop.state === 0">
+                    <div class="miniCard shopUnFinish">{{oneShop.name}}</div>
+                  </template>
+                  <template v-else-if="oneShop.state === 1">
+                    <div class="miniCard shopOnGoing">{{oneShop.name}}</div>
+                  </template>
+                  <template v-else-if="oneShop.state === 2">
+                    <div class="miniCard shopFinish">{{oneShop.name}}</div>
+                  </template>
+                </template>
+                
+
+
               </div>
             </el-col>
           </el-row>
@@ -211,7 +210,10 @@ export default {
             finish:0,
             total:0,
           },
-          shopState:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2], 
+          shopState:[{
+            name:'绍兴店',
+            state:0,
+          }]
         },
       ], 
 
