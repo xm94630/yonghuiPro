@@ -76,7 +76,7 @@
         
         <div class="linesList" v-for="one in lines">
           <el-row :gutter="10">
-            <el-col :span="1"><div class="borderBox lineName">路线11</div></el-col>
+            <el-col :span="1"><div class="borderBox lineName">{{one.lineName}}</div></el-col>
             
             <el-col :span="4">
 
@@ -213,7 +213,8 @@ export default {
           shopState:[{
             name:'绍兴店',
             state:0,
-          }]
+          }],
+          lineName:'线路1'
         },
       ], 
 
@@ -223,10 +224,8 @@ export default {
   },
   methods: {
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath);
     }
   },
   mounted:function(){
@@ -238,7 +237,11 @@ export default {
         this.total             = response.data.total
         this.lines             = response.data.lines
         
+        this.$forceUpdate()
+
       })
+    
+
   }
 }
 </script>

@@ -36,6 +36,7 @@ import addBtn from '../components/addBtn.vue'
 import lineChart from '../components/line.vue'
 import barChart from '../components/bar.vue'
 import dater from '../components/Dater.vue'
+import axios from 'axios'
 
 export default {
   name: 'app',
@@ -50,8 +51,8 @@ export default {
       chartData1:{
         chartId:"aaa",
         titleText:"当日拣货任务汇总",
-        xAxisData:['0:00', '1:00', '2:00', '3:00', '4:00', '5:00', '6:00','7:00', '8:00', '9:00', '10:00', '11:00', '12:00', '13:00','14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00','21:00', '22:00', '23:00', '24:00'],
-        seriesData:[110, 932, 901, 934, 1290, 1330, 1320,820, 932, 901, 934, 1290, 1330, 1320,1220, 932, 901, 934, 1290, 330, 120,820, 932, 901, 934],
+        xAxisData:['0:00',"1:00"],
+        seriesData:[100,200],
       },
       chartData2:{
         chartId:"xxxyyy",
@@ -72,12 +73,23 @@ export default {
   },
   methods: {
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath);
     }
+  },
+  
+  mounted:function(){
+    //webpack对 "http://localhost:8080/epimetheus/api/diy/report/queryReportByCode/3" 代理，
+    //代理访问   "http://localhost:3000/epimetheus/api/diy/report/queryReportByCode/3"
+    //匹配的规则是 '/epimetheus/api'
+    axios.get('/epimetheus/api' + '/diy/report/queryReportByCode/3')
+      .then((response)=>{
+        //更新图标1
+        this.chartData1.xAxisData  = response.data.total.data.xAxis.data
+        this.chartData1.seriesData = response.data.total.data.series[0].data 
+      })
   }
+
 }
 </script>
 

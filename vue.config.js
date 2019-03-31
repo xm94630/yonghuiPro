@@ -3,9 +3,9 @@ module.exports={
     configureWebpack: {
         devServer: {
             proxy: {
-                '/api': {
+                '/epimetheus/api': {
                     target: 'http://localhost:3000/',
-                    pathRewrite: {'^/api' : ''},      
+                    //pathRewrite: {'^/api' : ''},      
                     changeOrigin: true,     // target是域名的话，需要这个参数
                     secure: false,          // 设置支持https协议的代理
                   },
