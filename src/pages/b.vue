@@ -1,7 +1,5 @@
 <template>
   <div class="myBox">
-
-    <card title="任务总量" text1="SKU" text2="E数" data1="100" data2="200" />
     
     <div class="HeadTitle">
       <router-link to="/picking" class="myLink">拣货进度</router-link>
@@ -23,71 +21,21 @@
             <div>当日拣货任务汇总</div>
           </div>
           <div class="replenishBoxLine_con">
+          
             <el-row :gutter="10">      
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT"> 任务总量</div>
-                  <div class="cardBoxM">
-                    <div>{{total.taskTotal.SKU}}</div> 
-                    <div>{{total.taskTotal.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="total.taskTotal.SKU" :data2="total.taskTotal.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">已完成</div>
-                  <div class="cardBoxM">
-                    <div>{{total.finish.SKU}}</div> 
-                    <div>{{total.finish.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="total.finish.SKU" :data2="total.finish.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">未完成</div>
-                  <div class="cardBoxM">
-                    <div>{{total.unfinish.SKU}}</div> 
-                    <div>{{total.unfinish.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="total.unfinish.SKU" :data2="total.unfinish.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">异常</div>
-                  <div class="cardBoxM">
-                    <div>{{total.abnormal.SKU}}</div> 
-                    <div>{{total.abnormal.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="total.abnormal.SKU" :data2="total.abnormal.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
-
             </el-row>
-
-
 
           </div>
         </div>
@@ -484,7 +432,6 @@ export default {
     //匹配的规则是 '/epimetheus/api'
     axios.get('/epimetheus/api' + '/diy/report/queryReportByCode/2')
       .then((response)=>{
-        console.log(123)
 
         //卡片数据
         this.total = response.data.total;

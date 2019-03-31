@@ -19,8 +19,8 @@ export default {
 		title:String,
 		text1:String,
 		text2:String,
-		data1:String,
-		data2:String,
+		data1:Number,
+		data2:Number,
 		cardData:Object,
   },
   mounted: function () {}
