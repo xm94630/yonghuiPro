@@ -322,6 +322,7 @@ export default {
       .then((response)=>{
 
         //这部分数据后端不按照前端约定实现，显得有点臃肿..
+        //这里数据虽然改变多个，但不会触发多个渲染。
         this.lines.total.taskTotal = response.data.total.taskTotal;
         this.lines.total.finish = response.data.total.finish;
         this.lines.total.unfinish = response.data.total.unfinish;
