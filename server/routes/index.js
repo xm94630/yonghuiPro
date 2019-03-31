@@ -99,37 +99,37 @@ router.get('/epimetheus/api/diy/report/queryReportByCode/2', async (ctx, next) =
   
       taskTotal:{
   
-        SKU:888,
+        SKU:10,
   
-        E:8888,
+        E:22,
   
       },
   
       finish:{
   
-        SKU:888,
+        SKU:1,
   
-        E:8888,
+        E:2,
   
       },
   
       unfinish:{
   
-        SKU:888,
+        SKU:3,
   
-        E:8888,
+        E:4,
   
       },
   
       abnormal :{
   
-        SKU:888,
+        SKU:5,
   
-        E:8888,
+        E:6,
   
       },
   
-      pie:[200,200,300] //已完成、未完成、异常
+      pie:[100,200,300] //已完成、未完成、异常
   
     },
   
@@ -137,9 +137,9 @@ router.get('/epimetheus/api/diy/report/queryReportByCode/2', async (ctx, next) =
   
       taskTotal:{
   
-        SKU:888,
+        SKU:2,
   
-        E:8888,
+        E:3,
   
       },
   

@@ -64,6 +64,7 @@ export default {
     }
   },
   mounted: function () {
+    console.log(this.bingTu_option)
     // 基于准备好的dom，初始化echarts实例
     this.myChart = echarts.init(document.getElementById(this.chartData.chartId))
     this.myChart.setOption(this.bingTu_option)
