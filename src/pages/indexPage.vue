@@ -234,13 +234,10 @@ export default {
     //匹配的规则是 '/epimetheus/api'
     axios.get('/epimetheus/api' + '/diy/report/queryReportByCode')
       .then((response)=>{
+        this.chartData.percent = response.data.total.rate.data
         this.total             = response.data.total
         this.lines             = response.data.lines
-        
-        this.$forceUpdate()
-
-      })
-    
+      })    
 
   }
 }

@@ -100,13 +100,22 @@ export default {
   },
   data(){
     return{
-        bingTu_option:getOption(this.chartData)
+        bingTu_option:getOption(this.chartData),
+				myChart:null,
     }
   },
   mounted: function () {
     // 基于准备好的dom，初始化echarts实例
-    let myChart = echarts.init(document.getElementById(this.chartData.chartId))
-    myChart.setOption(this.bingTu_option)
+    this.myChart = echarts.init(document.getElementById(this.chartData.chartId))
+    this.myChart.setOption(this.bingTu_option)
+  },
+	watch: {
+    'chartData': {
+      handler:function (val, oldVal) {
+        this.myChart.setOption(getOption(val))
+      },
+      deep: true
+    },
   }
 }
 </script>
