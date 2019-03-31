@@ -8,6 +8,7 @@
     </div>
 
     <div class="replenishBox">
+
       <div class="replenishBoxLine replenishBoxLine1">
         上海会员物流拣货补货进度
         <div class="dateBox">
@@ -21,7 +22,7 @@
             <div>当日拣货任务汇总</div>
           </div>
           <div class="replenishBoxLine_con">
-          
+
             <el-row :gutter="10">      
               <el-col :span="6">
                 <card :data1="total.taskTotal.SKU" :data2="total.taskTotal.E" title="任务总量" text1="SKU" text2="E数" />
@@ -41,229 +42,85 @@
         </div>
         <div class="replenishBoxLineR"><pie2 :chartData="chartData1" /></div>
       </div>
+
       <div class="replenishBoxLine replenishBoxLine3">
         <div class="replenishBoxLineL">
           <div class="replenishBoxLine_title">
             <div>DC拣货任务</div>
           </div>
           <div class="replenishBoxLine_con">
-            <el-row :gutter="10">      
+            <el-row :gutter="10">  
+
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT"> 任务总量</div>
-                  <div class="cardBoxM">
-                    <div>{{DCPicking.abnormal.SKU}}</div> 
-                    <div>{{DCPicking.abnormal.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="DCPicking.taskTotal.SKU" :data2="DCPicking.taskTotal.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">已完成</div>
-                  <div class="cardBoxM">
-                    <div>{{DCPicking.finish.SKU}}</div> 
-                    <div>{{DCPicking.finish.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="DCPicking.finish.SKU" :data2="DCPicking.finish.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">未完成</div>
-                  <div class="cardBoxM">
-                    <div>{{DCPicking.unfinish.SKU}}</div> 
-                    <div>{{DCPicking.unfinish.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="DCPicking.unfinish.SKU" :data2="DCPicking.unfinish.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">异常</div>
-                  <div class="cardBoxM">
-                    <div>{{DCPicking.abnormal.SKU}}</div> 
-                    <div>{{DCPicking.abnormal.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="DCPicking.abnormal.SKU" :data2="DCPicking.abnormal.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
 
             </el-row>
-
-
 
           </div>
         </div>
         <div class="replenishBoxLineR"><pie2 :chartData="chartData2" /></div>
       </div>
+
       <div class="replenishBoxLine replenishBoxLine4">
         <div class="replenishBoxLineL">
           <div class="replenishBoxLine_title">
             <div>AGV拣货任务</div>
           </div>
           <div class="replenishBoxLine_con">
-            <el-row :gutter="10">      
+            <el-row :gutter="10">  
+
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT"> 任务总量</div>
-                  <div class="cardBoxM">
-                    <div>{{AGVPicking.abnormal.SKU}}</div> 
-                    <div>{{AGVPicking.abnormal.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="AGVPicking.taskTotal.SKU" :data2="AGVPicking.taskTotal.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">已完成</div>
-                  <div class="cardBoxM">
-                    <div>{{AGVPicking.finish.SKU}}</div> 
-                    <div>{{AGVPicking.finish.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="AGVPicking.finish.SKU" :data2="AGVPicking.finish.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">未完成</div>
-                  <div class="cardBoxM">
-                    <div>{{AGVPicking.unfinish.SKU}}</div> 
-                    <div>{{AGVPicking.unfinish.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="AGVPicking.unfinish.SKU" :data2="AGVPicking.unfinish.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">异常</div>
-                  <div class="cardBoxM">
-                    <div>{{AGVPicking.abnormal.SKU}}</div> 
-                    <div>{{AGVPicking.abnormal.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="AGVPicking.abnormal.SKU" :data2="AGVPicking.abnormal.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
 
             </el-row>
-
-
 
           </div>
         </div>
         <div class="replenishBoxLineR"><pie2 :chartData="chartData3" /></div>
       </div>
+
       <div class="replenishBoxLine replenishBoxLine5">
         <div class="replenishBoxLineL">
           <div class="replenishBoxLine_title">
             <div>DC补货任务</div>
           </div>
           <div class="replenishBoxLine_con">
-            <el-row :gutter="10">      
+            <el-row :gutter="10">  
+
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT"> 任务总量</div>
-                  <div class="cardBoxM">
-                    <div>{{DCReplenish.taskTotal.SKU}}</div> 
-                    <div>{{DCReplenish.taskTotal.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="DCReplenish.taskTotal.SKU" :data2="DCReplenish.taskTotal.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">已完成</div>
-                  <div class="cardBoxM">
-                    <div>{{DCReplenish.finish.SKU}}</div> 
-                    <div>{{DCReplenish.finish.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="DCReplenish.finish.SKU" :data2="DCReplenish.finish.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">未完成</div>
-                  <div class="cardBoxM">
-                    <div>{{DCReplenish.unfinish.SKU}}</div> 
-                    <div>{{DCReplenish.unfinish.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
+                <card :data1="DCReplenish.unfinish.SKU" :data2="DCReplenish.unfinish.E" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-
-                <div class="cardBox">
-                  <div class="cardBoxT">异常</div>
-                  <div class="cardBoxM">
-                    <div>{{DCReplenish.abnormal.SKU}}</div> 
-                    <div>{{DCReplenish.abnormal.E}}</div> 
-                  </div>
-                  <div class="cardBoxB">
-                    <div>SKU</div> 
-                    <div>E数</div> 
-                  </div>
-                </div>
-
-              </el-col>
+                <card :data1="DCReplenish.abnormal.SKU" :data2="DCReplenish.abnormal.E" title="任务总量" text1="SKU" text2="E数" />
+              </el-col>  
 
             </el-row>
-
-
 
           </div>
         </div>
