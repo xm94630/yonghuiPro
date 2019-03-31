@@ -27,8 +27,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT"> 任务总量</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -42,8 +42,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">已完成</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -57,8 +57,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">未完成</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -72,8 +72,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">异常</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -103,8 +103,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT"> 任务总量</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -118,8 +118,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">已完成</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -133,8 +133,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">未完成</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -148,8 +148,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">异常</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -179,8 +179,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT"> 任务总量</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -194,8 +194,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">已完成</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -209,8 +209,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">未完成</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -224,8 +224,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">异常</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -255,8 +255,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT"> 任务总量</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -270,8 +270,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">已完成</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -285,8 +285,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">未完成</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -300,8 +300,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">异常</div>
                   <div class="cardBoxM">
-                    <div>8888</div> 
-                    <div>8888</div> 
+                    <div>11</div> 
+                    <div>11</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
