@@ -27,8 +27,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT"> 任务总量</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{total.taskTotal.SKU}}</div> 
+                    <div>{{total.taskTotal.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -42,8 +42,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">已完成</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{total.finish.SKU}}</div> 
+                    <div>{{total.finish.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -57,8 +57,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">未完成</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{total.unfinish.SKU}}</div> 
+                    <div>{{total.unfinish.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -72,8 +72,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">异常</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{total.abnormal.SKU}}</div> 
+                    <div>{{total.abnormal.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -94,7 +94,7 @@
       <div class="replenishBoxLine replenishBoxLine3">
         <div class="replenishBoxLineL">
           <div class="replenishBoxLine_title">
-            <div>当日拣货任务汇总</div>
+            <div>DC拣货任务</div>
           </div>
           <div class="replenishBoxLine_con">
             <el-row :gutter="10">      
@@ -103,8 +103,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT"> 任务总量</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{DCPicking.abnormal.SKU}}</div> 
+                    <div>{{DCPicking.abnormal.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -118,8 +118,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">已完成</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{DCPicking.finish.SKU}}</div> 
+                    <div>{{DCPicking.finish.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -133,8 +133,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">未完成</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{DCPicking.unfinish.SKU}}</div> 
+                    <div>{{DCPicking.unfinish.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -148,8 +148,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">异常</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{DCPicking.abnormal.SKU}}</div> 
+                    <div>{{DCPicking.abnormal.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -170,7 +170,7 @@
       <div class="replenishBoxLine replenishBoxLine4">
         <div class="replenishBoxLineL">
           <div class="replenishBoxLine_title">
-            <div>当日拣货任务汇总</div>
+            <div>AGV拣货任务</div>
           </div>
           <div class="replenishBoxLine_con">
             <el-row :gutter="10">      
@@ -179,8 +179,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT"> 任务总量</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{AGVPicking.abnormal.SKU}}</div> 
+                    <div>{{AGVPicking.abnormal.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -194,8 +194,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">已完成</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{AGVPicking.finish.SKU}}</div> 
+                    <div>{{AGVPicking.finish.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -209,8 +209,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">未完成</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{AGVPicking.unfinish.SKU}}</div> 
+                    <div>{{AGVPicking.unfinish.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -224,8 +224,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">异常</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{AGVPicking.abnormal.SKU}}</div> 
+                    <div>{{AGVPicking.abnormal.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -246,7 +246,7 @@
       <div class="replenishBoxLine replenishBoxLine5">
         <div class="replenishBoxLineL">
           <div class="replenishBoxLine_title">
-            <div>当日拣货任务汇总</div>
+            <div>DC补货任务</div>
           </div>
           <div class="replenishBoxLine_con">
             <el-row :gutter="10">      
@@ -255,8 +255,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT"> 任务总量</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{DCReplenish.taskTotal.SKU}}</div> 
+                    <div>{{DCReplenish.taskTotal.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -270,8 +270,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">已完成</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{DCReplenish.finish.SKU}}</div> 
+                    <div>{{DCReplenish.finish.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -285,8 +285,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">未完成</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{DCReplenish.unfinish.SKU}}</div> 
+                    <div>{{DCReplenish.unfinish.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -300,8 +300,8 @@
                 <div class="cardBox">
                   <div class="cardBoxT">异常</div>
                   <div class="cardBoxM">
-                    <div>11</div> 
-                    <div>11</div> 
+                    <div>{{DCReplenish.abnormal.SKU}}</div> 
+                    <div>{{DCReplenish.abnormal.E}}</div> 
                   </div>
                   <div class="cardBoxB">
                     <div>SKU</div> 
@@ -332,6 +332,7 @@
 import addBtn from '../components/addBtn.vue'
 import pie2 from '../components/pie2.vue'
 import dater from '../components/Dater.vue'
+import axios from 'axios'
 
 export default {
   name: 'app',
@@ -344,44 +345,122 @@ export default {
     return {
       percent:0.6,
       isCollapse: true,
+
+      //汇总
+      total:{  
+        taskTotal:{
+          SKU:0,
+          E:0,
+        },
+        finish:{
+          SKU:0,
+          E:0,
+        },
+        unfinish:{
+          SKU:0,
+          E:0,
+        },
+        abnormal :{
+          SKU:0,
+          E:0,
+        },
+      },
+
+      //DC拣货
+      DCPicking:{
+        taskTotal:{
+          SKU:0,
+          E:0,
+        },
+        finish:{
+          SKU:0,
+          E:0,
+        },
+        unfinish:{
+          SKU:0,
+          E:0,
+        },
+        abnormal :{
+          SKU:0,
+          E:0,
+        },
+      },
+
+      //AGV拣货
+      AGVPicking:{
+        taskTotal:{
+          SKU:0,
+          E:0,
+        },
+        finish:{
+          SKU:0,
+          E:0,
+        },
+        unfinish:{
+          SKU:0,
+          E:0,
+        },
+        abnormal :{
+          SKU:0,
+          E:0,
+        },
+      },
+
+      //补货
+      DCReplenish:{  
+        taskTotal:{
+          SKU:0,
+          E:0,
+        },
+        finish:{
+          SKU:0,
+          E:0,
+        },
+        unfinish:{
+          SKU:0,
+          E:0,
+        },
+        abnormal :{
+          SKU:0,
+          E:0,
+        },  
+      },
+
+
       chartData1:{
         chartId:"id001",
         titleText:"",
-        percent:0.6,
         seriesData:[
-          {value:100, name:'异常'},
-          {value:100, name:'已完成'},
-          {value:100, name:'未完成'}
+          {value:0, name:'已完成'},
+          {value:0, name:'未完成'},
+          {value:0, name:'异常'}
         ],
       },
       chartData2:{
         chartId:"id002",
         titleText:"",
-        percent:0.6,
         seriesData:[
-          {value:100, name:'异常'},
-          {value:10, name:'已完成'},
-          {value:100, name:'未完成'}
+          {value:0, name:'已完成'},
+          {value:0, name:'未完成'},
+          {value:0, name:'异常'}
         ],
       },
       chartData3:{
         chartId:"id003",
         titleText:"",
-        percent:0.6,
         seriesData:[
-          {value:100, name:'异常'},
-          {value:300, name:'已完成'},
-          {value:100, name:'未完成'}
+          {value:0, name:'已完成'},
+          {value:0, name:'未完成'},
+          {value:0, name:'异常'}
         ],
       },
       chartData4:{
         chartId:"id004",
         titleText:"",
-        percent:0.6,
         seriesData:[
-          {value:100, name:'异常'},
-          {value:100, name:'已完成'},
-          {value:100, name:'未完成'}
+          {value:0, name:'已完成'},
+          {value:0, name:'未完成'},
+          {value:0, name:'异常'}
         ],
       }
     };
@@ -393,6 +472,39 @@ export default {
     handleClose(key, keyPath) {
       //console.log(key, keyPath);
     }
+  },
+  mounted:function(){
+    //webpack对 "http://localhost:8080/epimetheus/api/diy/report/queryReportByCode/2" 代理，
+    //代理访问   "http://localhost:3000/epimetheus/api/diy/report/queryReportByCode/2"
+    //匹配的规则是 '/epimetheus/api'
+    axios.get('/epimetheus/api' + '/diy/report/queryReportByCode/2')
+      .then((response)=>{
+        console.log(123)
+
+        //卡片数据
+        this.total = response.data.total;
+        this.DCPicking = response.data.DCPicking;
+        this.AGVPicking = response.data.AGVPicking;
+        this.DCReplenish = response.data.DCReplenish;
+        //饼图数据
+        //这部分数据后端不按照前端约定实现，显得有点臃肿..
+        this.chartData1.seriesData[0].value = response.data.total.pie[0]
+        this.chartData1.seriesData[1].value = response.data.total.pie[1]
+        this.chartData1.seriesData[2].value = response.data.total.pie[2]
+
+        this.chartData2.seriesData[0].value = response.data.DCPicking.pie[0]
+        this.chartData2.seriesData[1].value = response.data.DCPicking.pie[1]
+        this.chartData2.seriesData[2].value = response.data.DCPicking.pie[2]
+
+        this.chartData3.seriesData[0].value = response.data.AGVPicking.pie[0]
+        this.chartData3.seriesData[1].value = response.data.AGVPicking.pie[1]
+        this.chartData3.seriesData[2].value = response.data.AGVPicking.pie[2]
+
+        this.chartData4.seriesData[0].value = response.data.DCReplenish.pie[0]
+        this.chartData4.seriesData[1].value = response.data.DCReplenish.pie[1]
+        this.chartData4.seriesData[2].value = response.data.DCReplenish.pie[2]
+        
+      })
   }
 }
 </script>

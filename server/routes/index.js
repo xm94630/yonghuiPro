@@ -129,7 +129,7 @@ router.get('/epimetheus/api/diy/report/queryReportByCode/2', async (ctx, next) =
   
       },
   
-  pie:[100,200,300] //已完成、未完成、异常
+      pie:[200,200,300] //已完成、未完成、异常
   
     },
   
@@ -167,7 +167,7 @@ router.get('/epimetheus/api/diy/report/queryReportByCode/2', async (ctx, next) =
   
       },
   
-  pie:[100,200,300] //已完成、未完成、异常
+  pie:[500,100,700] //已完成、未完成、异常
   
     },
   
