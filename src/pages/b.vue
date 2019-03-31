@@ -1,7 +1,7 @@
 <template>
   <div class="myBox">
 
-    <card title="任务总量" text1="SKU" text2="E数" :cardData="arr" />
+    <!--<card title="任务总量" text1="SKU" text2="E数" :cardData="arr" />-->
     
     <div class="HeadTitle">
       <router-link to="/picking" class="myLink">拣货进度</router-link>
@@ -346,7 +346,7 @@ export default {
   data() {
     return {
 
-      arr:[{value:100},{value:200}],
+      //arr:[{value:100},{value:200}],
 
       percent:0.6,
       isCollapse: true,
