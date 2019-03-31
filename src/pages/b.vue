@@ -1,7 +1,7 @@
 <template>
   <div class="myBox">
 
-    <!--<card title="任务总量" text1="SKU" text2="E数" :cardData="arr" />-->
+    <card title="任务总量" text1="SKU" text2="E数" data1="100" data2="200" />
     
     <div class="HeadTitle">
       <router-link to="/picking" class="myLink">拣货进度</router-link>

@@ -2,12 +2,12 @@
 	<div class="cardBox">
 		<div class="cardBoxT">{{title}}</div>
 		<div class="cardBoxM">
-			<div>{{cardData[0].value || 999}}</div> 
-			<div>{{cardData[1].value || 999}}</div> 
+			<div>{{(cardData&&cardData[0]&&cardData[0].value) || data1 || 999}}</div> 
+			<div>{{(cardData&&cardData[1]&&cardData[1].value) || data2 || 999}}</div> 
 		</div>
 		<div class="cardBoxB">
-			<div>{{cardData[0].name || text1}}</div> 
-			<div>{{cardData[1].name || text2}}</div> 
+			<div>{{(cardData&&cardData[0]&&cardData[0].name) || text1}}</div> 
+			<div>{{(cardData&&cardData[0]&&cardData[0].name) || text2}}</div> 
 		</div>
   </div>
 </template>
@@ -19,9 +19,10 @@ export default {
 		title:String,
 		text1:String,
 		text2:String,
+		data1:String,
+		data2:String,
 		cardData:Object,
   },
-  data(){},
   mounted: function () {}
 }
 </script>
