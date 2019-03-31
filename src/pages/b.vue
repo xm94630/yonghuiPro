@@ -22,7 +22,20 @@
         <div class="replenishBoxLine replenishBoxLineHeight">
           <div class="replenishBoxLineL">
             <div class="replenishBoxLine_title">
-              <div>当日拣货任务汇总</div>
+
+              <div v-if="key === 'total'">
+                当日拣货任务汇总
+              </div>
+              <div v-else-if="key === 'AGVPicking'">
+                AGV拣货任务
+              </div>
+              <div v-else-if="key === 'DCPicking'">
+                DC拣货任务
+              </div>
+              <div v-else>
+                DC补货任务
+              </div>
+
             </div>
             <div class="replenishBoxLine_con">
 
@@ -31,13 +44,13 @@
                   <card :data1="lines[key].taskTotal.SKU" :data2="lines[key].taskTotal.E" title="任务总量" text1="SKU" text2="E数" />
                 </el-col>
                 <el-col :span="6">
-                  <card :data1="lines[key].finish.SKU" :data2="lines[key].finish.E" title="任务总量" text1="SKU" text2="E数" />
+                  <card :data1="lines[key].finish.SKU" :data2="lines[key].finish.E" title="已完成" text1="SKU" text2="E数" />
                 </el-col>
                 <el-col :span="6">
-                  <card :data1="lines[key].unfinish.SKU" :data2="lines[key].unfinish.E" title="任务总量" text1="SKU" text2="E数" />
+                  <card :data1="lines[key].unfinish.SKU" :data2="lines[key].unfinish.E" title="未完成" text1="SKU" text2="E数" />
                 </el-col>
                 <el-col :span="6">
-                  <card :data1="lines[key].abnormal.SKU" :data2="lines[key].abnormal.E" title="任务总量" text1="SKU" text2="E数" />
+                  <card :data1="lines[key].abnormal.SKU" :data2="lines[key].abnormal.E" title="异常" text1="SKU" text2="E数" />
                 </el-col>
               </el-row>
 
