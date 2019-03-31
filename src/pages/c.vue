@@ -57,14 +57,14 @@ export default {
       chartData2:{
         chartId:"xxxyyy",
         titleText:"人工拣货每人拣货量",
-        xAxisData:['甲', '乙', '丙', '丁','甲', '乙', '丙', '丁'],
-        seriesData:[120, 200, 150, 80,120, 100, 150, 80]
+        xAxisData:['甲', '乙'],
+        seriesData:[120, 200]
       },
       chartData3:{
         chartId:"zzz",
         titleText:"AGV每工位拣货量",
-        xAxisData:['甲', '乙', '丙', '丁','甲', '乙', '丙', '丁'],
-        seriesData:[10, 20, 15, 80,120, 100, 150, 80]
+        xAxisData:['甲', '乙'],
+        seriesData:[10, 20]
       },
 
       percent:0.6,
@@ -87,6 +87,12 @@ export default {
         //更新图标1
         this.chartData1.xAxisData  = response.data.total.data.xAxis.data
         this.chartData1.seriesData = response.data.total.data.series[0].data 
+        //更新图标2
+        this.chartData2.xAxisData  = response.data.people.data.xAxis.data
+        this.chartData2.seriesData = response.data.people.data.series[0].data 
+        //更新图标3
+        this.chartData3.xAxisData  = response.data.AGV.data.xAxis.data
+        this.chartData3.seriesData = response.data.AGV.data.series[0].data 
       })
   }
 

@@ -6,8 +6,6 @@
 <script>
 import echarts from 'echarts'
 
-let myChart=null;
-
 //获取饼图option配置
 function getOption(data){
 	let option = {
@@ -47,18 +45,19 @@ export default {
   },
   data(){
     return{
-        bingTu_option:getOption(this.chartData)
+        bingTu_option:getOption(this.chartData),
+        myChart:null
     }
   },
   mounted: function () {
     // 基于准备好的dom，初始化echarts实例
-    myChart = echarts.init(document.getElementById(this.chartData.chartId))
-    myChart.setOption(this.bingTu_option)
+    this.myChart = echarts.init(document.getElementById(this.chartData.chartId))
+    this.myChart.setOption(this.bingTu_option)
   },
   watch: {
     'chartData': {
       handler:function (val, oldVal) {
-        myChart.setOption(getOption(val))
+        this.myChart.setOption(getOption(val))
       },
       deep: true
     },

@@ -368,7 +368,7 @@ router.get('/epimetheus/api/diy/report/queryReportByCode/3', async (ctx, next) =
   
             name:'2011',
   
-            data:[10, 52, 200, 334, 390, 330, 220],
+            data:[1000, 52, 200, 334, 390, 330, 220],
   
           },
   
