@@ -1,5 +1,7 @@
 <template>
   <div class="myBox">
+
+    <card title="任务总量" text1="SKU" text2="E数" :cardData="arr" />
     
     <div class="HeadTitle">
       <router-link to="/picking" class="myLink">拣货进度</router-link>
@@ -329,9 +331,9 @@
 </template>
 
 <script>
-import addBtn from '../components/addBtn.vue'
 import pie2 from '../components/pie2.vue'
 import dater from '../components/Dater.vue'
+import card from '../components/card.vue'
 import axios from 'axios'
 
 export default {
@@ -339,10 +341,13 @@ export default {
   components: {
     pie2,
     dater,
-    addBtn
+    card
   },
   data() {
     return {
+
+      arr:[{value:100},{value:200}],
+
       percent:0.6,
       isCollapse: true,
 
