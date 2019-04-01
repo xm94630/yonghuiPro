@@ -10,6 +10,7 @@ import echarts from 'echarts'
 function getOption(data){
 
 	let option = {
+    color:['#a6c87e', '#ffd385','#f49999'],
     title : {
         text: data.titleText,
         // subtext: '纯属虚构',

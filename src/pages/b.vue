@@ -7,7 +7,7 @@
     </div>
 
     <div class="replenishBox">
-      <div class="replenishBoxLine replenishBoxLine1">
+      <div class="replenishBoxLine1">
         上海会员物流拣货补货进度
         <div class="dateBox">
           <dater/>
@@ -354,15 +354,6 @@ export default {
 </script>
 
 <style lang="scss">
-.myBox {
-  font-size: 12px;
-  width: 1080px;
-  height: 607.5px;
-  margin: 0 auto;
-  border: solid 1px #000;
-  background: #fff;
-  padding: 0 30px;
-}
 .HeadTitle {
   width: 100%;
   height: 40px;
@@ -381,10 +372,14 @@ export default {
 }
 .replenishBoxLine {
   position: relative;
-  border: solid 1px #666;
   display: flex;
   box-sizing: border-box;
   padding: 0 20px;
+  background-color: #ffffff;
+	box-shadow: 0px 5px 5px 0px 
+		rgba(187, 194, 225, 0.22);
+	border-radius: 10px;
+	border: solid 1px #e5e5e5;
   .replenishBoxLineL {
     width: 80%;
     display: flex;

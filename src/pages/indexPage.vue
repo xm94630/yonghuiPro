@@ -244,16 +244,6 @@ export default {
 </script>
 
 <style lang="scss">
-.myBox{
-  font-size:16px;
-  width:1920px;
-  height:1080px;
-  margin:0 auto;
-  border:solid 1px #000;
-  background:#fff;
-  padding:0 30px;
-  box-sizing:border-box;
-}
 .HeadTitle{
   width:100%;
   height:60px;

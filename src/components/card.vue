@@ -34,9 +34,11 @@ export default {
   flex-direction:column;
   justify-content: space-around;
   text-align:center;
-  border:solid 1px #666;
   box-sizing:border-box;  
   padding:5px;
+  background:#fff;
+  border-radius: 5px;
+  border: solid 1px #c0c0c0;
   .cardBoxT{
     height:30%;
     font-size:20px;
