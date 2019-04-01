@@ -41,20 +41,25 @@ export default {
   border: solid 1px #c0c0c0;
   .cardBoxT{
     height:30%;
-    font-size:20px;
+    font-size:16px;
     font-weight:bold;
+    text-align: left;
+    margin-left: 18px;
   }
   .cardBoxM{
     display:flex;
     justify-content: space-around;
     height:50%; 
-    font-size:35px;
+    font-size:30px;
     font-weight:bold;
+    color: #000000;
   }
   .cardBoxB{
     display:flex;
     justify-content: space-around;
     height:30%;
+    color: #666666;
+    font-size: 16px;
   }
 }
 </style>

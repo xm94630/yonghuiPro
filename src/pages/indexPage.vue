@@ -326,37 +326,37 @@ export default {
 
 
 //卡片的全部样式
-.cardBox{
-  display:flex;
-  flex-direction:column;
-  justify-content: space-around;
+// .cardBox{
+//   display:flex;
+//   flex-direction:column;
+//   justify-content: space-around;
 
-  //height:80px;
-  text-align:center;
-  border:solid 1px #666;
+//   //height:80px;
+//   text-align:center;
+//   border:solid 1px #666;
   
-  box-sizing:border-box;  
-  padding:5px;
+//   box-sizing:border-box;  
+//   padding:5px;
 
-  .cardBoxT{
-    height:30%;
-    font-size:20px;
-    font-weight:bold;
-  }
-  .cardBoxM{
-    display:flex;
-    justify-content: space-around;
-    height:50%; 
-    font-size:35px;
-    font-weight:bold;
+//   .cardBoxT{
+//     height:30%;
+//     font-size:20px;
+//     font-weight:bold;
+//   }
+//   .cardBoxM{
+//     display:flex;
+//     justify-content: space-around;
+//     height:50%; 
+//     font-size:35px;
+//     font-weight:bold;
     
-  }
-  .cardBoxB{
-    display:flex;
-    justify-content: space-around;
-    height:30%;
-  }
-}
+//   }
+//   .cardBoxB{
+//     display:flex;
+//     justify-content: space-around;
+//     height:30%;
+//   }
+// }
 
 
 // #app {

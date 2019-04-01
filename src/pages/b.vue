@@ -390,6 +390,8 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      font-size:18px;
+      color: #333333;
     }
     .replenishBoxLine_con {
       height: 65%;
