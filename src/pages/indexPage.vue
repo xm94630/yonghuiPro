@@ -390,13 +390,13 @@ export default {
 }
 
 .shopUnFinish{
-  background:#999;
+  background:#ccc;
 }
 .shopOnGoing{
-  background:red;
+  background:#f49999;
 }
 .shopFinish{
-  background:green;
+  background:#a6c87e;
 }
 
 
