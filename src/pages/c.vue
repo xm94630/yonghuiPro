@@ -94,6 +94,11 @@ export default {
         this.chartData3.xAxisData  = response.data.AGV.data.xAxis.data
         this.chartData3.seriesData = response.data.AGV.data.series[0].data 
       })
+
+    axios.post("/epimetheus/api/diy/report/querySingleReportByCode/",{"code":"TrendChart"})
+      .then((response)=>{
+        console.log(response)
+      })
   }
 
 }

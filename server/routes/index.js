@@ -390,4 +390,33 @@ router.get('/epimetheus/api/diy/report/queryReportByCode/3', async (ctx, next) =
 
 })
 
+
+
+//最后确定的接口形式
+router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, next) => {
+  let obj = null;
+
+  if ("TrendChart" == ctx.request.body.code){
+    //页面3 图1
+    obj={
+      a:123
+    }
+  }
+  else if("eachOnePicking" == ctx.request.body.code){
+    //页面3 图2
+    obj={
+      a:222
+    }
+  }
+  else if("eachStation" == ctx.request.body.code){
+    //页面3 图3
+    obj={
+      a:333
+    }
+  }
+
+  ctx.body = obj;
+
+})
+
 module.exports = router
