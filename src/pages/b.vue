@@ -1,5 +1,5 @@
 <template>
-  <div class="myBox">
+  <div class="myBox page2">
     <div class="HeadTitle">
       <router-link to="/picking" class="myLink">拣货进度</router-link>
       <router-link to="/pickingReplenishment" class="myLink active">拣货补货进度</router-link>
@@ -33,6 +33,7 @@
                     title="任务总量"
                     text1="SKU"
                     text2="E数"
+                    state="0"
                   />
                 </el-col>
                 <el-col :span="6">
@@ -42,6 +43,7 @@
                     title="已完成"
                     text1="SKU"
                     text2="E数"
+                    state="1"
                   />
                 </el-col>
                 <el-col :span="6">
@@ -51,6 +53,7 @@
                     title="未完成"
                     text1="SKU"
                     text2="E数"
+                    state="2"
                   />
                 </el-col>
                 <el-col :span="6">
@@ -60,6 +63,7 @@
                     title="异常"
                     text1="SKU"
                     text2="E数"
+                    state="3"
                   />
                 </el-col>
               </el-row>
@@ -374,7 +378,7 @@ export default {
   position: relative;
   display: flex;
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 47px;
   background-color: #ffffff;
 	box-shadow: 0px 5px 5px 0px 
 		rgba(187, 194, 225, 0.22);
@@ -401,7 +405,8 @@ export default {
         .el-col {
           height: 100%;
           .cardBox {
-            height: 100%;
+            //height: 100%;
+            height: 115px;
           }
         }
       }
@@ -425,4 +430,7 @@ export default {
 .replenishBoxLineHeight {
   height: 20%;
 }
+
+
+
 </style>

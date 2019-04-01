@@ -1,5 +1,5 @@
 <template>
-	<div class="cardBox">
+	<div class="cardBox" v-bind:class="classObject">
 		<div class="cardBoxT">{{title}}</div>
 		<div class="cardBoxM">
 			<div>{{(cardData&&cardData[0]&&cardData[0].value) || data1 || 999}}</div> 
@@ -21,7 +21,17 @@ export default {
 		text2:String,
 		data1:Number,
 		data2:Number,
-		cardData:Object,
+    cardData:Object,
+    state:String,
+  },
+  data:function(){
+    return{
+      classObject:{
+        'green':this.state=="1"?true:false,
+        'orange':this.state=="2"?true:false,
+        'red':this.state=="3"?true:false,
+      }
+    }
   },
   mounted: function () {}
 }
@@ -42,7 +52,7 @@ export default {
   .cardBoxT{
     height:30%;
     font-size:16px;
-    font-weight:bold;
+    font-weight:normal;
     text-align: left;
     margin-left: 18px;
   }
@@ -61,5 +71,23 @@ export default {
     color: #666666;
     font-size: 16px;
   }
+}
+.cardBox.green{
+  border: solid 1px #1a9d14;
+  .cardBoxT{
+    color:#1a9d14;
+  }  
+}
+.cardBox.orange{
+  border: solid 1px #ff7200;
+  .cardBoxT{
+    color:#ff7200;
+  }  
+}
+.cardBox.red{
+  border: solid 1px #e42525;
+  .cardBoxT{
+    color:#e42525;
+  }  
 }
 </style>

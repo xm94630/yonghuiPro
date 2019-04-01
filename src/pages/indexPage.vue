@@ -1,6 +1,6 @@
 <template>
-  <div class="myBox">
-      
+  <div class="myBox page1">
+
       <div class="HeadTitle">
         <router-link to="/picking" class="myLink active">拣货进度</router-link>
         <router-link to="/pickingReplenishment" class="myLink">拣货补货进度</router-link>
@@ -398,4 +398,7 @@ export default {
 .shopFinish{
   background:green;
 }
+
+
+
 </style>
