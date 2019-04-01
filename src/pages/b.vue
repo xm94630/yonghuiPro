@@ -15,8 +15,8 @@
       </div>
 
       <!-- 对象遍历 -->
-      <template v-for="(one, key, index) in lines">
-        <div class="replenishBoxLine replenishBoxLineHeight">
+      <template v-for="(one, key) in lines">
+        <div class="replenishBoxLine replenishBoxLineHeight" :key="one.id">
           <div class="replenishBoxLineL">
             <div class="replenishBoxLine_title">
               <div v-if="key === 'total'">当日拣货任务汇总</div>
@@ -303,12 +303,6 @@ export default {
     };
   },
   methods: {
-    handleOpen(key, keyPath) {
-      //console.log(key, keyPath);
-    },
-    handleClose(key, keyPath) {
-      //console.log(key, keyPath);
-    }
   },
   mounted: function() {
     //webpack对 "http://localhost:8080/epimetheus/api/diy/report/queryReportByCode/2" 代理，
