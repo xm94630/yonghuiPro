@@ -6,7 +6,7 @@
       <router-link to="/workload" class="myLink">工作量</router-link>
     </div>
 
-    <div class="replenishBox">
+    <div class="replenishBox replenishBoxTittle">
       <div class="replenishBoxLine1">
         上海会员物流拣货补货进度
         <div class="dateBox">
@@ -430,7 +430,9 @@ export default {
 .replenishBoxLineHeight {
   height: 20%;
 }
-
+.replenishBoxTittle{
+  position: relative;
+}
 
 
 </style>
