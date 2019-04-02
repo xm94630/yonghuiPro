@@ -82,22 +82,38 @@ export default {
     //webpack对 "http://localhost:8080/epimetheus/api/diy/report/queryReportByCode/3" 代理，
     //代理访问   "http://localhost:3000/epimetheus/api/diy/report/queryReportByCode/3"
     //匹配的规则是 '/epimetheus/api'
-    axios.get('/epimetheus/api' + '/diy/report/queryReportByCode/3')
-      .then((response)=>{
-        //更新图标1
-        this.chartData1.xAxisData  = response.data.total.data.xAxis.data
-        this.chartData1.seriesData = response.data.total.data.series[0].data 
-        //更新图标2
-        this.chartData2.xAxisData  = response.data.people.data.xAxis.data
-        this.chartData2.seriesData = response.data.people.data.series[0].data 
-        //更新图标3
-        this.chartData3.xAxisData  = response.data.AGV.data.xAxis.data
-        this.chartData3.seriesData = response.data.AGV.data.series[0].data 
-      })
+    
+    // axios.get('/epimetheus/api' + '/diy/report/queryReportByCode/3')
+    //   .then((response)=>{
+    //     //更新图标1
+    //     this.chartData1.xAxisData  = response.data.total.data.xAxis.data
+    //     this.chartData1.seriesData = response.data.total.data.series[0].data 
+    //     //更新图标2
+    //     this.chartData2.xAxisData  = response.data.people.data.xAxis.data
+    //     this.chartData2.seriesData = response.data.people.data.series[0].data 
+    //     //更新图标3
+    //     this.chartData3.xAxisData  = response.data.AGV.data.xAxis.data
+    //     this.chartData3.seriesData = response.data.AGV.data.series[0].data 
+    //   })
 
     axios.post("/epimetheus/api/diy/report/querySingleReportByCode/",{"code":"TrendChart"})
       .then((response)=>{
+        this.chartData1.xAxisData  = _.map(response.data, _.iteratee('xAxis'))
+        this.chartData1.seriesData = _.map(response.data, _.iteratee('series'))
       })
+
+    axios.post("/epimetheus/api/diy/report/querySingleReportByCode/",{"code":"eachOnePicking"})
+      .then((response)=>{
+        this.chartData2.xAxisData  = _.map(response.data, _.iteratee('xAxis'))
+        this.chartData2.seriesData = _.map(response.data, _.iteratee('series'))
+      })
+
+    axios.post("/epimetheus/api/diy/report/querySingleReportByCode/",{"code":"eachStation"})
+      .then((response)=>{
+        this.chartData3.xAxisData  = _.map(response.data, _.iteratee('xAxis'))
+        this.chartData3.seriesData = _.map(response.data, _.iteratee('series'))
+      })
+
   }
 
 }
