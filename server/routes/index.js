@@ -487,7 +487,7 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
     //图1
     obj = [{
       "xAxis": "18",
-      "series": 3346
+      "series": Math.round(Math.random() * 10000),
     }, {
       "xAxis": "19",
       "series": 3346
@@ -501,7 +501,7 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
     obj = [
       {
         "xAxis": "甲",
-        "series": 213
+        "series": Math.round(Math.random() * 10000),
       },
       {
         "xAxis": "乙",
@@ -517,7 +517,7 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
     //图3
     obj = [{
       "xAxis": "工作站1",
-      "series": 3346
+      "series": Math.round(Math.random() * 10000),
     }, {
       "xAxis": "工作站2",
       "series": 3346
