@@ -1,9 +1,22 @@
 <template>
   <div class="myBox page2">
+    
     <div class="HeadTitle">
       <router-link to="/picking" class="myLink">拣货进度</router-link>
       <router-link to="/pickingReplenishment" class="myLink active">拣货补货进度</router-link>
       <router-link to="/workload" class="myLink">工作量</router-link>
+    </div>
+
+    <div class="intervalSelectBox">
+      刷新频率 
+      <el-select v-model="refreshTime" placeholder="请选择"  @change = "selectChange">
+        <el-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value">
+        </el-option>
+      </el-select>
     </div>
 
     <div class="replenishBox replenishBoxTittle">
@@ -23,16 +36,16 @@
             <el-row :gutter="10">  
 
               <el-col :span="6">
-                <card :data1="line1.total.e" :data2="line1.total.sku" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line1.total.sku" :data2="line1.total.e" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="line1.finish.e" :data2="line1.finish.sku" title="已完成" text1="SKU" text2="E数" state="1"/>
+                <card :data1="line1.finish.sku" :data2="line1.finish.e" title="已完成" text1="SKU" text2="E数" state="1"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="line1.unfinish.e" :data2="line1.unfinish.sku" title="未完成" text1="SKU" text2="E数" state="2"/>
+                <card :data1="line1.unfinish.sku" :data2="line1.unfinish.e" title="未完成" text1="SKU" text2="E数" state="2"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="line1.abnormal.e" :data2="line1.abnormal.sku" title="异常" text1="SKU" text2="E数" state="3"/>
+                <card :data1="line1.abnormal.sku" :data2="line1.abnormal.e" title="异常" text1="SKU" text2="E数" state="3"/>
               </el-col>
 
             </el-row>
@@ -52,16 +65,16 @@
             <el-row :gutter="10">  
 
               <el-col :span="6">
-                <card :data1="line2.total.e" :data2="line2.total.sku" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line2.total.sku" :data2="line2.total.e" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="line2.finish.e" :data2="line2.finish.sku" title="已完成" text1="SKU" text2="E数" state="1"/>
+                <card :data1="line2.finish.sku" :data2="line2.finish.e" title="已完成" text1="SKU" text2="E数" state="1"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="line2.unfinish.e" :data2="line2.unfinish.sku" title="未完成" text1="SKU" text2="E数" state="2"/>
+                <card :data1="line2.unfinish.sku" :data2="line2.unfinish.e" title="未完成" text1="SKU" text2="E数" state="2"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="line2.abnormal.e" :data2="line2.abnormal.sku" title="异常" text1="SKU" text2="E数" state="3"/>
+                <card :data1="line2.abnormal.sku" :data2="line2.abnormal.e" title="异常" text1="SKU" text2="E数" state="3"/>
               </el-col>
 
             </el-row>
@@ -80,16 +93,16 @@
             <el-row :gutter="10">  
 
               <el-col :span="6">
-                <card :data1="line3.total.e" :data2="line3.total.sku" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line3.total.sku" :data2="line3.total.e" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="line3.finish.e" :data2="line3.finish.sku" title="已完成" text1="SKU" text2="E数" state="1"/>
+                <card :data1="line3.finish.sku" :data2="line3.finish.e" title="已完成" text1="SKU" text2="E数" state="1"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="line3.unfinish.e" :data2="line3.unfinish.sku" title="未完成" text1="SKU" text2="E数" state="2"/>
+                <card :data1="line3.unfinish.sku" :data2="line3.unfinish.e" title="未完成" text1="SKU" text2="E数" state="2"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="line3.abnormal.e" :data2="line3.abnormal.sku" title="异常" text1="SKU" text2="E数" state="3"/>
+                <card :data1="line3.abnormal.sku" :data2="line3.abnormal.e" title="异常" text1="SKU" text2="E数" state="3"/>
               </el-col>
 
             </el-row>
@@ -108,16 +121,16 @@
             <el-row :gutter="10">  
 
               <el-col :span="6">
-                <card :data1="line4.total.e" :data2="line4.total.sku" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line4.total.sku" :data2="line4.total.e" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="line4.finish.e" :data2="line4.finish.sku" title="已完成" text1="SKU" text2="E数" state="1"/>
+                <card :data1="line4.finish.sku" :data2="line4.finish.e" title="已完成" text1="SKU" text2="E数" state="1"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="line4.unfinish.e" :data2="line4.unfinish.sku" title="未完成" text1="SKU" text2="E数" state="2"/>
+                <card :data1="line4.unfinish.sku" :data2="line4.unfinish.e" title="未完成" text1="SKU" text2="E数" state="2"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="line4.abnormal.e" :data2="line4.abnormal.sku" title="异常" text1="SKU" text2="E数" state="3"/>
+                <card :data1="line4.abnormal.sku" :data2="line4.abnormal.e" title="异常" text1="SKU" text2="E数" state="3"/>
               </el-col>
 
             </el-row>
@@ -139,6 +152,7 @@ import card from "../components/card.vue";
 import axios from "axios";
 import _ from "lodash";
 
+
 export default {
   name: "app",
   components: {
@@ -148,6 +162,21 @@ export default {
   },
   data() {
     return {
+
+      //刷新频率
+      options: [{
+        value: 5,
+        label: '5分钟'
+      }, {
+        value: 10,
+        label: '10分钟'
+      }, {
+        value: 30,
+        label: '30分钟'
+      }],
+      refreshTime: 5,
+
+      intervalID:null,
 
       line1:{
         "total":{
@@ -266,36 +295,48 @@ export default {
     };
   },
   methods: {
+    selectChange:function(v){
+
+      clearInterval(this.intervalID)
+      this.intervalID = setInterval(()=>{
+        this.refreshData();
+      }, v * 1000 * 60);
+
+    },
+    refreshData:function(){
+      //webpack对 "http://localhost:8080/epimetheus/api/diy/report/queryReportByCode/2" 代理，
+      //代理访问   "http://localhost:3000/epimetheus/api/diy/report/queryReportByCode/2"
+      //匹配的规则是 '/epimetheus/api'
+      axios
+        .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"pickingTaskTotal"})
+        .then(response => {
+          this.line1 = _.keyBy(response.data, function(o) {return o.code;});
+        });
+
+      axios
+        .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"DC-Picking"})
+        .then(response => {
+          this.line2 = _.keyBy(response.data, function(o) {return o.code;});
+        });
+
+      axios
+        .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"AGV-Picking"})
+        .then(response => {
+          this.line3 = _.keyBy(response.data, function(o) {return o.code;});
+        });
+
+      axios
+        .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"DC-Replenish"})
+        .then(response => {
+          this.line4 = _.keyBy(response.data, function(o) {return o.code;});
+        });
+    },
   },
   mounted: function() {
-    //webpack对 "http://localhost:8080/epimetheus/api/diy/report/queryReportByCode/2" 代理，
-    //代理访问   "http://localhost:3000/epimetheus/api/diy/report/queryReportByCode/2"
-    //匹配的规则是 '/epimetheus/api'
-    axios
-      .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"pickingTaskTotal"})
-      .then(response => {
-        this.line1 = _.keyBy(response.data, function(o) {return o.code;});
-      });
-
-    axios
-      .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"DC-Picking"})
-      .then(response => {
-        this.line2 = _.keyBy(response.data, function(o) {return o.code;});
-      });
-
-    axios
-      .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"AGV-Picking"})
-      .then(response => {
-        this.line3 = _.keyBy(response.data, function(o) {return o.code;});
-      });
-
-    axios
-      .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"DC-Replenish"})
-      .then(response => {
-        this.line4 = _.keyBy(response.data, function(o) {return o.code;});
-      });
-
-
+    this.refreshData();
+    this.intervalID = setInterval(()=>{
+      this.refreshData();
+    },this.refreshTime * 1000 * 60 );
   }
 };
 </script>

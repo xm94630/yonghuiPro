@@ -402,20 +402,20 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
     //当日拣货任务汇总
     obj=[{
       "code": "total",
-      "e": 341,
-      "sku": 342
+      "e":  Math.round(Math.random()*10000),
+      "sku": 100000
       },{
       "code": "finish",
-      "e": 324,
-      "sku": 4324
+      "e":  Math.round(Math.random()*10000),
+      "sku":  Math.round(Math.random()*10000)
       },{
       "code": "unfinish",
-      "e": 6,
-      "sku": 23
+      "e":  Math.round(Math.random()*10000),
+      "sku":  Math.round(Math.random()*10000)
       },{
       "code": "abnormal",
-      "e": 7,
-      "sku": 234
+      "e":  Math.round(Math.random()*10000),
+      "sku":  Math.round(Math.random()*10000)
       }]
   }
   if ("DC-Picking" == ctx.request.body.code){
