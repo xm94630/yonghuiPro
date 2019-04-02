@@ -403,11 +403,9 @@ export default {
       //代理访问   "http://localhost:3000/epimetheus/api/diy/report/queryReportByCode/2"
       //匹配的规则是 '/epimetheus/api'
       axios
-        .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/", {
-          code: "pickingTaskTotal"
-        })
+        .post("http://172.16.28.46:9090/epimetheus/api" + "/diy/report/querySingleReportByCode?code=pickingTaskTotal")
         .then(response => {
-          var obj = _.keyBy(response.data, function(o) {
+          var obj = _.keyBy(response.data.data, function(o) {
             return o.code;
           });
           this.line1 = obj;
@@ -417,11 +415,9 @@ export default {
         });
 
       axios
-        .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/", {
-          code: "DC-Picking"
-        })
+        .post("http://172.16.28.46:9090/epimetheus/api" + "/diy/report/querySingleReportByCode?code=DC-Picking")
         .then(response => {
-          var obj = _.keyBy(response.data, function(o) {
+          var obj = _.keyBy(response.data.data, function(o) {
             return o.code;
           });
           this.line2 = obj;
@@ -431,11 +427,9 @@ export default {
         });
 
       axios
-        .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/", {
-          code: "AGV-Picking"
-        })
+        .post("http://172.16.28.46:9090/epimetheus/api" + "/diy/report/querySingleReportByCode?code=AGV-Picking")
         .then(response => {
-          var obj = _.keyBy(response.data, function(o) {
+          var obj = _.keyBy(response.data.data, function(o) {
             return o.code;
           });
           this.line3 = obj;
@@ -444,19 +438,17 @@ export default {
           this.chartData3.seriesData[2].value = obj.abnormal.sku;
         });
 
-      axios
-        .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/", {
-          code: "DC-Replenish"
-        })
-        .then(response => {
-          var obj = _.keyBy(response.data, function(o) {
-            return o.code;
-          });
-          this.line4 = obj;
-          this.chartData4.seriesData[0].value = obj.finish.sku;
-          this.chartData4.seriesData[1].value = obj.unfinish.sku;
-          this.chartData4.seriesData[2].value = obj.abnormal.sku;
-        });
+      // axios
+      //   .post("http://172.16.28.46:9090/epimetheus/api" + "/diy/report/querySingleReportByCode?code=DC-Replenish")
+      //   .then(response => {
+      //     var obj = _.keyBy(response.data.data, function(o) {
+      //       return o.code;
+      //     });
+      //     this.line4 = obj;
+      //     this.chartData4.seriesData[0].value = obj.finish.sku;
+      //     this.chartData4.seriesData[1].value = obj.unfinish.sku;
+      //     this.chartData4.seriesData[2].value = obj.abnormal.sku;
+      //   });
     }
   },
   mounted: function() {

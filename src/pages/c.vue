@@ -109,30 +109,30 @@ export default {
       axios
         .post("http://172.16.28.46:9090/epimetheus/api/diy/report/querySingleReportByCode?code=TrendChart")
         .then(response => {
-          this.chartData1.xAxisData = _.map(response.data.data, _.iteratee("xAxis"));
+          this.chartData1.xAxisData = _.map(response.data.data, _.iteratee("xaxis"));
           this.chartData1.seriesData = _.map(
             response.data.data,
-            _.iteratee("SERIES")
+            _.iteratee("series")
           );
         });
 
       axios
         .post("http://172.16.28.46:9090/epimetheus/api/diy/report/querySingleReportByCode?code=eachOnePicking")
         .then(response => {
-          this.chartData2.xAxisData = _.map(response.data.data, _.iteratee("xAxis"));
+          this.chartData2.xAxisData = _.map(response.data.data, _.iteratee("xaxis"));
           this.chartData2.seriesData = _.map(
             response.data.data,
-            _.iteratee("SERIES")
+            _.iteratee("series")
           );
         });
 
       axios
         .post("http://172.16.28.46:9090/epimetheus/api/diy/report/querySingleReportByCode?code=eachStation")
         .then(response => {
-          this.chartData3.xAxisData = _.map(response.data.data, _.iteratee("xAxis"));
+          this.chartData3.xAxisData = _.map(response.data.data, _.iteratee("xaxis"));
           this.chartData3.seriesData = _.map(
             response.data.data,
-            _.iteratee("SERIES")
+            _.iteratee("series")
           );
         });
     }
