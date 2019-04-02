@@ -310,25 +310,41 @@ export default {
       axios
         .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"pickingTaskTotal"})
         .then(response => {
-          this.line1 = _.keyBy(response.data, function(o) {return o.code;});
+          var obj = _.keyBy(response.data, function(o) {return o.code;});
+          this.line1 = obj
+          this.chartData1.seriesData[0].value = obj.finish.sku;
+          this.chartData1.seriesData[1].value = obj.unfinish.sku;
+          this.chartData1.seriesData[2].value = obj.abnormal.sku;
         });
 
       axios
         .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"DC-Picking"})
         .then(response => {
-          this.line2 = _.keyBy(response.data, function(o) {return o.code;});
+          var obj = _.keyBy(response.data, function(o) {return o.code;});
+          this.line2 = obj
+          this.chartData2.seriesData[0].value = obj.finish.sku;
+          this.chartData2.seriesData[1].value = obj.unfinish.sku;
+          this.chartData2.seriesData[2].value = obj.abnormal.sku;
         });
 
       axios
         .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"AGV-Picking"})
         .then(response => {
-          this.line3 = _.keyBy(response.data, function(o) {return o.code;});
+          var obj = _.keyBy(response.data, function(o) {return o.code;});
+          this.line3 = obj
+          this.chartData3.seriesData[0].value = obj.finish.sku;
+          this.chartData3.seriesData[1].value = obj.unfinish.sku;
+          this.chartData3.seriesData[2].value = obj.abnormal.sku;
         });
 
       axios
         .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"DC-Replenish"})
         .then(response => {
-          this.line4 = _.keyBy(response.data, function(o) {return o.code;});
+          var obj = _.keyBy(response.data, function(o) {return o.code;});
+          this.line4 = obj
+          this.chartData4.seriesData[0].value = obj.finish.sku;
+          this.chartData4.seriesData[1].value = obj.unfinish.sku;
+          this.chartData4.seriesData[2].value = obj.abnormal.sku;
         });
     },
   },

@@ -431,7 +431,7 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
       },{
       "code": "unfinish",
       "e": 6,
-      "sku": 23
+      "sku": 230
       },{
       "code": "abnormal",
       "e": 7,
@@ -467,7 +467,7 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
       },{
       "code": "finish",
       "e": 324,
-      "sku": 4324
+      "sku": 432
       },{
       "code": "unfinish",
       "e": 6,
