@@ -149,7 +149,12 @@ export default {
     this.intervalID = setInterval(() => {
       this.refreshData();
     }, this.refreshTime * 1000 * 60);
+  },
+  
+  beforeDestroy:function(){
+    clearInterval(this.intervalID);
   }
+
 };
 </script>
 
