@@ -23,16 +23,16 @@
             <el-row :gutter="10">  
 
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line1.total.e" :data2="line1.total.sku" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line1.finish.e" :data2="line1.finish.sku" title="已完成" text1="SKU" text2="E数" state="1"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line1.unfinish.e" :data2="line1.unfinish.sku" title="未完成" text1="SKU" text2="E数" state="2"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line1.abnormal.e" :data2="line1.abnormal.sku" title="异常" text1="SKU" text2="E数" state="3"/>
               </el-col>
 
             </el-row>
@@ -52,16 +52,16 @@
             <el-row :gutter="10">  
 
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line2.total.e" :data2="line2.total.sku" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line2.finish.e" :data2="line2.finish.sku" title="已完成" text1="SKU" text2="E数" state="1"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line2.unfinish.e" :data2="line2.unfinish.sku" title="未完成" text1="SKU" text2="E数" state="2"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line2.abnormal.e" :data2="line2.abnormal.sku" title="异常" text1="SKU" text2="E数" state="3"/>
               </el-col>
 
             </el-row>
@@ -80,16 +80,16 @@
             <el-row :gutter="10">  
 
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line3.total.e" :data2="line3.total.sku" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line3.finish.e" :data2="line3.finish.sku" title="已完成" text1="SKU" text2="E数" state="1"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line3.unfinish.e" :data2="line3.unfinish.sku" title="未完成" text1="SKU" text2="E数" state="2"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line3.abnormal.e" :data2="line3.abnormal.sku" title="异常" text1="SKU" text2="E数" state="3"/>
               </el-col>
 
             </el-row>
@@ -108,17 +108,17 @@
             <el-row :gutter="10">  
 
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line4.total.e" :data2="line4.total.sku" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line4.finish.e" :data2="line4.finish.sku" title="已完成" text1="SKU" text2="E数" state="1"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="line4.unfinish.e" :data2="line4.unfinish.sku" title="未完成" text1="SKU" text2="E数" state="2"/>
               </el-col>
               <el-col :span="6">
-                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
-              </el-col>  
+                <card :data1="line4.abnormal.e" :data2="line4.abnormal.sku" title="异常" text1="SKU" text2="E数" state="3"/>
+              </el-col>
 
             </el-row>
 
@@ -147,6 +147,83 @@ export default {
   },
   data() {
     return {
+
+      line1:{
+        "total":{
+          "e": 1,
+          "sku": 0
+        },
+        "finish":{
+          "e": 0,
+          "sku": 0
+        },
+        "unfinish":{
+          "e": 0,
+          "sku": 0
+        },
+        "abnormal":{
+          "e": 0,
+          "sku": 0
+        }
+      },
+      line2:{
+        "total":{
+          "e": 2,
+          "sku": 0
+        },
+        "finish":{
+          "e": 0,
+          "sku": 0
+        },
+        "unfinish":{
+          "e": 0,
+          "sku": 0
+        },
+        "abnormal":{
+          "e": 0,
+          "sku": 0
+        }
+      },
+      line3:
+      {
+        "total":{
+          "e": 3,
+          "sku": 0
+        },
+        "finish":{
+          "e": 0,
+          "sku": 0
+        },
+        "unfinish":{
+          "e": 0,
+          "sku": 0
+        },
+        "abnormal":{
+          "e": 0,
+          "sku": 0
+        }
+      },
+      line4:
+      {
+        "total":{
+          "e": 4,
+          "sku": 0
+        },
+        "finish":{
+          "e": 0,
+          "sku": 0
+        },
+        "unfinish":{
+          "e": 0,
+          "sku": 0
+        },
+        "abnormal":{
+          "e": 0,
+          "sku": 0
+        }
+      },
+
+
       chartData1: {
         chartId: "id001",
         titleText: "",
@@ -194,9 +271,9 @@ export default {
     //代理访问   "http://localhost:3000/epimetheus/api/diy/report/queryReportByCode/2"
     //匹配的规则是 '/epimetheus/api'
     axios
-      .get("/epimetheus/api" + "/diy/report/queryReportByCode/2")
+      .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"pickingTaskTotal"})
       .then(response => {
-
+        
       });
   }
 };

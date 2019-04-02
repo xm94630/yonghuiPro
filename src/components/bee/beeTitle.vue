@@ -31,7 +31,6 @@ export default {
   methods: {
     myFun(){
       this.isActive = !this.isActive;
-      console.log(this.isActive)
     },
     changeData(x,y){
       this.x = x;

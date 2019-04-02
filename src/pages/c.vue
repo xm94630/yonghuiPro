@@ -97,7 +97,6 @@ export default {
 
     axios.post("/epimetheus/api/diy/report/querySingleReportByCode/",{"code":"TrendChart"})
       .then((response)=>{
-        console.log(response)
       })
   }
 

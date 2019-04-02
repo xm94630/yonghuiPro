@@ -396,20 +396,67 @@ router.get('/epimetheus/api/diy/report/queryReportByCode/3', async (ctx, next) =
 router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, next) => {
   let obj = null;
 
+  
+  //页面2
+  if ("pickingTaskTotal" == ctx.request.body.code){
+    //当日拣货任务汇总
+    obj={
+      data:[{
+        "code": "total",
+        "e": 0,
+        "sku": 342
+        },{
+        "code": "finish",
+        "e": 0,
+        "sku": 4324
+        },{
+        "code": "unfinish",
+        "e": 0,
+        "sku": 23
+        },{
+        "code": "abnormal",
+        "e": 0,
+        "sku": 234
+        }]
+    }
+  }
+  if ("DC-Picking" == ctx.request.body.code){
+    //DC拣货任务
+    obj={
+      a:123
+    }
+  }
+  if ("AGV-Picking" == ctx.request.body.code){
+    //AGV拣货任务
+    obj={
+      a:123
+    }
+  }
+  if ("DC-Replenish" == ctx.request.body.code){
+    //DC补货任务
+    obj={
+      a:123
+    }
+  }
+
+
+
+
+  //页面3
   if ("TrendChart" == ctx.request.body.code){
-    //页面3 图1
+    //图1
     obj={
       a:123
     }
   }
   else if("eachOnePicking" == ctx.request.body.code){
-    //页面3 图2
+    //图2
     obj={
       a:222
     }
   }
   else if("eachStation" == ctx.request.body.code){
-    //页面3 图3
+    //图3
     obj={
       a:333
     }
