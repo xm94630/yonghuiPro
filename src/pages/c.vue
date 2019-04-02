@@ -153,7 +153,12 @@ export default {
 }
 .workloadBoxM{
   height:41%;
-  border:solid 1px #666;
+  background-color: #ffffff;
+	box-shadow: 0px 5px 5px 0px 
+		rgba(187, 194, 225, 0.22);
+	border-radius: 10px;
+	border: solid 1px #e5e5e5;
+  
 }
 .workloadBoxB{
   height:41%;
@@ -163,11 +168,19 @@ export default {
 
 .workloadBoxBL{
   width:48%;
-  border:solid 1px #666;
+background-color: #ffffff;
+	box-shadow: 0px 5px 5px 0px 
+		rgba(187, 194, 225, 0.22);
+	border-radius: 10px;
+	border: solid 1px #e5e5e5;
 }
 .workloadBoxBR{
   width:48%;
-  border:solid 1px #666;
+background-color: #ffffff;
+	box-shadow: 0px 5px 5px 0px 
+		rgba(187, 194, 225, 0.22);
+	border-radius: 10px;
+	border: solid 1px #e5e5e5;
 }
 
 </style>
