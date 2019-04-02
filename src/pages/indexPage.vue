@@ -258,6 +258,11 @@ export default {
   width:100%;
   .totalBoxL{
     height:320px;
+    background-color: #ffffff;
+	  box-shadow: 0px 5px 5px 0px 
+		rgba(187, 194, 225, 0.22);
+    border-radius: 10px;
+    border: solid 1px #e5e5e5;
   }
   .totalBoxR{
     height:320px;
@@ -323,50 +328,6 @@ export default {
   right:0px;
   font-size:12px;
 }
-
-
-//卡片的全部样式
-// .cardBox{
-//   display:flex;
-//   flex-direction:column;
-//   justify-content: space-around;
-
-//   //height:80px;
-//   text-align:center;
-//   border:solid 1px #666;
-  
-//   box-sizing:border-box;  
-//   padding:5px;
-
-//   .cardBoxT{
-//     height:30%;
-//     font-size:20px;
-//     font-weight:bold;
-//   }
-//   .cardBoxM{
-//     display:flex;
-//     justify-content: space-around;
-//     height:50%; 
-//     font-size:35px;
-//     font-weight:bold;
-    
-//   }
-//   .cardBoxB{
-//     display:flex;
-//     justify-content: space-around;
-//     height:30%;
-//   }
-// }
-
-
-// #app {
-//   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-//   margin-top: 60px;
-// }
 
 .el-container {
   height: 100%;
