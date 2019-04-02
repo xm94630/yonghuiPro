@@ -7,7 +7,6 @@
     </div>
 
     <div class="totalBox">
-    
       <el-row :gutter="30">
         <el-col :span="8">
           <div class="borderBox totalBoxL">
@@ -39,7 +38,6 @@
           </div>
         </el-col>
       </el-row>
-
     </div>
 
     <div class="linesBox borderBox MT30">
@@ -68,10 +66,7 @@
           </div>
         </el-col>
       </el-row>
-      
     </div>
-
-
   </div>
 </template>
 
@@ -151,7 +146,7 @@ export default {
           code: "totalProgress"
         })
         .then(response => {
-          this.chartData.percent = response.data.data
+          this.chartData.percent = response.data.data;
         });
 
       // axios
@@ -203,6 +198,11 @@ export default {
       }
       .cardBox {
         height: 160px;
+        background-color: #ffffff;
+        box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
+        border-radius: 10px;
+        border: solid 1px #e5e5e5;
+
         .cardBoxM {
           font-size: 50px;
         }
@@ -219,10 +219,9 @@ export default {
   height: 636px;
 
   background-color: #ffffff;
-	box-shadow: 0px 5px 5px 0px 
-		rgba(187, 194, 225, 0.22);
-	border-radius: 10px;
-	border: solid 1px #e5e5e5;
+  box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
+  border-radius: 10px;
+  border: solid 1px #e5e5e5;
 
   .lineName {
     text-align: center;
