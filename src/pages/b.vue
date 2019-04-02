@@ -20,7 +20,7 @@
 
     <div class="replenishBox replenishBoxTittle">
       <div class="replenishBoxLine1">
-        上海会员物流拣货补货进度
+        <div class="mod">上海会员物流拣货补货进度</div>
         <div class="dateBox">
           <dater/>
         </div>
@@ -545,5 +545,9 @@ export default {
 }
 .replenishBoxTittle {
   position: relative;
+  .mod{
+    position: relative;
+    top:-15px;
+  }
 }
 </style>

@@ -20,7 +20,7 @@
 
     <div class="workloadBox">
       <div class="workloadbaseBox workloadBoxT">
-        上海会员物流拣货工作量
+        <div class="mod">上海会员物流拣货工作量</div>
         <div class="dateBox">
           <dater/>
         </div>
@@ -189,6 +189,10 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  .mod{
+    position: relative;
+    top:-10px;
+  }
 }
 .workloadBoxM {
   height: 41%;
