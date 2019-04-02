@@ -398,7 +398,7 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
 
 
   //页面1
-  if ("pickingTaskTotal" == ctx.request.body.code) {
+  if ("totalProgress" == ctx.request.body.code) {
     //总体进度
     obj = {
       "data": 0.03
