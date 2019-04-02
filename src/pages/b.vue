@@ -14,68 +14,35 @@
         </div>
       </div>
 
-      <!-- 对象遍历 -->
-      <template v-for="(one, key) in lines">
-        <div class="replenishBoxLine replenishBoxLineHeight" :key="one.id">
-          <div class="replenishBoxLineL">
-            <div class="replenishBoxLine_title">
-              <div v-if="key === 'total'">当日拣货任务汇总</div>
-              <div v-else-if="key === 'AGVPicking'">AGV拣货任务</div>
-              <div v-else-if="key === 'DCPicking'">DC拣货任务</div>
-              <div v-else>DC补货任务</div>
-            </div>
-            <div class="replenishBoxLine_con">
-              <el-row :gutter="10">
-                <el-col :span="6">
-                  <card
-                    :data1="lines[key].taskTotal.SKU"
-                    :data2="lines[key].taskTotal.E"
-                    title="任务总量"
-                    text1="SKU"
-                    text2="E数"
-                    state="0"
-                  />
-                </el-col>
-                <el-col :span="6">
-                  <card
-                    :data1="lines[key].finish.SKU"
-                    :data2="lines[key].finish.E"
-                    title="已完成"
-                    text1="SKU"
-                    text2="E数"
-                    state="1"
-                  />
-                </el-col>
-                <el-col :span="6">
-                  <card
-                    :data1="lines[key].unfinish.SKU"
-                    :data2="lines[key].unfinish.E"
-                    title="未完成"
-                    text1="SKU"
-                    text2="E数"
-                    state="2"
-                  />
-                </el-col>
-                <el-col :span="6">
-                  <card
-                    :data1="lines[key].abnormal.SKU"
-                    :data2="lines[key].abnormal.E"
-                    title="异常"
-                    text1="SKU"
-                    text2="E数"
-                    state="3"
-                  />
-                </el-col>
-              </el-row>
-            </div>
+      <div class="replenishBoxLine replenishBoxLineHeight">
+        <div class="replenishBoxLineL">
+          <div class="replenishBoxLine_title">
+            <div>当日拣货任务汇总</div>
           </div>
-          <div class="replenishBoxLineR">
-            <pie2 :chartData="lines[key].chartData"/>
+          <div class="replenishBoxLine_con">
+            <el-row :gutter="10">  
+
+              <el-col :span="6">
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+              </el-col>
+              <el-col :span="6">
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+              </el-col>
+              <el-col :span="6">
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+              </el-col>
+              <el-col :span="6">
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
+              </el-col>
+
+            </el-row>
+
           </div>
         </div>
-      </template>
+        <div class="replenishBoxLineR"><pie2 :chartData="chartData1" /></div>
+      </div>
 
-      <!--
+      
       <div class="replenishBoxLine replenishBoxLineHeight">
         <div class="replenishBoxLineL">
           <div class="replenishBoxLine_title">
@@ -85,16 +52,16 @@
             <el-row :gutter="10">  
 
               <el-col :span="6">
-                <card :data1="DCPicking.taskTotal.SKU" :data2="DCPicking.taskTotal.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="DCPicking.finish.SKU" :data2="DCPicking.finish.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="DCPicking.unfinish.SKU" :data2="DCPicking.unfinish.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="DCPicking.abnormal.SKU" :data2="DCPicking.abnormal.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
 
             </el-row>
@@ -113,16 +80,16 @@
             <el-row :gutter="10">  
 
               <el-col :span="6">
-                <card :data1="AGVPicking.taskTotal.SKU" :data2="AGVPicking.taskTotal.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="AGVPicking.finish.SKU" :data2="AGVPicking.finish.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="AGVPicking.unfinish.SKU" :data2="AGVPicking.unfinish.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="AGVPicking.abnormal.SKU" :data2="AGVPicking.abnormal.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
 
             </el-row>
@@ -141,16 +108,16 @@
             <el-row :gutter="10">  
 
               <el-col :span="6">
-                <card :data1="DCReplenish.taskTotal.SKU" :data2="DCReplenish.taskTotal.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="DCReplenish.finish.SKU" :data2="DCReplenish.finish.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="DCReplenish.unfinish.SKU" :data2="DCReplenish.unfinish.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>
               <el-col :span="6">
-                <card :data1="DCReplenish.abnormal.SKU" :data2="DCReplenish.abnormal.E" title="任务总量" text1="SKU" text2="E数" />
+                <card :data1="888" :data2="888" title="任务总量" text1="SKU" text2="E数" />
               </el-col>  
 
             </el-row>
@@ -158,7 +125,9 @@
           </div>
         </div>
         <div class="replenishBoxLineR"><pie2 :chartData="chartData4" /></div>
-      </div>-->
+      </div>
+
+
     </div>
   </div>
 </template>
@@ -169,18 +138,6 @@ import dater from "../components/Dater.vue";
 import card from "../components/card.vue";
 import axios from "axios";
 
-function parsePieData(id, arr) {
-  return {
-    chartId: id,
-    titleText: "",
-    seriesData: [
-      { value: arr[0], name: "已完成" },
-      { value: arr[1], name: "未完成" },
-      { value: arr[2], name: "异常" }
-    ]
-  };
-}
-
 export default {
   name: "app",
   components: {
@@ -190,120 +147,44 @@ export default {
   },
   data() {
     return {
-      //arr:[{value:100},{value:200}],
+      chartData1: {
+        chartId: "id001",
+        titleText: "",
+        seriesData: [
+          { value: 2, name: "已完成" },
+          { value: 1, name: "未完成" },
+          { value: 2, name: "异常" }
+        ]
+      },
+      chartData2: {
+        chartId: "id002",
+        titleText: "",
+        seriesData: [
+          { value: 2, name: "已完成" },
+          { value: 1, name: "未完成" },
+          { value: 0, name: "异常" }
+        ]
+      },
+      chartData3: {
+        chartId: "id003",
+        titleText: "",
+        seriesData: [
+          { value: 2, name: "已完成" },
+          { value: 1, name: "未完成" },
+          { value: 0, name: "异常" }
+        ]
+      },
+      chartData4: {
+        chartId: "id004",
+        titleText: "",
+        seriesData: [
+          { value: 2, name: "已完成" },
+          { value: 1, name: "未完成" },
+          { value: 0, name: "异常" }
+        ]
+      },
 
-      percent: 0.6,
-      isCollapse: true,
 
-      lines: {
-        //汇总
-        total: {
-          taskTotal: {
-            SKU: 0,
-            E: 0
-          },
-          finish: {
-            SKU: 0,
-            E: 0
-          },
-          unfinish: {
-            SKU: 0,
-            E: 0
-          },
-          abnormal: {
-            SKU: 0,
-            E: 0
-          },
-          chartData: parsePieData("id001", [0, 0, 0])
-        },
-
-        //DC拣货
-        DCPicking: {
-          taskTotal: {
-            SKU: 0,
-            E: 0
-          },
-          finish: {
-            SKU: 0,
-            E: 0
-          },
-          unfinish: {
-            SKU: 0,
-            E: 0
-          },
-          abnormal: {
-            SKU: 0,
-            E: 0
-          },
-          chartData: {
-            chartId: "id002",
-            titleText: "",
-            seriesData: [
-              { value: 2, name: "已完成" },
-              { value: 1, name: "未完成" },
-              { value: 0, name: "异常" }
-            ]
-          }
-        },
-
-        //AGV拣货
-        AGVPicking: {
-          taskTotal: {
-            SKU: 0,
-            E: 0
-          },
-          finish: {
-            SKU: 0,
-            E: 0
-          },
-          unfinish: {
-            SKU: 0,
-            E: 0
-          },
-          abnormal: {
-            SKU: 0,
-            E: 0
-          },
-          chartData: {
-            chartId: "id003",
-            titleText: "",
-            seriesData: [
-              { value: 0, name: "已完成" },
-              { value: 0, name: "未完成" },
-              { value: 0, name: "异常" }
-            ]
-          }
-        },
-
-        //补货
-        DCReplenish: {
-          taskTotal: {
-            SKU: 0,
-            E: 0
-          },
-          finish: {
-            SKU: 0,
-            E: 0
-          },
-          unfinish: {
-            SKU: 0,
-            E: 0
-          },
-          abnormal: {
-            SKU: 0,
-            E: 0
-          },
-          chartData: {
-            chartId: "id004",
-            titleText: "",
-            seriesData: [
-              { value: 0, name: "已完成" },
-              { value: 0, name: "未完成" },
-              { value: 0, name: "异常" }
-            ]
-          }
-        }
-      }
     };
   },
   methods: {
@@ -315,43 +196,7 @@ export default {
     axios
       .get("/epimetheus/api" + "/diy/report/queryReportByCode/2")
       .then(response => {
-        //这部分数据后端不按照前端约定实现，显得有点臃肿..
-        //这里数据虽然改变多个，但不会触发多个渲染。
-        this.lines.total.taskTotal = response.data.total.taskTotal;
-        this.lines.total.finish = response.data.total.finish;
-        this.lines.total.unfinish = response.data.total.unfinish;
-        this.lines.total.abnormal = response.data.total.abnormal;
-        this.lines.total.chartData = parsePieData(
-          "id001",
-          response.data.total.pie
-        );
 
-        this.lines.DCPicking.taskTotal = response.data.DCPicking.taskTotal;
-        this.lines.DCPicking.finish = response.data.DCPicking.finish;
-        this.lines.DCPicking.unfinish = response.data.DCPicking.unfinish;
-        this.lines.DCPicking.abnormal = response.data.DCPicking.abnormal;
-        this.lines.DCPicking.chartData = parsePieData(
-          "id002",
-          response.data.DCPicking.pie
-        );
-
-        this.lines.AGVPicking.taskTotal = response.data.AGVPicking.taskTotal;
-        this.lines.AGVPicking.finish = response.data.AGVPicking.finish;
-        this.lines.AGVPicking.unfinish = response.data.AGVPicking.unfinish;
-        this.lines.AGVPicking.abnormal = response.data.AGVPicking.abnormal;
-        this.lines.AGVPicking.chartData = parsePieData(
-          "id003",
-          response.data.AGVPicking.pie
-        );
-
-        this.lines.DCReplenish.taskTotal = response.data.DCReplenish.taskTotal;
-        this.lines.DCReplenish.finish = response.data.DCReplenish.finish;
-        this.lines.DCReplenish.unfinish = response.data.DCReplenish.unfinish;
-        this.lines.DCReplenish.abnormal = response.data.DCReplenish.abnormal;
-        this.lines.DCReplenish.chartData = parsePieData(
-          "id004",
-          response.data.DCReplenish.pie
-        );
       });
   }
 };
