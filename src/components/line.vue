@@ -9,7 +9,7 @@ import echarts from 'echarts'
 //获取饼图option配置
 function getOption(data){
 	let option = {
-    color: ["#f49999",],
+    //color: ["#f49999",],
 		title:{
 			show:true,
 			text:data.titleText,
