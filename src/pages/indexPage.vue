@@ -7,6 +7,7 @@
     </div>
 
     <div class="totalBox">
+    
       <el-row :gutter="30">
         <el-col :span="8">
           <div class="borderBox totalBoxL">
@@ -38,6 +39,7 @@
           </div>
         </el-col>
       </el-row>
+
     </div>
 
     <div class="linesBox borderBox MT30">
@@ -66,7 +68,10 @@
           </div>
         </el-col>
       </el-row>
+      
     </div>
+
+
   </div>
 </template>
 
@@ -211,7 +216,14 @@ export default {
 
 .linesBox {
   background: #fff;
-  height: 666px;
+  height: 636px;
+
+  background-color: #ffffff;
+	box-shadow: 0px 5px 5px 0px 
+		rgba(187, 194, 225, 0.22);
+	border-radius: 10px;
+	border: solid 1px #e5e5e5;
+
   .lineName {
     text-align: center;
   }
@@ -267,7 +279,7 @@ export default {
 }
 
 .myLink.active {
-  color: red;
+  color: #599ef8;
 }
 
 .shopUnFinish {
