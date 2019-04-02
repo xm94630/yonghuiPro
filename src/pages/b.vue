@@ -137,6 +137,7 @@ import pie2 from "../components/pie2.vue";
 import dater from "../components/Dater.vue";
 import card from "../components/card.vue";
 import axios from "axios";
+import _ from "lodash";
 
 export default {
   name: "app",
@@ -273,8 +274,28 @@ export default {
     axios
       .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"pickingTaskTotal"})
       .then(response => {
-        
+        this.line1 = _.keyBy(response.data, function(o) {return o.code;});
       });
+
+    axios
+      .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"DC-Picking"})
+      .then(response => {
+        this.line2 = _.keyBy(response.data, function(o) {return o.code;});
+      });
+
+    axios
+      .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"AGV-Picking"})
+      .then(response => {
+        this.line3 = _.keyBy(response.data, function(o) {return o.code;});
+      });
+
+    axios
+      .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/",{"code":"DC-Replenish"})
+      .then(response => {
+        this.line4 = _.keyBy(response.data, function(o) {return o.code;});
+      });
+
+
   }
 };
 </script>

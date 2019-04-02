@@ -400,43 +400,83 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
   //页面2
   if ("pickingTaskTotal" == ctx.request.body.code){
     //当日拣货任务汇总
-    obj={
-      data:[{
-        "code": "total",
-        "e": 0,
-        "sku": 342
-        },{
-        "code": "finish",
-        "e": 0,
-        "sku": 4324
-        },{
-        "code": "unfinish",
-        "e": 0,
-        "sku": 23
-        },{
-        "code": "abnormal",
-        "e": 0,
-        "sku": 234
-        }]
-    }
+    obj=[{
+      "code": "total",
+      "e": 341,
+      "sku": 342
+      },{
+      "code": "finish",
+      "e": 324,
+      "sku": 4324
+      },{
+      "code": "unfinish",
+      "e": 6,
+      "sku": 23
+      },{
+      "code": "abnormal",
+      "e": 7,
+      "sku": 234
+      }]
   }
   if ("DC-Picking" == ctx.request.body.code){
     //DC拣货任务
-    obj={
-      a:123
-    }
+    obj=[{
+      "code": "total",
+      "e": 341,
+      "sku": 342
+      },{
+      "code": "finish",
+      "e": 324,
+      "sku": 4324
+      },{
+      "code": "unfinish",
+      "e": 6,
+      "sku": 23
+      },{
+      "code": "abnormal",
+      "e": 7,
+      "sku": 234
+      }]
   }
   if ("AGV-Picking" == ctx.request.body.code){
     //AGV拣货任务
-    obj={
-      a:123
-    }
+    obj=[{
+      "code": "total",
+      "e": 341,
+      "sku": 342
+      },{
+      "code": "finish",
+      "e": 324,
+      "sku": 4324
+      },{
+      "code": "unfinish",
+      "e": 6,
+      "sku": 23
+      },{
+      "code": "abnormal",
+      "e": 7,
+      "sku": 234
+      }]
   }
   if ("DC-Replenish" == ctx.request.body.code){
     //DC补货任务
-    obj={
-      a:123
-    }
+    obj=[{
+      "code": "total",
+      "e": 341,
+      "sku": 342
+      },{
+      "code": "finish",
+      "e": 324,
+      "sku": 4324
+      },{
+      "code": "unfinish",
+      "e": 6,
+      "sku": 23
+      },{
+      "code": "abnormal",
+      "e": 7,
+      "sku": 234
+      }]
   }
 
 
