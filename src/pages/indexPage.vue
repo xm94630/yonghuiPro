@@ -71,61 +71,67 @@
     </div>
 
     <div class="linesBox borderBox MT30">
-      <template v-for="(one,index) in lines">
-        <div class="oneLine" :key="index">
-          <el-row :gutter="10" :key="index">
-            <el-col :span="1">
-              <div class="borderBox lineName">线路{{index+1}}</div>
-            </el-col>
+      <!-- swiper -->
+      <swiper :options="swiperOption" class="xxx">
+        <div class="swiper-pagination" slot="pagination"></div>
+        <template v-for="(one,index) in lines">
+          <swiper-slide :key="index">
+            <div class="oneLine">
+              <el-row :gutter="10">
+                <el-col :span="1">
+                  <div class="borderBox lineName">线路{{index+1}}</div>
+                </el-col>
 
-            <el-col :span="4">
-              <card
-                :data1="one.SKU.finish"
-                :data2="one.SKU.total"
-                title="SKU"
-                text1="完成数"
-                text2="总数"
-              />
-            </el-col>
+                <el-col :span="4">
+                  <card
+                    :data1="one.SKU.finish"
+                    :data2="one.SKU.total"
+                    title="SKU"
+                    text1="完成数"
+                    text2="总数"
+                  />
+                </el-col>
 
-            <el-col :span="4">
-              <card
-                :data1="one.SKU.finish"
-                :data2="one.SKU.total"
-                title="E数"
-                text1="完成数"
-                text2="总数"
-              />
-            </el-col>
+                <el-col :span="4">
+                  <card
+                    :data1="one.SKU.finish"
+                    :data2="one.SKU.total"
+                    title="E数"
+                    text1="完成数"
+                    text2="总数"
+                  />
+                </el-col>
 
-            <el-col :span="4">
-              <card
-                :data1="one.SKU.finish"
-                :data2="one.SKU.total"
-                title="门店数"
-                text1="完成数"
-                text2="总数"
-              />
-            </el-col>
+                <el-col :span="4">
+                  <card
+                    :data1="one.SKU.finish"
+                    :data2="one.SKU.total"
+                    title="门店数"
+                    text1="完成数"
+                    text2="总数"
+                  />
+                </el-col>
 
-            <el-col :span="11">
-              <div class="borderBox">
-                <template v-for="(oneShop,index) in one.shopState">
-                  <template v-if="oneShop.state === 0">
-                    <div class="miniCard shopUnFinish" :key="index">{{oneShop.name}}</div>
-                  </template>
-                  <template v-else-if="oneShop.state === 1">
-                    <div class="miniCard shopOnGoing" :key="index">{{oneShop.name}}</div>
-                  </template>
-                  <template v-else>
-                    <div class="miniCard shopFinish" :key="index">{{oneShop.name}}</div>
-                  </template>
-                </template>
-              </div>
-            </el-col>
-          </el-row>
-        </div>
-      </template>
+                <el-col :span="11">
+                  <div class="borderBox">
+                    <template v-for="(oneShop,index) in one.shopState">
+                      <template v-if="oneShop.state === 0">
+                        <div class="miniCard shopUnFinish" :key="index">{{oneShop.name}}</div>
+                      </template>
+                      <template v-else-if="oneShop.state === 1">
+                        <div class="miniCard shopOnGoing" :key="index">{{oneShop.name}}</div>
+                      </template>
+                      <template v-else>
+                        <div class="miniCard shopFinish" :key="index">{{oneShop.name}}</div>
+                      </template>
+                    </template>
+                  </div>
+                </el-col>
+              </el-row>
+            </div>
+          </swiper-slide>
+        </template>
+      </swiper>
     </div>
   </div>
 </template>
@@ -136,18 +142,30 @@ import dater from "../components/Dater.vue";
 import axios from "axios";
 import card from "../components/card.vue";
 
+import { swiper, swiperSlide } from "vue-awesome-swiper";
+
 import config from "../config";
 let baseUrl = config.baseUrl || "";
 
 export default {
   name: "app",
   components: {
+    swiper,
+    swiperSlide,
     pie,
     dater,
     card
   },
   data() {
     return {
+      swiperOption: {
+        autoplay: true,
+        direction: "vertical",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        }
+      },
 
       //刷新频率
       options: [
@@ -433,5 +451,10 @@ export default {
 }
 .shopFinish {
   background: #a6c87e;
+}
+
+.xxx {
+  width: 100%;
+  height: 600px;
 }
 </style>
