@@ -170,7 +170,7 @@ export default {
   data() {
     return {
       swiperOption: {
-        autoplay: false,
+        autoplay: true,
         direction: "vertical",
         pagination: {
           el: ".swiper-pagination",
