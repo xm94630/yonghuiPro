@@ -442,11 +442,11 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
         "finish": Math.round(Math.random()*1000),
       },
       "shopState": [{
-        "name": "永辉生活严桥路店YH9DH8 2-19",
-        "state": 0
+        "name": "绍兴店",
+        "state": 1
       }, {
         "name": "永辉生活台儿庄路店YH9DHW 3-19",
-        "state": 0
+        "state": 2
       }, {
         "name": "永辉生活三门支路店YH9DI4 3-10",
         "state": 0

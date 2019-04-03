@@ -74,81 +74,72 @@
       <!-- swiper -->
       <swiper :options="swiperOption" class="xxx">
         <div class="swiper-pagination" slot="pagination"></div>
-        
-        
-        
-        
-        
+
         <template v-for="(oneGroup,index) in lines">
-         
           <swiper-slide :key="index">
-
             <template v-for="(one,index) in oneGroup">
-            <div class="oneLine" :key="index">
-              <el-row :gutter="10">
-                <el-col :span="1">
-                  <div class="borderBox lineName">线路{{index+1}}</div>
-                </el-col>
+              <div class="oneLine" :key="index">
+                <el-row :gutter="10">
+                  <el-col :span="1">
+                    <div class="borderBox lineName">线路{{index+1}}</div>
+                  </el-col>
 
-                <el-col :span="3">
-                  <card
-                    :data1="one.SKU.finish"
-                    :data2="one.SKU.total"
-                    title="SKU"
-                    text1="完成数"
-                    text2="总数"
-                  />
-                </el-col>
+                  <el-col :span="3">
+                    <card
+                      :data1="one.SKU.finish"
+                      :data2="one.SKU.total"
+                      title="SKU"
+                      text1="完成数"
+                      text2="总数"
+                    />
+                  </el-col>
 
-                <el-col :span="3">
-                  <card
-                    :data1="one.SKU.finish"
-                    :data2="one.SKU.total"
-                    title="E数"
-                    text1="完成数"
-                    text2="总数"
-                  />
-                </el-col>
+                  <el-col :span="3">
+                    <card
+                      :data1="one.SKU.finish"
+                      :data2="one.SKU.total"
+                      title="E数"
+                      text1="完成数"
+                      text2="总数"
+                    />
+                  </el-col>
 
-                <el-col :span="3">
-                  <card
-                    :data1="one.SKU.finish"
-                    :data2="one.SKU.total"
-                    title="门店数"
-                    text1="完成数"
-                    text2="总数"
-                  />
-                </el-col>
+                  <el-col :span="3">
+                    <card
+                      :data1="one.SKU.finish"
+                      :data2="one.SKU.total"
+                      title="门店数"
+                      text1="完成数"
+                      text2="总数"
+                    />
+                  </el-col>
 
-                <el-col :span="14">
-                  <div class="borderBox">
-                    <template v-for="(oneShop,index) in one.shopState">
-                      <template v-if="oneShop.state === 0">
-                        <div class="miniCard shopUnFinish" :key="index">{{oneShop.name}}</div>
+                  <el-col :span="14">
+                    <div class="borderBox">
+                      <template v-for="(oneShop,index) in one.shopState">
+                        <template v-if="oneShop.state === 0">
+                          <div class="miniCard shopUnFinish" :key="index">
+                            <div class="innerBox">{{oneShop.name}}</div>
+                          </div>
+                        </template>
+                        <template v-else-if="oneShop.state === 1">
+                          <div class="miniCard shopOnGoing" :key="index">
+                            <div class="innerBox">{{oneShop.name}}</div>
+                          </div>
+                        </template>
+                        <template v-else>
+                          <div class="miniCard shopFinish" :key="index">
+                            <div class="innerBox">{{oneShop.name}}</div>
+                          </div>
+                        </template>
                       </template>
-                      <template v-else-if="oneShop.state === 1">
-                        <div class="miniCard shopOnGoing" :key="index">{{oneShop.name}}</div>
-                      </template>
-                      <template v-else>
-                        <div class="miniCard shopFinish" :key="index">{{oneShop.name}}</div>
-                      </template>
-                    </template>
-                  </div>
-                </el-col>
-              </el-row>
-            </div>
+                    </div>
+                  </el-col>
+                </el-row>
+              </div>
             </template>
-
           </swiper-slide>
-
         </template>
-
-
-
-
-
-
-
       </swiper>
     </div>
   </div>
@@ -230,26 +221,26 @@ export default {
       lines: [
         [
           {
-          SKU: {
-            finish: 0,
-            total: 0
-          },
-          E: {
-            finish: 0,
-            total: 0
-          },
-          shop: {
-            finish: 0,
-            total: 0
-          },
-          shopState: [
-            {
-              name: "绍兴店",
-              state: 0
-            }
-          ],
-          lineName: "线路1"
-        }
+            SKU: {
+              finish: 0,
+              total: 0
+            },
+            E: {
+              finish: 0,
+              total: 0
+            },
+            shop: {
+              finish: 0,
+              total: 0
+            },
+            shopState: [
+              {
+                name: "绍兴店",
+                state: 0
+              }
+            ],
+            lineName: "线路1"
+          }
         ]
       ]
     };
@@ -320,13 +311,24 @@ export default {
         )
         .then(response => {
           let linesData = response.data.data;
-          //店面数据，最多只保留前面16条
+
+          //数据加工
+          let maxLen = 12;
           linesData.forEach(function(one) {
+            //店面数据，最多只保留前面16条
             one.shopState = one.shopState.slice(0, 16);
+            //名字超过12字的就截断
+            one.shopState.map(function(thisShop) {
+              thisShop.name =
+                thisShop.name.length > maxLen
+                  ? thisShop.name.substring(0, maxLen) + "..."
+                  : thisShop.name;
+              return thisShop;
+            });
           });
           //linesData这个数组要按照每5个拆分成N个数组，为了适应swiper
           linesData = _.chunk(linesData, 5);
-          
+
           this.lines = linesData;
         });
     }
@@ -439,6 +441,14 @@ export default {
   text-align: center;
   overflow: hidden;
   font-size: 12px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  .innerBox {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .dateBox {
@@ -470,7 +480,7 @@ export default {
 }
 
 .shopUnFinish {
-  background: #ccc;
+  background: #ddd;
 }
 .shopOnGoing {
   background: #f49999;
