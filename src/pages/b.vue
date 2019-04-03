@@ -401,6 +401,8 @@ export default {
       this.intervalID = setInterval(() => {
         this.refreshData();
       }, v * 1000 * 60);
+      //每次选择也会刷新一次
+      this.refreshData();
     },
     refreshData: function() {
       //webpack对 "http://localhost:8080/epimetheus/api/diy/report/queryReportByCode/2" 代理，

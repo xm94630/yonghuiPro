@@ -260,6 +260,8 @@ export default {
       this.intervalID = setInterval(() => {
         this.refreshData();
       }, v * 1000 * 60);
+      //每次选择也会刷新一次
+      this.refreshData();
     },
     refreshData: function() {
       //如果开启代理模式的话：
