@@ -41,31 +41,50 @@
     </div>
 
     <div class="linesBox borderBox MT30">
-      <el-row :gutter="10">
-        <el-col :span="1">
-          <div class="borderBox lineName">001</div>
-        </el-col>
+      
+      <template  v-for="(one,index) in lines">
+        <el-row :gutter="10" :key="index">
+          <el-col :span="1">
+            <div class="borderBox lineName">线路{{index}}</div>
+          </el-col>
 
-        <el-col :span="4">
-          <card :data1="22" :data2="33" title="SKU" text1="完成数" text2="总数"/>
-        </el-col>
+          <el-col :span="4">
+            <card :data1="one.SKU.finish" :data2="one.SKU.total" title="SKU" text1="完成数" text2="总数"/>
+          </el-col>
 
-        <el-col :span="4">
-          <card :data1="22" :data2="33" title="E数" text1="完成数" text2="总数"/>
-        </el-col>
+          <el-col :span="4">
+            <card :data1="one.SKU.finish" :data2="one.SKU.total" title="E数" text1="完成数" text2="总数"/>
+          </el-col>
 
-        <el-col :span="4">
-          <card :data1="22" :data2="33" title="门店数" text1="完成数" text2="总数"/>
-        </el-col>
+          <el-col :span="4">
+            <card :data1="one.SKU.finish" :data2="one.SKU.total" title="门店数" text1="完成数" text2="总数"/>
+          </el-col>
 
-        <el-col :span="11">
-          <div class="borderBox">
-            <div class="miniCard shopUnFinish">店1</div>
-            <div class="miniCard shopOnGoing">店2</div>
-            <div class="miniCard shopFinish">店3</div>
-          </div>
-        </el-col>
-      </el-row>
+          <el-col :span="11">
+            <div class="borderBox">
+
+              <template  v-for="(oneShop,index) in one.shopState">
+                
+                <template v-if="oneShop.state === 0">
+                   <div class="miniCard shopUnFinish" :key="index">{{oneShop.name}}</div>
+                </template>
+                <template v-else-if="oneShop.state === 1">
+                   <div class="miniCard shopOnGoing" :key="index">{{oneShop.name}}</div>
+                </template>
+                <template v-else>
+                  <div class="miniCard shopFinish" :key="index">{{oneShop.name}}</div>
+                </template>
+
+              </template>
+
+            </div>
+          </el-col>
+        </el-row>
+      </template>
+
+      
+
+
     </div>
   </div>
 </template>
@@ -189,13 +208,14 @@ export default {
         });
 
       //各行
-      // axios
-      //   .post(
-      //     baseUrl +
-      //       "/epimetheus/api/diy/report/querySingleReportByCode?code=lines"
-      //   )
-      //   .then(response => {
-      //   });
+      axios
+        .post(
+          baseUrl +
+            "/epimetheus/api/diy/report/querySingleReportByCode?code=lines"
+        )
+        .then(response => {
+          this.lines = response.data.data;
+        });
     }
   },
   mounted: function() {
@@ -291,6 +311,7 @@ export default {
   margin: 0 10px 10px 0;
   background: #ccc;
   text-align: center;
+  overflow: hidden;
 }
 
 .dateBox {
