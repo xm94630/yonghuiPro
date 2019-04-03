@@ -6,6 +6,18 @@
       <router-link to="/workload" class="myLink">工作量</router-link>
     </div>
 
+    <div class="intervalSelectBox">
+      刷新频率
+      <el-select v-model="refreshTime" placeholder="请选择" @change="selectChange">
+        <el-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value"
+        ></el-option>
+      </el-select>
+    </div>
+
     <div class="totalBox">
       <el-row :gutter="30">
         <el-col :span="8">
@@ -63,7 +75,7 @@
         <div class="oneLine" :key="index">
           <el-row :gutter="10" :key="index">
             <el-col :span="1">
-              <div class="borderBox lineName">线路{{index}}</div>
+              <div class="borderBox lineName">线路{{index+1}}</div>
             </el-col>
 
             <el-col :span="4">
@@ -138,6 +150,25 @@ export default {
   },
   data() {
     return {
+
+      //刷新频率
+      options: [
+        {
+          value: 5,
+          label: "5分钟"
+        },
+        {
+          value: 10,
+          label: "10分钟"
+        },
+        {
+          value: 30,
+          label: "30分钟"
+        }
+      ],
+      refreshTime: 5,
+      intervalID: null,
+
       chartData: {
         chartId: "xxxyyy",
         titleText: "总体进度",
@@ -187,6 +218,12 @@ export default {
     };
   },
   methods: {
+    selectChange: function(v) {
+      clearInterval(this.intervalID);
+      this.intervalID = setInterval(() => {
+        this.refreshData();
+      }, v * 1000 * 60);
+    },
     refreshData: function() {
       //如果开启代理模式的话：
       //webpack对 "http://localhost:8080/epimetheus/api/diy/report/queryReportByCode" 代理，
@@ -254,6 +291,9 @@ export default {
   },
   mounted: function() {
     this.refreshData();
+    this.intervalID = setInterval(() => {
+      this.refreshData();
+    }, this.refreshTime * 1000 * 60);
   }
 };
 </script>
@@ -324,12 +364,11 @@ export default {
 
     .cardBox {
       height: 100px;
-      margin-top:10px;
+      margin-top: 10px;
       .cardBoxM {
         font-size: 30px;
       }
     }
-
   }
   .oneLine:nth-child(even) {
     //background: #eee;

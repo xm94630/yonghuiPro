@@ -401,28 +401,28 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
   if ("totalProgress" == ctx.request.query.code) {
     //总体进度
     obj = {
-      "data": 0.85
+      "data": Math.random(),
     }
   }
   if ("total-SKU" == ctx.request.query.code) {
     //总体SKU
     obj = {
-      "total": 2392,
-      "finish": 0
+      "total": Math.round(Math.random()*1000),
+      "finish": Math.round(Math.random()*1000),
     }
   }
   if ("total-E" == ctx.request.query.code) {
     //总体E数
     obj = {
-      "total": 2392,
-      "finish": 0
+      "total": Math.round(Math.random()*1000),
+      "finish": Math.round(Math.random()*1000),
     }
   }
   if ("total-Shop" == ctx.request.query.code) {
     //门店
     obj = {
-      "total": 2392,
-      "finish": 0
+      "total": Math.round(Math.random()*1000),
+      "finish": Math.round(Math.random()*1000),
     }
   }
   if ("lines" == ctx.request.query.code) {
@@ -430,16 +430,16 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
     obj = [{
       "priority": 30,
       "SKU": {
-        "total": 204,
-        "finish": 0
+        "total": Math.round(Math.random()*1000),
+        "finish": Math.round(Math.random()*1000),
       },
       "E": {
-        "total": 713,
-        "finish": 0
+        "total": Math.round(Math.random()*1000),
+        "finish": Math.round(Math.random()*1000),
       },
       "shop": {
-        "total": 32,
-        "finish": 0
+        "total": Math.round(Math.random()*1000),
+        "finish": Math.round(Math.random()*1000),
       },
       "shopState": [{
         "name": "永辉生活严桥路店YH9DH8 2-19",
