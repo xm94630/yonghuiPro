@@ -47,7 +47,7 @@ import barChart from "../components/bar.vue";
 import dater from "../components/Dater.vue";
 import axios from "axios";
 
-import config from '../../vue.config'
+import config from "../config";
 let baseUrl = config.baseUrl || '';
 
 export default {

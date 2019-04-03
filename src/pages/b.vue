@@ -252,7 +252,7 @@ import card from "../components/card.vue";
 import axios from "axios";
 import _ from "lodash";
 
-import config from '../../vue.config'
+import config from "../config";
 let baseUrl = config.baseUrl || '';
 
 

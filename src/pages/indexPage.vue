@@ -137,7 +137,7 @@ import dater from "../components/Dater.vue";
 import axios from "axios";
 import card from "../components/card.vue";
 
-import config from "../../vue.config";
+import config from "../config";
 let baseUrl = config.baseUrl || "";
 
 export default {
