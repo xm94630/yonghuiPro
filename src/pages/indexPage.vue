@@ -24,14 +24,14 @@
             <div class="totalBoxRB">
               <el-row :gutter="30">
                 <el-col :span="8">
-                  <card :data1="1" :data2="2" title="SKU" text1="完成数" text2="总数"/>
+                  <card :data1="total.SKU.finish" :data2="total.SKU.total" title="SKU" text1="完成数" text2="总数"/>
                 </el-col>
                 <el-col :span="8">
-                  <card :data1="1" :data2="2" title="E数" text1="完成数" text2="总数"/>
+                  <card :data1="total.E.finish" :data2="total.E.total" title="E数" text1="完成数" text2="总数"/>
                 </el-col>
 
                 <el-col :span="8">
-                  <card :data1="1" :data2="2" title="门店数" text1="完成数" text2="总数"/>
+                  <card :data1="total.shop.finish" :data2="total.shop.total" title="门店数" text1="完成数" text2="总数"/>
                 </el-col>
               </el-row>
             </div>
@@ -154,6 +154,48 @@ export default {
         .then(response => {
           this.chartData.percent = response.data.data.data;
         });
+
+      //sku
+      axios
+        .post(
+          baseUrl +
+            "/epimetheus/api/diy/report/querySingleReportByCode?code=total-SKU"
+        )
+        .then(response => {
+          this.total.SKU.total = response.data.data.total;
+          this.total.SKU.finish = response.data.data.finish;
+        });
+
+      //e
+      axios
+        .post(
+          baseUrl +
+            "/epimetheus/api/diy/report/querySingleReportByCode?code=total-E"
+        )
+        .then(response => {
+          this.total.E.total = response.data.data.total;
+          this.total.E.finish = response.data.data.finish;
+        });
+
+      //shop
+      axios
+        .post(
+          baseUrl +
+            "/epimetheus/api/diy/report/querySingleReportByCode?code=total-Shop"
+        )
+        .then(response => {
+          this.total.shop.total = response.data.data.total;
+          this.total.shop.finish = response.data.data.finish;
+        });
+
+      //各行
+      // axios
+      //   .post(
+      //     baseUrl +
+      //       "/epimetheus/api/diy/report/querySingleReportByCode?code=lines"
+      //   )
+      //   .then(response => {
+      //   });
     }
   },
   mounted: function() {
