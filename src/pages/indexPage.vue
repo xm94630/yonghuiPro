@@ -74,9 +74,17 @@
       <!-- swiper -->
       <swiper :options="swiperOption" class="xxx">
         <div class="swiper-pagination" slot="pagination"></div>
-        <template v-for="(one,index) in lines">
+        
+        
+        
+        
+        
+        <template v-for="(oneGroup,index) in lines">
+         
           <swiper-slide :key="index">
-            <div class="oneLine">
+
+            <template v-for="(one,index) in oneGroup">
+            <div class="oneLine" :key="index">
               <el-row :gutter="10">
                 <el-col :span="1">
                   <div class="borderBox lineName">线路{{index+1}}</div>
@@ -129,8 +137,18 @@
                 </el-col>
               </el-row>
             </div>
+            </template>
+
           </swiper-slide>
+
         </template>
+
+
+
+
+
+
+
       </swiper>
     </div>
   </div>
@@ -208,8 +226,10 @@ export default {
       },
 
       //数据全部来自接口
+      //注意，这里需要有2层的数组结构，内层的以5个数组为一组，主要是为了适应swiper的渲染结构。
       lines: [
-        {
+        [
+          {
           SKU: {
             finish: 0,
             total: 0
@@ -230,6 +250,7 @@ export default {
           ],
           lineName: "线路1"
         }
+        ]
       ]
     };
   },
@@ -301,6 +322,9 @@ export default {
           linesData.forEach(function(one) {
             one.shopState = one.shopState.slice(0, 16);
           });
+          //linesData这个数组要按照每5个拆分成N个数组，为了适应swiper
+          linesData = _.chunk(linesData, 5);
+          
           this.lines = linesData;
         });
     }
