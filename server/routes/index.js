@@ -676,7 +676,456 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
         "name": "永辉生活芙蓉江路店YH9DK7 1-5",
         "state": 0
       }]
-    }]
+    },
+    {
+      "priority": 30,
+      "SKU": {
+        "total": 204,
+        "finish": 0
+      },
+      "E": {
+        "total": 713,
+        "finish": 0
+      },
+      "shop": {
+        "total": 32,
+        "finish": 0
+      },
+      "shopState": [{
+        "name": "永辉生活严桥路店YH9DH8 2-19",
+        "state": 0
+      }, {
+        "name": "永辉生活台儿庄路店YH9DHW 3-19",
+        "state": 0
+      }, {
+        "name": "永辉生活三门支路店YH9DI4 3-10",
+        "state": 0
+      }, {
+        "name": "永辉生活新松江路店YH9DIR 6-12",
+        "state": 0
+      }, {
+        "name": "永辉上海静安区--永辉生活新疆路店9DJA 2-2",
+        "state": 0
+      }, {
+        "name": "永辉生活武威东路店 9DEE 2-11",
+        "state": 0
+      }, {
+        "name": "永辉生活松兰路店9DEK 5-16",
+        "state": 0
+      }, {
+        "name": "永辉生活罗秀路店9DEU 6-19",
+        "state": 0
+      }, {
+        "name": "永辉生活环林东路YH9DGI 2-12",
+        "state": 0
+      }, {
+        "name": "永辉生活黄兴路店9DFI 3-7",
+        "state": 0
+      }, {
+        "name": "永辉生活梅园路店9DEH 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活浦东大道店 9DF2 1-14",
+        "state": 0
+      }, {
+        "name": "永辉生活平城路店9DFC 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活梅岭北路店YH9DGA 2-14",
+        "state": 0
+      }, {
+        "name": "永辉生活青松路店YH9DHL 6-3",
+        "state": 0
+      }, {
+        "name": "永辉生活城中路店YH9DGP 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活芳华路店YH9DHK 2-18",
+        "state": 0
+      }, {
+        "name": "永辉生活本溪路店YH9DIQ 4-10",
+        "state": 0
+      }, {
+        "name": "苏州--永辉生活9DIY星湖街店6-10",
+        "state": 0
+      }, {
+        "name": "永辉生活沁春路店YH9DI7 2-10",
+        "state": 0
+      }, {
+        "name": "-永辉生活银都路 9DED 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活双阳路店9DFE 3-9",
+        "state": 0
+      }, {
+        "name": "永辉生活云清路店9DG2 6-9",
+        "state": 0
+      }, {
+        "name": "永辉生活外婆泾店YH9DGD 6-8",
+        "state": 0
+      }, {
+        "name": "永辉生活涞坊路店YH9DGE 电梯口",
+        "state": 0
+      }, {
+        "name": "苏州永辉生活东沙湖路店6-6",
+        "state": 0
+      }, {
+        "name": "永辉生活罗锦路店YH9DGN 6-17",
+        "state": 0
+      }, {
+        "name": "苏州永辉生活9DHS东沈浒路店6-7",
+        "state": 0
+      }, {
+        "name": "永辉生活泽普路店YH9DJ6 1-1",
+        "state": 0
+      }, {
+        "name": "苏州永辉生活9DEC王天井巷店6-4",
+        "state": 0
+      }, {
+        "name": "永辉生活淮阴路店9DFA 1-10",
+        "state": 0
+      }, {
+        "name": "苏州--永辉生活9DFG新未来花园店6-9",
+        "state": 0
+      },{
+        "priority": 30,
+        "SKU": {
+          "total": 204,
+          "finish": 0
+        },
+        "E": {
+          "total": 713,
+          "finish": 0
+        },
+        "shop": {
+          "total": 32,
+          "finish": 0
+        },
+        "shopState": [{
+          "name": "永辉生活严桥路店YH9DH8 2-19",
+          "state": 0
+        }, {
+          "name": "永辉生活台儿庄路店YH9DHW 3-19",
+          "state": 0
+        }, {
+          "name": "永辉生活三门支路店YH9DI4 3-10",
+          "state": 0
+        }, {
+          "name": "永辉生活新松江路店YH9DIR 6-12",
+          "state": 0
+        }, {
+          "name": "永辉上海静安区--永辉生活新疆路店9DJA 2-2",
+          "state": 0
+        }, {
+          "name": "永辉生活武威东路店 9DEE 2-11",
+          "state": 0
+        }, {
+          "name": "永辉生活松兰路店9DEK 5-16",
+          "state": 0
+        }, {
+          "name": "永辉生活罗秀路店9DEU 6-19",
+          "state": 0
+        }, {
+          "name": "永辉生活环林东路YH9DGI 2-12",
+          "state": 0
+        }, {
+          "name": "永辉生活黄兴路店9DFI 3-7",
+          "state": 0
+        }, {
+          "name": "永辉生活梅园路店9DEH 电梯口",
+          "state": 0
+        }, {
+          "name": "永辉生活浦东大道店 9DF2 1-14",
+          "state": 0
+        }, {
+          "name": "永辉生活平城路店9DFC 电梯口",
+          "state": 0
+        }, {
+          "name": "永辉生活梅岭北路店YH9DGA 2-14",
+          "state": 0
+        }, {
+          "name": "永辉生活青松路店YH9DHL 6-3",
+          "state": 0
+        }, {
+          "name": "永辉生活城中路店YH9DGP 电梯口",
+          "state": 0
+        }, {
+          "name": "永辉生活芳华路店YH9DHK 2-18",
+          "state": 0
+        }, {
+          "name": "永辉生活本溪路店YH9DIQ 4-10",
+          "state": 0
+        }, {
+          "name": "苏州--永辉生活9DIY星湖街店6-10",
+          "state": 0
+        }, {
+          "name": "永辉生活沁春路店YH9DI7 2-10",
+          "state": 0
+        }, {
+          "name": "-永辉生活银都路 9DED 电梯口",
+          "state": 0
+        }, {
+          "name": "永辉生活双阳路店9DFE 3-9",
+          "state": 0
+        }, {
+          "name": "永辉生活云清路店9DG2 6-9",
+          "state": 0
+        }, {
+          "name": "永辉生活外婆泾店YH9DGD 6-8",
+          "state": 0
+        }, {
+          "name": "永辉生活涞坊路店YH9DGE 电梯口",
+          "state": 0
+        }, {
+          "name": "苏州永辉生活东沙湖路店6-6",
+          "state": 0
+        }, {
+          "name": "永辉生活罗锦路店YH9DGN 6-17",
+          "state": 0
+        }, {
+          "name": "苏州永辉生活9DHS东沈浒路店6-7",
+          "state": 0
+        }, {
+          "name": "永辉生活泽普路店YH9DJ6 1-1",
+          "state": 0
+        }, {
+          "name": "苏州永辉生活9DEC王天井巷店6-4",
+          "state": 0
+        }, {
+          "name": "永辉生活淮阴路店9DFA 1-10",
+          "state": 0
+        }, {
+          "name": "苏州--永辉生活9DFG新未来花园店6-9",
+          "state": 0
+        }]
+      }]
+    }, 
+    {
+      "priority": 30,
+      "SKU": {
+        "total": 204,
+        "finish": 0
+      },
+      "E": {
+        "total": 713,
+        "finish": 0
+      },
+      "shop": {
+        "total": 32,
+        "finish": 0
+      },
+      "shopState": [{
+        "name": "永辉生活严桥路店YH9DH8 2-19",
+        "state": 0
+      }, {
+        "name": "永辉生活台儿庄路店YH9DHW 3-19",
+        "state": 0
+      }, {
+        "name": "永辉生活三门支路店YH9DI4 3-10",
+        "state": 0
+      }, {
+        "name": "永辉生活新松江路店YH9DIR 6-12",
+        "state": 0
+      }, {
+        "name": "永辉上海静安区--永辉生活新疆路店9DJA 2-2",
+        "state": 0
+      }, {
+        "name": "永辉生活武威东路店 9DEE 2-11",
+        "state": 0
+      }, {
+        "name": "永辉生活松兰路店9DEK 5-16",
+        "state": 0
+      }, {
+        "name": "永辉生活罗秀路店9DEU 6-19",
+        "state": 0
+      }, {
+        "name": "永辉生活环林东路YH9DGI 2-12",
+        "state": 0
+      }, {
+        "name": "永辉生活黄兴路店9DFI 3-7",
+        "state": 0
+      }, {
+        "name": "永辉生活梅园路店9DEH 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活浦东大道店 9DF2 1-14",
+        "state": 0
+      }, {
+        "name": "永辉生活平城路店9DFC 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活梅岭北路店YH9DGA 2-14",
+        "state": 0
+      }, {
+        "name": "永辉生活青松路店YH9DHL 6-3",
+        "state": 0
+      }, {
+        "name": "永辉生活城中路店YH9DGP 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活芳华路店YH9DHK 2-18",
+        "state": 0
+      }, {
+        "name": "永辉生活本溪路店YH9DIQ 4-10",
+        "state": 0
+      }, {
+        "name": "苏州--永辉生活9DIY星湖街店6-10",
+        "state": 0
+      }, {
+        "name": "永辉生活沁春路店YH9DI7 2-10",
+        "state": 0
+      }, {
+        "name": "-永辉生活银都路 9DED 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活双阳路店9DFE 3-9",
+        "state": 0
+      }, {
+        "name": "永辉生活云清路店9DG2 6-9",
+        "state": 0
+      }, {
+        "name": "永辉生活外婆泾店YH9DGD 6-8",
+        "state": 0
+      }, {
+        "name": "永辉生活涞坊路店YH9DGE 电梯口",
+        "state": 0
+      }, {
+        "name": "苏州永辉生活东沙湖路店6-6",
+        "state": 0
+      }, {
+        "name": "永辉生活罗锦路店YH9DGN 6-17",
+        "state": 0
+      }, {
+        "name": "苏州永辉生活9DHS东沈浒路店6-7",
+        "state": 0
+      }, {
+        "name": "永辉生活泽普路店YH9DJ6 1-1",
+        "state": 0
+      }, {
+        "name": "苏州永辉生活9DEC王天井巷店6-4",
+        "state": 0
+      }, {
+        "name": "永辉生活淮阴路店9DFA 1-10",
+        "state": 0
+      }, {
+        "name": "苏州--永辉生活9DFG新未来花园店6-9",
+        "state": 0
+      }]
+    }, 
+    {
+      "priority": 30,
+      "SKU": {
+        "total": 204,
+        "finish": 0
+      },
+      "E": {
+        "total": 713,
+        "finish": 0
+      },
+      "shop": {
+        "total": 32,
+        "finish": 0
+      },
+      "shopState": [{
+        "name": "永辉生活严桥路店YH9DH8 2-19",
+        "state": 0
+      }, {
+        "name": "永辉生活台儿庄路店YH9DHW 3-19",
+        "state": 0
+      }, {
+        "name": "永辉生活三门支路店YH9DI4 3-10",
+        "state": 0
+      }, {
+        "name": "永辉生活新松江路店YH9DIR 6-12",
+        "state": 0
+      }, {
+        "name": "永辉上海静安区--永辉生活新疆路店9DJA 2-2",
+        "state": 0
+      }, {
+        "name": "永辉生活武威东路店 9DEE 2-11",
+        "state": 0
+      }, {
+        "name": "永辉生活松兰路店9DEK 5-16",
+        "state": 0
+      }, {
+        "name": "永辉生活罗秀路店9DEU 6-19",
+        "state": 0
+      }, {
+        "name": "永辉生活环林东路YH9DGI 2-12",
+        "state": 0
+      }, {
+        "name": "永辉生活黄兴路店9DFI 3-7",
+        "state": 0
+      }, {
+        "name": "永辉生活梅园路店9DEH 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活浦东大道店 9DF2 1-14",
+        "state": 0
+      }, {
+        "name": "永辉生活平城路店9DFC 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活梅岭北路店YH9DGA 2-14",
+        "state": 0
+      }, {
+        "name": "永辉生活青松路店YH9DHL 6-3",
+        "state": 0
+      }, {
+        "name": "永辉生活城中路店YH9DGP 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活芳华路店YH9DHK 2-18",
+        "state": 0
+      }, {
+        "name": "永辉生活本溪路店YH9DIQ 4-10",
+        "state": 0
+      }, {
+        "name": "苏州--永辉生活9DIY星湖街店6-10",
+        "state": 0
+      }, {
+        "name": "永辉生活沁春路店YH9DI7 2-10",
+        "state": 0
+      }, {
+        "name": "-永辉生活银都路 9DED 电梯口",
+        "state": 0
+      }, {
+        "name": "永辉生活双阳路店9DFE 3-9",
+        "state": 0
+      }, {
+        "name": "永辉生活云清路店9DG2 6-9",
+        "state": 0
+      }, {
+        "name": "永辉生活外婆泾店YH9DGD 6-8",
+        "state": 0
+      }, {
+        "name": "永辉生活涞坊路店YH9DGE 电梯口",
+        "state": 0
+      }, {
+        "name": "苏州永辉生活东沙湖路店6-6",
+        "state": 0
+      }, {
+        "name": "永辉生活罗锦路店YH9DGN 6-17",
+        "state": 0
+      }, {
+        "name": "苏州永辉生活9DHS东沈浒路店6-7",
+        "state": 0
+      }, {
+        "name": "永辉生活泽普路店YH9DJ6 1-1",
+        "state": 0
+      }, {
+        "name": "苏州永辉生活9DEC王天井巷店6-4",
+        "state": 0
+      }, {
+        "name": "永辉生活淮阴路店9DFA 1-10",
+        "state": 0
+      }, {
+        "name": "苏州--永辉生活9DFG新未来花园店6-9",
+        "state": 0
+      }]
+    }, 
+  
+    ]
   }
 
 
