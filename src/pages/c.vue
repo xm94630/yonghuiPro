@@ -41,7 +41,6 @@
 </template>
 
 <script>
-import addBtn from "../components/addBtn.vue";
 import lineChart from "../components/line.vue";
 import barChart from "../components/bar.vue";
 import dater from "../components/Dater.vue";
@@ -55,8 +54,7 @@ export default {
   components: {
     lineChart,
     barChart,
-    dater,
-    addBtn
+    dater
   },
   data() {
     return {

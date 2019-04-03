@@ -131,7 +131,6 @@
 </template>
 
 <script>
-import addBtn from "../components/addBtn.vue";
 import pie from "../components/pie.vue";
 import dater from "../components/Dater.vue";
 import axios from "axios";
@@ -145,7 +144,6 @@ export default {
   components: {
     pie,
     dater,
-    addBtn,
     card
   },
   data() {
@@ -282,7 +280,7 @@ export default {
         .then(response => {
           let linesData = response.data.data;
           //店面数据，最多只保留前面16条
-          linesData.forEach(function(one, i) {
+          linesData.forEach(function(one) {
             one.shopState = one.shopState.slice(0, 16);
           });
           this.lines = linesData;
@@ -350,7 +348,7 @@ export default {
 
 .linesBox {
   background: #fff;
-  height: 636px;
+  height: 600px;
   background-color: #ffffff;
   box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
   border-radius: 10px;
