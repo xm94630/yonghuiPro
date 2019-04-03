@@ -214,7 +214,12 @@ export default {
             "/epimetheus/api/diy/report/querySingleReportByCode?code=lines"
         )
         .then(response => {
-          this.lines = response.data.data;
+          let linesData = response.data.data;
+          //店面数据，最多只保留前面16条
+          linesData.forEach(function(one,i){
+            one.shopState = one.shopState.slice(0,16)
+          })
+          this.lines = linesData;
         });
     }
   },
