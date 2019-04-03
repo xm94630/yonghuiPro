@@ -24,14 +24,14 @@
             <div class="totalBoxRB">
               <el-row :gutter="30">
                 <el-col :span="8">
-                  <card :data1="122" :data2="133" title="SKU" text1="完成数" text2="总数"/>
+                  <card :data1="1" :data2="2" title="SKU" text1="完成数" text2="总数"/>
                 </el-col>
                 <el-col :span="8">
-                  <card :data1="222" :data2="333" title="E数" text1="完成数" text2="总数"/>
+                  <card :data1="1" :data2="2" title="E数" text1="完成数" text2="总数"/>
                 </el-col>
 
                 <el-col :span="8">
-                  <card :data1="444" :data2="555" title="门店数" text1="完成数" text2="总数"/>
+                  <card :data1="1" :data2="2" title="门店数" text1="完成数" text2="总数"/>
                 </el-col>
               </el-row>
             </div>
@@ -47,22 +47,22 @@
         </el-col>
 
         <el-col :span="4">
-          <card :data1="444" :data2="555" title="SKU" text1="完成数" text2="总数"/>
+          <card :data1="22" :data2="33" title="SKU" text1="完成数" text2="总数"/>
         </el-col>
 
         <el-col :span="4">
-          <card :data1="444" :data2="555" title="E数" text1="完成数" text2="总数"/>
+          <card :data1="22" :data2="33" title="E数" text1="完成数" text2="总数"/>
         </el-col>
 
         <el-col :span="4">
-          <card :data1="444" :data2="555" title="门店数" text1="完成数" text2="总数"/>
+          <card :data1="22" :data2="33" title="门店数" text1="完成数" text2="总数"/>
         </el-col>
 
         <el-col :span="11">
           <div class="borderBox">
-            <div class="miniCard shopUnFinish">123</div>
-            <div class="miniCard shopOnGoing">222</div>
-            <div class="miniCard shopFinish">333</div>
+            <div class="miniCard shopUnFinish">店1</div>
+            <div class="miniCard shopOnGoing">店2</div>
+            <div class="miniCard shopFinish">店3</div>
           </div>
         </el-col>
       </el-row>
@@ -76,6 +76,9 @@ import pie from "../components/pie.vue";
 import dater from "../components/Dater.vue";
 import axios from "axios";
 import card from "../components/card.vue";
+
+import config from '../../vue.config'
+let baseUrl = config.baseUrl || '';
 
 export default {
   name: "app",
@@ -137,16 +140,16 @@ export default {
   },
   methods: {
     refreshData: function() {
+
+      //如果开启代理模式的话：
       //webpack对 "http://localhost:8080/epimetheus/api/diy/report/queryReportByCode" 代理，
       //代理访问   "http://localhost:3000/epimetheus/api/diy/report/queryReportByCode"
       //匹配的规则是 '/epimetheus/api'
 
       axios
-        .post("/epimetheus/api" + "/diy/report/querySingleReportByCode/", {
-          code: "totalProgress"
-        })
+        .post(baseUrl+"/epimetheus/api" + "/diy/report/querySingleReportByCode?code=totalProgress")
         .then(response => {
-          this.chartData.percent = response.data.data;
+          this.chartData.percent = response.data.data.data;
         });
 
       // axios

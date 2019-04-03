@@ -401,7 +401,7 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
   if ("totalProgress" == ctx.request.query.code) {
     //总体进度
     obj = {
-      "data": 0.03
+      "data": 0.85
     }
   }
   if ("total-SKU" == ctx.request.query.code) {
