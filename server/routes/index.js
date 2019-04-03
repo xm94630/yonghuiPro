@@ -398,34 +398,34 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
 
 
   //页面1
-  if ("totalProgress" == ctx.request.body.code) {
+  if ("totalProgress" == ctx.request.query.code) {
     //总体进度
     obj = {
       "data": 0.03
     }
   }
-  if ("total-SKU" == ctx.request.body.code) {
+  if ("total-SKU" == ctx.request.query.code) {
     //总体SKU
     obj = {
       "total": 2392,
       "finish": 0
     }
   }
-  if ("total-E" == ctx.request.body.code) {
+  if ("total-E" == ctx.request.query.code) {
     //总体E数
     obj = {
       "total": 2392,
       "finish": 0
     }
   }
-  if ("total-Shop" == ctx.request.body.code) {
+  if ("total-Shop" == ctx.request.query.code) {
     //门店
     obj = {
       "total": 2392,
       "finish": 0
     }
   }
-  if ("lines" == ctx.request.body.code) {
+  if ("lines" == ctx.request.query.code) {
     //lines
     obj = [{
       "priority": 30,
@@ -685,7 +685,9 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
 
 
   //页面2
-  if ("pickingTaskTotal" == ctx.request.body.code) {
+  //ctx.request.query.code  //这个是url中传的
+  //ctx.request.body.code   //这个是body中传的
+  if ("pickingTaskTotal" == ctx.request.query.code) {
     //当日拣货任务汇总
     obj = [{
       "code": "total",
@@ -705,7 +707,7 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
       "sku": Math.round(Math.random() * 10000)
     }]
   }
-  if ("DC-Picking" == ctx.request.body.code) {
+  if ("DC-Picking" == ctx.request.query.code) {
     //DC拣货任务
     obj = [{
       "code": "total",
@@ -725,7 +727,7 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
       "sku": 234
     }]
   }
-  if ("AGV-Picking" == ctx.request.body.code) {
+  if ("AGV-Picking" == ctx.request.query.code) {
     //AGV拣货任务
     obj = [{
       "code": "total",
@@ -745,7 +747,7 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
       "sku": 234
     }]
   }
-  if ("DC-Replenish" == ctx.request.body.code) {
+  if ("DC-Replenish" == ctx.request.query.code) {
     //DC补货任务
     obj = [{
       "code": "total",
@@ -770,51 +772,53 @@ router.post('/epimetheus/api/diy/report/querySingleReportByCode/', async (ctx, n
 
 
   //页面3
-  if ("TrendChart" == ctx.request.body.code) {
+  if ("TrendChart" == ctx.request.query.code) {
     //图1
     obj = [{
-      "xAxis": "18",
+      "xaxis": "18",
       "series": Math.round(Math.random() * 10000),
     }, {
-      "xAxis": "19",
+      "xaxis": "19",
       "series": 3346
     }, {
-      "xAxis": "20",
+      "xaxis": "20",
       "series": 1216
     }]
   }
-  else if ("eachOnePicking" == ctx.request.body.code) {
+  else if ("eachOnePicking" == ctx.request.query.code) {
     //图2
     obj = [
       {
-        "xAxis": "甲",
+        "xaxis": "甲",
         "series": Math.round(Math.random() * 10000),
       },
       {
-        "xAxis": "乙",
+        "xaxis": "乙",
         "series": 321
       },
       {
-        "xAxis": "丙",
+        "xaxis": "丙",
         "series": 100
       }
     ]
   }
-  else if ("eachStation" == ctx.request.body.code) {
+  else if ("eachStation" == ctx.request.query.code) {
     //图3
     obj = [{
-      "xAxis": "工作站1",
+      "xaxis": "工作站1",
       "series": Math.round(Math.random() * 10000),
     }, {
-      "xAxis": "工作站2",
+      "xaxis": "工作站2",
       "series": 3346
     }, {
-      "xAxis": "工作站3",
+      "xaxis": "工作站3",
       "series": 888
     }]
   }
 
-  ctx.body = obj;
+  ctx.body = {
+    data:obj
+  };
 
 })
 

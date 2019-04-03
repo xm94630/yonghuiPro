@@ -47,6 +47,9 @@ import barChart from "../components/bar.vue";
 import dater from "../components/Dater.vue";
 import axios from "axios";
 
+import config from '../../vue.config'
+let baseUrl = config.baseUrl || '';
+
 export default {
   name: "app",
   components: {
@@ -107,7 +110,7 @@ export default {
     },
     refreshData: function() {
       axios
-        .post("http://172.16.28.46:9090/epimetheus/api/diy/report/querySingleReportByCode?code=TrendChart")
+        .post(baseUrl+"/epimetheus/api/diy/report/querySingleReportByCode?code=TrendChart")
         .then(response => {
           this.chartData1.xAxisData = _.map(response.data.data, _.iteratee("xaxis"));
           this.chartData1.seriesData = _.map(
@@ -117,7 +120,7 @@ export default {
         });
 
       axios
-        .post("http://172.16.28.46:9090/epimetheus/api/diy/report/querySingleReportByCode?code=eachOnePicking")
+        .post(baseUrl+"/epimetheus/api/diy/report/querySingleReportByCode?code=eachOnePicking")
         .then(response => {
           this.chartData2.xAxisData = _.map(response.data.data, _.iteratee("xaxis"));
           this.chartData2.seriesData = _.map(
@@ -127,7 +130,7 @@ export default {
         });
 
       axios
-        .post("http://172.16.28.46:9090/epimetheus/api/diy/report/querySingleReportByCode?code=eachStation")
+        .post(baseUrl+"/epimetheus/api/diy/report/querySingleReportByCode?code=eachStation")
         .then(response => {
           this.chartData3.xAxisData = _.map(response.data.data, _.iteratee("xaxis"));
           this.chartData3.seriesData = _.map(
