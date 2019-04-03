@@ -82,9 +82,7 @@
                 <el-row :gutter="10">
                   <el-col :span="1">
                     <div class="borderBox lineName">
-                      <div class="vBox">
-                        线路{{index+1}}
-                      </div>
+                      <div class="vBox">线路{{index+1}}</div>
                     </div>
                   </el-col>
 
@@ -365,26 +363,32 @@ export default {
     box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
     border-radius: 10px;
     border: solid 1px #e5e5e5;
+    padding: 10px;
+    box-sizing: border-box;
   }
   .totalBoxR {
     height: 320px;
     .totalBoxRT {
-      height: 160px;
+      height: 150px;
       font-size: 50px;
       text-align: center;
       position: relative;
     }
     .totalBoxRB {
       .borderBox {
-        height: 160px;
+        height: 170px;
       }
       .cardBox {
-        height: 160px;
+        height: 170px;
         background-color: #ffffff;
         box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
         border-radius: 10px;
         border: solid 1px #e5e5e5;
-
+        .cardBoxT {
+          line-height: 100%;
+          position: relative;
+          top: 15px;
+        }
         .cardBoxM {
           font-size: 50px;
         }
@@ -405,7 +409,7 @@ export default {
   border: solid 1px #e5e5e5;
   overflow: hidden;
   box-sizing: border-box;
-  padding:0 10px;
+  padding: 0 10px;
 
   .oneLine {
     height: 120px;
@@ -491,7 +495,7 @@ export default {
   background: #ddd;
 }
 .shopOnGoing {
-  background: #f49999;
+  background: #fd9f82;
 }
 .shopFinish {
   background: #a6c87e;

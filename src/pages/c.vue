@@ -47,7 +47,7 @@ import dater from "../components/Dater.vue";
 import axios from "axios";
 
 import config from "../config";
-let baseUrl = config.baseUrl || '';
+let baseUrl = config.baseUrl || "";
 
 export default {
   name: "app",
@@ -110,9 +110,15 @@ export default {
     },
     refreshData: function() {
       axios
-        .post(baseUrl+"/epimetheus/api/diy/report/querySingleReportByCode?code=TrendChart")
+        .post(
+          baseUrl +
+            "/epimetheus/api/diy/report/querySingleReportByCode?code=TrendChart"
+        )
         .then(response => {
-          this.chartData1.xAxisData = _.map(response.data.data, _.iteratee("xaxis"));
+          this.chartData1.xAxisData = _.map(
+            response.data.data,
+            _.iteratee("xaxis")
+          );
           this.chartData1.seriesData = _.map(
             response.data.data,
             _.iteratee("series")
@@ -120,9 +126,15 @@ export default {
         });
 
       axios
-        .post(baseUrl+"/epimetheus/api/diy/report/querySingleReportByCode?code=eachOnePicking")
+        .post(
+          baseUrl +
+            "/epimetheus/api/diy/report/querySingleReportByCode?code=eachOnePicking"
+        )
         .then(response => {
-          this.chartData2.xAxisData = _.map(response.data.data, _.iteratee("xaxis"));
+          this.chartData2.xAxisData = _.map(
+            response.data.data,
+            _.iteratee("xaxis")
+          );
           this.chartData2.seriesData = _.map(
             response.data.data,
             _.iteratee("series")
@@ -130,9 +142,15 @@ export default {
         });
 
       axios
-        .post(baseUrl+"/epimetheus/api/diy/report/querySingleReportByCode?code=eachStation")
+        .post(
+          baseUrl +
+            "/epimetheus/api/diy/report/querySingleReportByCode?code=eachStation"
+        )
         .then(response => {
-          this.chartData3.xAxisData = _.map(response.data.data, _.iteratee("xaxis"));
+          this.chartData3.xAxisData = _.map(
+            response.data.data,
+            _.iteratee("xaxis")
+          );
           this.chartData3.seriesData = _.map(
             response.data.data,
             _.iteratee("series")
@@ -147,11 +165,10 @@ export default {
       this.refreshData();
     }, this.refreshTime * 1000 * 60);
   },
-  
-  beforeDestroy:function(){
+
+  beforeDestroy: function() {
     clearInterval(this.intervalID);
   }
-
 };
 </script>
 
@@ -186,9 +203,9 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  .mod{
+  .mod {
     position: relative;
-    top:-10px;
+    top: -10px;
   }
 }
 .workloadBoxM {
@@ -197,6 +214,8 @@ export default {
   box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
   border-radius: 10px;
   border: solid 1px #e5e5e5;
+  padding: 20px;
+  box-sizing: border-box;
 }
 .workloadBoxB {
   height: 41%;
@@ -210,6 +229,8 @@ export default {
   box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
   border-radius: 10px;
   border: solid 1px #e5e5e5;
+  padding: 20px;
+  box-sizing: border-box;
 }
 .workloadBoxBR {
   width: 48%;
@@ -217,5 +238,7 @@ export default {
   box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
   border-radius: 10px;
   border: solid 1px #e5e5e5;
+  padding: 20px;
+  box-sizing: border-box;
 }
 </style>

@@ -32,7 +32,7 @@
             <div>当日拣货任务汇总</div>
           </div>
           <div class="replenishBoxLine_con">
-            <el-row :gutter="10">
+            <el-row :gutter="15">
               <el-col :span="6">
                 <card
                   :data1="line1.total.sku"
@@ -86,7 +86,7 @@
             <div>DC拣货任务</div>
           </div>
           <div class="replenishBoxLine_con">
-            <el-row :gutter="10">
+            <el-row :gutter="15">
               <el-col :span="6">
                 <card
                   :data1="line2.total.sku"
@@ -140,7 +140,7 @@
             <div>AGV拣货任务</div>
           </div>
           <div class="replenishBoxLine_con">
-            <el-row :gutter="10">
+            <el-row :gutter="15">
               <el-col :span="6">
                 <card
                   :data1="line3.total.sku"
@@ -194,7 +194,7 @@
             <div>DC补货任务</div>
           </div>
           <div class="replenishBoxLine_con">
-            <el-row :gutter="10">
+            <el-row :gutter="15">
               <el-col :span="6">
                 <card
                   :data1="line4.total.sku"
@@ -253,8 +253,7 @@ import axios from "axios";
 import _ from "lodash";
 
 import config from "../config";
-let baseUrl = config.baseUrl || '';
-
+let baseUrl = config.baseUrl || "";
 
 export default {
   name: "app",
@@ -458,8 +457,8 @@ export default {
 
       axios
         .post(
-          baseUrl+
-          "/epimetheus/api" +
+          baseUrl +
+            "/epimetheus/api" +
             "/diy/report/querySingleReportByCode?code=DC-Replenish"
         )
         .then(response => {
@@ -506,7 +505,7 @@ export default {
   position: relative;
   display: flex;
   box-sizing: border-box;
-  padding: 0 47px;
+  padding: 0 0px 0 47px;;
   background-color: #ffffff;
   box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
   border-radius: 10px;
@@ -541,6 +540,8 @@ export default {
   }
   .replenishBoxLineR {
     width: 20%;
+    position: relative;
+    top:-10px;
   }
 }
 .replenishBoxLine1 {

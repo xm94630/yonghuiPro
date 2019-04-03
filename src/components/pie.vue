@@ -9,7 +9,7 @@ import echarts from 'echarts'
 //获取饼图option配置
 function getOption(data){
   var option = {
-		//color:['#f49999','#ffd385',],
+		//color:['#a6c87e','#fd9f82'],
 		// 标题组件，包含主标题和副标题
 		title:{
 			show:true,
