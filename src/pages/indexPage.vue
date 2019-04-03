@@ -81,7 +81,11 @@
               <div class="oneLine" :key="index">
                 <el-row :gutter="10">
                   <el-col :span="1">
-                    <div class="borderBox lineName">线路{{index+1}}</div>
+                    <div class="borderBox lineName">
+                      <div class="vBox">
+                        线路{{index+1}}
+                      </div>
+                    </div>
                   </el-col>
 
                   <el-col :span="3">
@@ -119,17 +123,17 @@
                       <template v-for="(oneShop,index) in one.shopState">
                         <template v-if="oneShop.state === 0">
                           <div class="miniCard shopUnFinish" :key="index">
-                            <div class="innerBox">{{oneShop.name}}</div>
+                            <div class="vBox">{{oneShop.name}}</div>
                           </div>
                         </template>
                         <template v-else-if="oneShop.state === 1">
                           <div class="miniCard shopOnGoing" :key="index">
-                            <div class="innerBox">{{oneShop.name}}</div>
+                            <div class="vBox">{{oneShop.name}}</div>
                           </div>
                         </template>
                         <template v-else>
                           <div class="miniCard shopFinish" :key="index">
-                            <div class="innerBox">{{oneShop.name}}</div>
+                            <div class="vBox">{{oneShop.name}}</div>
                           </div>
                         </template>
                       </template>
@@ -400,11 +404,14 @@ export default {
   border-radius: 10px;
   border: solid 1px #e5e5e5;
   overflow: hidden;
+  box-sizing: border-box;
+  padding:0 10px;
 
   .oneLine {
     height: 120px;
     overflow: hidden;
     border-bottom: solid 1px #eee;
+    box-sizing: border-box;
 
     .cardBox {
       height: 100px;
@@ -443,12 +450,13 @@ export default {
   font-size: 12px;
   padding: 0 5px;
   box-sizing: border-box;
-  .innerBox {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-  }
+}
+
+.vBox {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .dateBox {
