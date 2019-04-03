@@ -77,8 +77,8 @@ import dater from "../components/Dater.vue";
 import axios from "axios";
 import card from "../components/card.vue";
 
-import config from '../../vue.config'
-let baseUrl = config.baseUrl || '';
+import config from "../../vue.config";
+let baseUrl = config.baseUrl || "";
 
 export default {
   name: "app",
@@ -140,25 +140,20 @@ export default {
   },
   methods: {
     refreshData: function() {
-
       //如果开启代理模式的话：
       //webpack对 "http://localhost:8080/epimetheus/api/diy/report/queryReportByCode" 代理，
       //代理访问   "http://localhost:3000/epimetheus/api/diy/report/queryReportByCode"
       //匹配的规则是 '/epimetheus/api'
 
+      //饼图
       axios
-        .post(baseUrl+"/epimetheus/api" + "/diy/report/querySingleReportByCode?code=totalProgress")
+        .post(
+          baseUrl +
+            "/epimetheus/api/diy/report/querySingleReportByCode?code=totalProgress"
+        )
         .then(response => {
           this.chartData.percent = response.data.data.data;
         });
-
-      // axios
-      //   .get("/epimetheus/api" + "/diy/report/queryReportByCode")
-      //   .then(response => {
-      //     this.chartData.percent = response.data.total.rate.data;
-      //     this.total = response.data.total;
-      //     this.lines = response.data.lines;
-      //   });
     }
   },
   mounted: function() {
