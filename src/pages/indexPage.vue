@@ -24,14 +24,32 @@
             <div class="totalBoxRB">
               <el-row :gutter="30">
                 <el-col :span="8">
-                  <card :data1="total.SKU.finish" :data2="total.SKU.total" title="SKU" text1="完成数" text2="总数"/>
+                  <card
+                    :data1="total.SKU.finish"
+                    :data2="total.SKU.total"
+                    title="SKU"
+                    text1="完成数"
+                    text2="总数"
+                  />
                 </el-col>
                 <el-col :span="8">
-                  <card :data1="total.E.finish" :data2="total.E.total" title="E数" text1="完成数" text2="总数"/>
+                  <card
+                    :data1="total.E.finish"
+                    :data2="total.E.total"
+                    title="E数"
+                    text1="完成数"
+                    text2="总数"
+                  />
                 </el-col>
 
                 <el-col :span="8">
-                  <card :data1="total.shop.finish" :data2="total.shop.total" title="门店数" text1="完成数" text2="总数"/>
+                  <card
+                    :data1="total.shop.finish"
+                    :data2="total.shop.total"
+                    title="门店数"
+                    text1="完成数"
+                    text2="总数"
+                  />
                 </el-col>
               </el-row>
             </div>
@@ -41,50 +59,61 @@
     </div>
 
     <div class="linesBox borderBox MT30">
-      
-      <template  v-for="(one,index) in lines">
-        <el-row :gutter="10" :key="index">
-          <el-col :span="1">
-            <div class="borderBox lineName">线路{{index}}</div>
-          </el-col>
+      <template v-for="(one,index) in lines">
+        <div class="oneLine" :key="index">
+          <el-row :gutter="10" :key="index">
+            <el-col :span="1">
+              <div class="borderBox lineName">线路{{index}}</div>
+            </el-col>
 
-          <el-col :span="4">
-            <card :data1="one.SKU.finish" :data2="one.SKU.total" title="SKU" text1="完成数" text2="总数"/>
-          </el-col>
+            <el-col :span="4">
+              <card
+                :data1="one.SKU.finish"
+                :data2="one.SKU.total"
+                title="SKU"
+                text1="完成数"
+                text2="总数"
+              />
+            </el-col>
 
-          <el-col :span="4">
-            <card :data1="one.SKU.finish" :data2="one.SKU.total" title="E数" text1="完成数" text2="总数"/>
-          </el-col>
+            <el-col :span="4">
+              <card
+                :data1="one.SKU.finish"
+                :data2="one.SKU.total"
+                title="E数"
+                text1="完成数"
+                text2="总数"
+              />
+            </el-col>
 
-          <el-col :span="4">
-            <card :data1="one.SKU.finish" :data2="one.SKU.total" title="门店数" text1="完成数" text2="总数"/>
-          </el-col>
+            <el-col :span="4">
+              <card
+                :data1="one.SKU.finish"
+                :data2="one.SKU.total"
+                title="门店数"
+                text1="完成数"
+                text2="总数"
+              />
+            </el-col>
 
-          <el-col :span="11">
-            <div class="borderBox">
-
-              <template  v-for="(oneShop,index) in one.shopState">
-                
-                <template v-if="oneShop.state === 0">
-                   <div class="miniCard shopUnFinish" :key="index">{{oneShop.name}}</div>
+            <el-col :span="11">
+              <div class="borderBox">
+                <template v-for="(oneShop,index) in one.shopState">
+                  <template v-if="oneShop.state === 0">
+                    <div class="miniCard shopUnFinish" :key="index">{{oneShop.name}}</div>
+                  </template>
+                  <template v-else-if="oneShop.state === 1">
+                    <div class="miniCard shopOnGoing" :key="index">{{oneShop.name}}</div>
+                  </template>
+                  <template v-else>
+                    <div class="miniCard shopFinish" :key="index">{{oneShop.name}}</div>
+                  </template>
                 </template>
-                <template v-else-if="oneShop.state === 1">
-                   <div class="miniCard shopOnGoing" :key="index">{{oneShop.name}}</div>
-                </template>
-                <template v-else>
-                  <div class="miniCard shopFinish" :key="index">{{oneShop.name}}</div>
-                </template>
-
-              </template>
-
-            </div>
-          </el-col>
-        </el-row>
+              </div>
+            </el-col>
+          </el-row>
+        </div>
       </template>
-
-      
-
-
     </div>
   </div>
 </template>
@@ -216,9 +245,9 @@ export default {
         .then(response => {
           let linesData = response.data.data;
           //店面数据，最多只保留前面16条
-          linesData.forEach(function(one,i){
-            one.shopState = one.shopState.slice(0,16)
-          })
+          linesData.forEach(function(one, i) {
+            one.shopState = one.shopState.slice(0, 16);
+          });
           this.lines = linesData;
         });
     }
@@ -282,11 +311,27 @@ export default {
 .linesBox {
   background: #fff;
   height: 636px;
-
   background-color: #ffffff;
   box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
   border-radius: 10px;
   border: solid 1px #e5e5e5;
+
+  .oneLine {
+    height: 135px;
+    border-bottom: solid 1px #eee;
+
+    .cardBox {
+      height: 115px;
+      margin-top:10px;
+      .cardBoxM {
+        font-size: 30px;
+      }
+    }
+
+  }
+  .oneLine:nth-child(even) {
+    //background: #eee;
+  }
 
   .lineName {
     text-align: center;
@@ -296,12 +341,6 @@ export default {
     padding: 10px;
     box-sizing: border-box;
     border: none;
-  }
-  .cardBox {
-    height: 110px;
-    .cardBoxM {
-      font-size: 30px;
-    }
   }
 }
 .linesList:nth-child(odd) {

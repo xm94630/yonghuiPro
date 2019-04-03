@@ -51,6 +51,7 @@ export default {
   background:#fff;
   border-radius: 5px;
   border: solid 1px #c0c0c0;
+  overflow: hidden;
   .cardBoxT{
     height:30%;
     font-size:16px;
