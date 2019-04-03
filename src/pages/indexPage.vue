@@ -315,13 +315,15 @@ export default {
   box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
   border-radius: 10px;
   border: solid 1px #e5e5e5;
+  overflow: hidden;
 
   .oneLine {
-    height: 135px;
+    height: 120px;
+    overflow: hidden;
     border-bottom: solid 1px #eee;
 
     .cardBox {
-      height: 115px;
+      height: 100px;
       margin-top:10px;
       .cardBoxM {
         font-size: 30px;
@@ -350,8 +352,8 @@ export default {
 .miniCard {
   display: inline-block;
   width: 90px;
-  height: 50px;
-  line-height: 50px;
+  height: 43px;
+  line-height: 43px;
   margin: 0 10px 10px 0;
   background: #ccc;
   text-align: center;
