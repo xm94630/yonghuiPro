@@ -90,7 +90,7 @@
                   <div class="borderBox lineName">线路{{index+1}}</div>
                 </el-col>
 
-                <el-col :span="4">
+                <el-col :span="3">
                   <card
                     :data1="one.SKU.finish"
                     :data2="one.SKU.total"
@@ -100,7 +100,7 @@
                   />
                 </el-col>
 
-                <el-col :span="4">
+                <el-col :span="3">
                   <card
                     :data1="one.SKU.finish"
                     :data2="one.SKU.total"
@@ -110,7 +110,7 @@
                   />
                 </el-col>
 
-                <el-col :span="4">
+                <el-col :span="3">
                   <card
                     :data1="one.SKU.finish"
                     :data2="one.SKU.total"
@@ -120,7 +120,7 @@
                   />
                 </el-col>
 
-                <el-col :span="11">
+                <el-col :span="14">
                   <div class="borderBox">
                     <template v-for="(oneShop,index) in one.shopState">
                       <template v-if="oneShop.state === 0">
@@ -177,7 +177,7 @@ export default {
   data() {
     return {
       swiperOption: {
-        autoplay: true,
+        autoplay: false,
         direction: "vertical",
         pagination: {
           el: ".swiper-pagination",
@@ -432,13 +432,13 @@ export default {
 
 .miniCard {
   display: inline-block;
-  width: 90px;
-  height: 43px;
-  line-height: 43px;
-  margin: 0 10px 10px 0;
+  width: 120px;
+  height: 45px;
+  margin: 0 10px 5px 0;
   background: #ccc;
   text-align: center;
   overflow: hidden;
+  font-size: 12px;
 }
 
 .dateBox {
