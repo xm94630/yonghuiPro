@@ -409,6 +409,7 @@ export default {
   overflow: hidden;
   box-sizing: border-box;
   padding: 0 10px;
+  margin-top: 30px;
 
   .oneLine {
     height: 120px;
