@@ -12,10 +12,8 @@ Vue.prototype.$echarts = echarts
 
 //swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-import 'swiper/dist/css/swiper.css' //这个还是要有的，比如分页的点点的样式什么的
+import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
-
-
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false
