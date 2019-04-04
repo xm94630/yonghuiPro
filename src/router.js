@@ -8,17 +8,17 @@ Vue.use(VueRouter)
 
 const routes = [
     {
-        path:'/',
-        component:pageIndex
-    },{
-        path:'/picking',
-        component:pageIndex
-    },{
-        path:'/pickingReplenishment',
-        component:pageB
-    },{
-        path:'/workload',
-        component:pageC
+        path: '/',
+        component: pageIndex
+    }, {
+        path: '/picking',
+        component: pageIndex
+    }, {
+        path: '/pickingReplenishment',
+        component: pageB
+    }, {
+        path: '/workload',
+        component: pageC
     }
 ]
 

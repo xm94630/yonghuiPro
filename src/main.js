@@ -9,7 +9,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 //echart
 import echarts from 'echarts'
 Vue.prototype.$echarts = echarts
- 
+
 //swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css' //这个还是要有的，比如分页的点点的样式什么的

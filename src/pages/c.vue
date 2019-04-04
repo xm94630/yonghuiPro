@@ -45,7 +45,7 @@ import lineChart from "../components/line.vue";
 import barChart from "../components/bar.vue";
 import dater from "../components/Dater.vue";
 import axios from "axios";
-
+import _ from "lodash";
 import config from "../config";
 let baseUrl = config.baseUrl || "";
 

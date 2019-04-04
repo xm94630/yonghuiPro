@@ -7,26 +7,26 @@
 
 <script>
 export default {
-  name: 'xm',
+  name: "xm",
   props: {
     msg: String
   },
-  data(){
-    return{
-        xxx:'大屏展示'
-    }
+  data() {
+    return {
+      xxx: "大屏展示"
+    };
   }
-}
+};
 </script>
 
 <style scoped>
-.addBtn{
-  width:150px;
-  height:150px;
-  background:#fff;
-  line-height:150px;
-  text-align:center;
-  border:dashed 2px lightseagreen;
-  display:inline-block;
+.addBtn {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  line-height: 150px;
+  text-align: center;
+  border: dashed 2px lightseagreen;
+  display: inline-block;
 }
 </style>

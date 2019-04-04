@@ -505,7 +505,7 @@ export default {
   position: relative;
   display: flex;
   box-sizing: border-box;
-  padding: 0 0px 0 47px;;
+  padding: 0 0px 0 47px;
   background-color: #ffffff;
   box-shadow: 0px 5px 5px 0px rgba(187, 194, 225, 0.22);
   border-radius: 10px;
@@ -541,7 +541,7 @@ export default {
   .replenishBoxLineR {
     width: 20%;
     position: relative;
-    top:-10px;
+    top: -10px;
   }
 }
 .replenishBoxLine1 {

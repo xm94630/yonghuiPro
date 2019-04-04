@@ -152,9 +152,8 @@ import pie from "../components/pie.vue";
 import dater from "../components/Dater.vue";
 import axios from "axios";
 import card from "../components/card.vue";
-
+import _ from "lodash";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
-
 import config from "../config";
 let baseUrl = config.baseUrl || "";
 
